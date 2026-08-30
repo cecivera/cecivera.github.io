@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cecilia Vera</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --bg: #14161a;
+    --text: #f5f5f5;
+    --muted: #9a9ea6;
+    --accent: #c6ff3d;
+    --card: #1c1e23;
+    --line: #2a2d33;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 100px 24px;
+  }
+
+  main { max-width: 640px; width: 100%; }
+
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 16px;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+  }
+
+  .role {
+    font-size: 18px;
+    color: var(--muted);
+    margin: 0 0 40px;
+    line-height: 1.5;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 40px 0 16px;
+  }
+
+  ul.links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  ul.links li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 20px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: border-color 0.15s ease;
+  }
+
+  ul.links li a:hover { border-color: var(--accent); }
+
+  ul.links li a .arrow { color: var(--accent); font-weight: 700; }
+
+  p.bio {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0 0 8px;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Product Designer · adidas Wholesale</p>
+  <h1>Cecilia Vera</h1>
+  <p class="role">Designing ASSIST and working on YARN, our CE&amp;C design system — currently focused on closing the gap between Figma and code for our FE team.</p>
+
+  <p class="bio">I run an internal course at adidas on <strong>Figma Dev Mode + GitHub</strong>, for designers and FE devs. Learning GitHub itself from the design side, gaps included — everything here is built and documented as I go.</p>
+
+  <div class="section-title">Projects</div>
+  <ul class="links">
+    <li><a href="https://github.com/cecivera/my-projects" target="_blank">Workshop prototypes &amp; docs <span class="arrow">→</span></a></li>
+    <li><a href="https://cecivera.github.io/my-projects/orders-prototype.html" target="_blank">Orders screen — live prototype <span class="arrow">→</span></a></li>
+    <li><a href="https://github.com/cecivera" target="_blank">All repositories <span class="arrow">→</span></a></li>
+  </ul>
+
+  <div class="section-title">Elsewhere</div>
+  <ul class="links">
+    <li><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank">LinkedIn <span class="arrow">→</span></a></li>
+    <li><a href="mailto:cecilia.vera@adidas.com">cecilia.vera@adidas.com <span class="arrow">→</span></a></li>
+  </ul>
+
+  <footer>Built while learning GitHub — this page itself is version-controlled at cecivera/cecivera.github.io.</footer>
+</main>
+</body>
+</html>
