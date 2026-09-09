@@ -216,6 +216,13 @@
   }
   @media (max-width:640px){ .stamp{display:none;} }
 
+  .wip-badge{
+    position:fixed; right:0; top:50%; transform:translateY(-50%) rotate(-90deg);
+    transform-origin:right center; background:var(--ink); color:var(--paper);
+    padding:8px 16px; font-family:'IBM Plex Mono', monospace; font-size:11px;
+    letter-spacing:0.14em; text-transform:uppercase; z-index:40;
+    border-radius:2px 2px 0 0; opacity:0.85;
+  }
   footer{
     max-width:1100px; margin:60px auto 0; padding:40px 32px 60px; border-top:1px solid var(--line);
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
@@ -227,6 +234,8 @@
 </style>
 </head>
 <body data-lang="es">
+
+  <div class="wip-badge">WIP</div>
 
   <div class="docket-bar">
     <div class="left">
@@ -284,10 +293,11 @@
         <div>
           <h3>Cecilia Vera</h3>
           <div class="client">Product Design Lead · Madrid · <a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" style="color:var(--accent-deep); text-decoration:underline;">LinkedIn ↗</a></div>
+          <div class="flabel" style="margin-top:18px;"><span class="es">Formación</span><span class="en">Training</span></div>
           <div class="tags">
-            <span>Salesforce</span><span>Figma</span><span>Claude Code</span>
-            <span class="es">Wholesale / Enterprise</span><span class="en">Wholesale / Enterprise</span>
-            <span class="es">Journeys</span><span class="en">User Journeys</span><span>UI</span><span>UX</span>
+            <span class="es">Sostenibilidad ambiental</span><span class="en">Environmental sustainability</span>
+            <span class="es">Sostenibilidad económica</span><span class="en">Economic sustainability</span>
+            <span class="es">Sostenibilidad social</span><span class="en">Social sustainability</span>
           </div>
         </div>
         <div>
