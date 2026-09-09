@@ -4,8 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — Product Design</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,900&family=IBM+Plex+Mono:wght@400;500&family=Archivo+Narrow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  @font-face{
+    font-family:'Financier Display';
+    src:url('fonts/test-financier-display-vf-roman.woff2') format('woff2-variations'),
+        url('fonts/test-financier-display-vf-roman.woff2') format('woff2');
+    font-weight:100 900; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:'Financier Display';
+    src:url('fonts/test-financier-display-vf-italic.woff2') format('woff2-variations'),
+        url('fonts/test-financier-display-vf-italic.woff2') format('woff2');
+    font-weight:100 900; font-style:italic; font-display:swap;
+  }
+  @font-face{
+    font-family:'Financier Text';
+    src:url('fonts/test-financier-text-vf-roman.woff2') format('woff2-variations'),
+        url('fonts/test-financier-text-vf-roman.woff2') format('woff2');
+    font-weight:100 900; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:'Financier Text';
+    src:url('fonts/test-financier-text-vf-italic.woff2') format('woff2-variations'),
+        url('fonts/test-financier-text-vf-italic.woff2') format('woff2');
+    font-weight:100 900; font-style:italic; font-display:swap;
+  }
+  @font-face{
+    font-family:'Die Grotesk';
+    src:url('fonts/test-die-grotesk-vf-roman.woff2') format('woff2-variations'),
+        url('fonts/test-die-grotesk-vf-roman.woff2') format('woff2');
+    font-weight:100 900; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:'Die Grotesk';
+    src:url('fonts/test-die-grotesk-vf-italic.woff2') format('woff2-variations'),
+        url('fonts/test-die-grotesk-vf-italic.woff2') format('woff2');
+    font-weight:100 900; font-style:italic; font-display:swap;
+  }
+</style>
 <style>
   :root{
     --ink:#1C1210;
@@ -25,7 +61,7 @@
   body{
     background:var(--paper);
     color:var(--text);
-    font-family:'Archivo Narrow', sans-serif;
+    font-family:'Die Grotesk', system-ui, sans-serif;
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
   }
@@ -45,7 +81,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    font-family:'Archivo Narrow', sans-serif;
+    font-family:'Die Grotesk', system-ui, sans-serif;
     font-size:13px;
     letter-spacing:0.06em;
     text-transform:uppercase;
@@ -55,14 +91,14 @@
   }
   .docket-bar .left{display:flex; gap:14px; align-items:baseline; white-space:nowrap;}
   .docket-bar .brand-name{
-    font-family:'Source Serif 4', serif;
+    font-family:'Financier Display', 'Financier Text', Georgia, serif;
     font-weight:700;
     font-size:15px;
     letter-spacing:0;
     text-transform:none;
   }
   .docket-bar .brand-tag{
-    font-family:'Archivo Narrow', sans-serif;
+    font-family:'Die Grotesk', system-ui, sans-serif;
     font-size:11px;
     opacity:0.55;
     letter-spacing:0.08em;
@@ -74,7 +110,7 @@
   .docket-bar nav a:hover{opacity:1;}
   .lang-switch{display:flex; gap:2px; border:1px solid rgba(250,243,234,0.3); border-radius:20px; padding:2px; flex-shrink:0;}
   .lang-switch button{
-    font-family:'Archivo Narrow', sans-serif; font-size:12px; letter-spacing:0.06em;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; letter-spacing:0.06em;
     background:transparent; border:none; color:var(--paper); opacity:0.55;
     padding:5px 12px; border-radius:20px; cursor:pointer; text-transform:uppercase;
     transition:all .2s;
@@ -84,13 +120,13 @@
   /* ===== HERO ===== */
   .hero{ padding:120px 32px 90px; max-width:1100px; margin:0 auto; position:relative; }
   .hero .tag{
-    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; letter-spacing:0.12em;
     text-transform:uppercase; color:var(--accent-deep); margin-bottom:22px;
     display:flex; align-items:center; gap:10px;
   }
   .hero .tag::before{ content:""; width:28px; height:1px; background:var(--accent-deep); }
   .hero h1{
-    font-family:'Source Serif 4', serif; font-weight:700; letter-spacing:-0.01em;
+    font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; letter-spacing:-0.01em;
     font-size:clamp(38px, 6vw, 60px); line-height:1.1; letter-spacing:-0.01em;
     max-width:16ch; color:var(--ink);
   }
@@ -99,7 +135,7 @@
   .role-strip div{ flex:1 1 160px; padding:16px 20px 0 0; border-right:1px solid var(--line); }
   .role-strip div:last-child{border-right:none;}
   .role-strip .k{
-    font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:10.5px; text-transform:uppercase;
     letter-spacing:0.1em; color:var(--text-dim); margin-bottom:6px;
   }
   .role-strip .v{font-size:14.5px; font-weight:500; color:var(--ink);}
@@ -107,10 +143,10 @@
   /* ===== SECTION LABEL (top intro) ===== */
   .section-intro{ max-width:1100px; margin:0 auto; padding:70px 32px 20px; }
   .section-intro .eyebrow{
-    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.14em;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; letter-spacing:0.14em;
     text-transform:uppercase; color:var(--accent-deep); margin-bottom:10px;
   }
-  .section-intro h2{ font-family:'Source Serif 4', serif; font-weight:700; font-size:27px; color:var(--ink); max-width:40ch; }
+  .section-intro h2{ font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; font-size:27px; color:var(--ink); max-width:40ch; }
 
   /* ===== COMPANY GROUP HEADER ===== */
   .company-group{ max-width:1100px; margin:0 auto; padding:0 32px; scroll-margin-top:70px; }
@@ -121,14 +157,14 @@
     margin-bottom:26px;
   }
   .company-header .company-name{
-    font-family:'Source Serif 4', serif; font-weight:700; font-size:25px; color:var(--ink);
+    font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; font-size:25px; color:var(--ink);
     display:flex; align-items:baseline; gap:14px;
   }
   .company-header .company-name .co-code{
-    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--accent-deep); font-weight:400;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; color:var(--accent-deep); font-weight:400;
   }
   .company-header .co-count{
-    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--text-dim);
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:11.5px; color:var(--text-dim);
     text-transform:uppercase; letter-spacing:0.08em;
   }
 
@@ -141,7 +177,7 @@
   .case-tab{
     display:flex; align-items:center; justify-content:space-between; padding:18px 26px;
     background:var(--paper-dim); border-bottom:1px solid var(--line);
-    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.06em;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; letter-spacing:0.06em;
     text-transform:uppercase; color:var(--text-dim);
   }
   .case-tab .case-id{color:var(--ink); font-weight:500;}
@@ -159,16 +195,16 @@
     .case-body{grid-template-columns:1fr; gap:32px; padding:32px 24px 36px;}
     .case-tab{padding:14px 20px; flex-wrap:wrap; gap:10px;}
   }
-  .case-body h3{ font-family:'Source Serif 4', serif; font-weight:700; font-size:32px; color:var(--ink); margin-bottom:10px; }
+  .case-body h3{ font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; font-size:32px; color:var(--ink); margin-bottom:10px; }
   .case-body .client{
-    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim);
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; color:var(--text-dim);
     text-transform:uppercase; letter-spacing:0.06em; margin-bottom:22px;
   }
   .case-body .desc{ font-size:15.5px; color:var(--text-dim); margin-bottom:26px; max-width:44ch; }
 
   .field{margin-bottom:22px;}
   .field .flabel{
-    font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:10.5px; text-transform:uppercase;
     letter-spacing:0.1em; color:var(--accent-deep); margin-bottom:7px;
   }
   .field .fvalue{font-size:14.5px; color:var(--text); line-height:1.6;}
@@ -179,19 +215,19 @@
     display:grid; grid-template-columns:28px 1fr; gap:14px; align-items:baseline;
   }
   .process-list li:last-child{border-bottom:1px solid var(--line);}
-  .process-list .pnum{ font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--accent-deep); }
+  .process-list .pnum{ font-family:'Die Grotesk', system-ui, sans-serif; font-size:11px; color:var(--accent-deep); }
   .process-list .ptitle{font-weight:600; font-size:14.5px; color:var(--ink); margin-bottom:3px;}
   .process-list .pdesc{font-size:13.5px; color:var(--text-dim);}
 
   .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;}
   .tags span{
-    font-family:'IBM Plex Mono', monospace; font-size:11px; padding:5px 10px;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:11px; padding:5px 10px;
     background:var(--paper-dim); border:1px solid var(--line); color:var(--ink-soft); border-radius:2px;
   }
 
   .case.placeholder .placeholder-note{
     grid-column:1 / -1; margin-top:6px; padding:16px 18px; background:var(--paper-dim);
-    border:1px dashed var(--line); font-family:'IBM Plex Mono', monospace; font-size:12px;
+    border:1px dashed var(--line); font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px;
     color:var(--text-dim); line-height:1.7;
   }
   .case.placeholder .placeholder-note b{color:var(--accent-deep);}
@@ -201,7 +237,7 @@
     display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;
     background:rgba(255,255,255,0.4);
   }
-  .empty-case .et{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--text-dim); }
+  .empty-case .et{ font-family:'Die Grotesk', system-ui, sans-serif; font-size:12.5px; color:var(--text-dim); }
   .empty-case .et b{color:var(--accent-deep); text-transform:uppercase; letter-spacing:0.06em; font-size:11px;}
 
   .stamp{
@@ -211,7 +247,7 @@
     transform:rotate(-8deg); opacity:0.9;
   }
   .stamp span{
-    font-family:'IBM Plex Mono', monospace; font-size:8.5px; letter-spacing:0.06em;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:8.5px; letter-spacing:0.06em;
     text-transform:uppercase; color:var(--accent-deep); line-height:1.3;
   }
   @media (max-width:640px){ .stamp{display:none;} }
@@ -219,7 +255,7 @@
   .docket-bar .left-stack{display:flex; flex-direction:column; gap:6px;}
   .docket-bar .left-sub{display:flex; gap:10px; align-items:center;}
   .docket-bar .wip{
-    font-family:'IBM Plex Mono', monospace; font-size:10px;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:10px;
     letter-spacing:0.18em; color:var(--accent); background:transparent;
     border:1px solid var(--accent); padding:2px 7px; border-radius:2px;
     font-weight:500;
@@ -228,7 +264,7 @@
     position:fixed; right:0; top:50%; transform:translateY(-50%);
     writing-mode:vertical-rl;
     background:var(--ink); color:var(--paper);
-    padding:16px 8px; font-family:'IBM Plex Mono', monospace; font-size:11px;
+    padding:16px 8px; font-family:'Die Grotesk', system-ui, sans-serif; font-size:11px;
     letter-spacing:0.2em; text-transform:uppercase; z-index:100;
     border:none; cursor:pointer; border-radius:2px 0 0 2px; opacity:0.9;
     transition:opacity .2s, background .2s;
@@ -243,7 +279,7 @@
   }
   .type-story.open{right:24px;}
   .type-story-eyebrow{
-    font-family:'IBM Plex Mono', monospace; font-size:10.5px;
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:10.5px;
     letter-spacing:0.14em; text-transform:uppercase;
     color:var(--accent-deep); margin-bottom:20px;
   }
@@ -253,7 +289,7 @@
   }
   .type-item{margin-bottom:18px; font-size:13px; line-height:1.55; color:var(--text-dim);}
   .type-item strong{
-    display:block; font-family:'Source Serif 4', serif; font-weight:700;
+    display:block; font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700;
     font-size:15px; color:var(--ink); margin-bottom:4px; letter-spacing:0;
     text-transform:none;
   }
@@ -262,7 +298,7 @@
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
   }
   footer .fmono{
-    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--text-dim);
+    font-family:'Die Grotesk', system-ui, sans-serif; font-size:11.5px; color:var(--text-dim);
     text-transform:uppercase; letter-spacing:0.08em;
   }
 </style>
@@ -276,19 +312,18 @@
     <button class="type-story-close" onclick="document.getElementById('type-story').classList.remove('open')" aria-label="Cerrar">×</button>
     <div class="type-story-eyebrow"><span class="es">Tipografías</span><span class="en">Typography</span></div>
     <div class="type-item">
-      <strong>Source Serif 4</strong>
-      <span class="es">Diseñada por Frank Grießhammer en Adobe (2014, revisada 2022). Serif humanista, elegante en cuerpos de display.</span>
-      <span class="en">Designed by Frank Grießhammer at Adobe (2014, revised 2022). Humanist serif, elegant at display sizes.</span>
+      <strong>Financier</strong>
+      <span class="es">Diseñada por Kris Sowersby (Klim Type Foundry, Nueva Zelanda). Serif de contraste alto inspirada en la tradición editorial anglosajona — originalmente encargada por el Financial Times.</span>
+      <span class="en">Designed by Kris Sowersby (Klim Type Foundry, New Zealand). High-contrast serif rooted in Anglo editorial tradition — originally commissioned by the Financial Times.</span>
     </div>
     <div class="type-item">
-      <strong>IBM Plex Mono</strong>
-      <span class="es">Diseñada por Mike Abbink con Bold Monday para IBM (2017). Fuente monoespaciada del design system corporativo de IBM.</span>
-      <span class="en">Designed by Mike Abbink with Bold Monday for IBM (2017). Monospaced typeface of IBM's corporate design system.</span>
+      <strong>Die Grotesk</strong>
+      <span class="es">Diseñada por Kris Sowersby (Klim Type Foundry). Sans-serif grotesque contemporánea, con proporciones neutras y un carácter técnico funcional.</span>
+      <span class="en">Designed by Kris Sowersby (Klim Type Foundry). Contemporary grotesque sans-serif, with neutral proportions and a functional, technical character.</span>
     </div>
-    <div class="type-item">
-      <strong>Archivo Narrow</strong>
-      <span class="es">Diseñada por Omnibus-Type (Argentina). Sans-serif condensada, funcional para etiquetas, navegación y UI.</span>
-      <span class="en">Designed by Omnibus-Type (Argentina). Condensed sans-serif, functional for labels, navigation, and UI.</span>
+    <div class="type-item" style="border-top:1px solid var(--line); padding-top:14px; font-size:11px;">
+      <span class="es">Ambas de <a href="https://klim.co.nz" target="_blank" style="color:var(--accent-deep);">klim.co.nz</a> — en licencia de prueba.</span>
+      <span class="en">Both from <a href="https://klim.co.nz" target="_blank" style="color:var(--accent-deep);">klim.co.nz</a> — trial license.</span>
     </div>
   </aside>
 
