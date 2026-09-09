@@ -108,6 +108,7 @@
   .docket-bar nav{display:flex; gap:22px; white-space:nowrap;}
   .docket-bar nav a{text-decoration:none; opacity:0.75; transition:opacity .2s;}
   .docket-bar nav a:hover{opacity:1;}
+  .docket-bar nav a.active{opacity:1; border-bottom:1px solid var(--accent);}
   .lang-switch{display:flex; gap:2px; border:1px solid rgba(250,243,234,0.3); border-radius:20px; padding:2px; flex-shrink:0;}
   .lang-switch button{
     font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; letter-spacing:0.06em;
@@ -340,8 +341,8 @@
       </div>
     </div>
     <nav>
-      <a href="#sobre-mi"><span class="es">Sobre mí</span><span class="en">About</span></a>
-      <a href="#work">Work</a>
+      <a href="index.html" class="active"><span class="es">Sobre mí</span><span class="en">About</span></a>
+      <a href="work.html">Work</a>
     </nav>
     <div class="lang-switch">
       <button class="active" data-set="es">ES</button>
@@ -367,7 +368,7 @@
       </div>
       <div>
         <div class="k"><span class="es">Stack de diseño</span><span class="en">Design stack</span></div>
-        <div class="v">Figma · Salesforce · Claude Code · Cursor · ChatGPT · <span class="es">Demos funcionales con IA</span><span class="en">Functional AI-powered demos</span></div>
+        <div class="v">Figma · Salesforce · Claude Code · Cursor · ChatGPT · Cloudflare · <span class="es">Demos funcionales con IA</span><span class="en">Functional AI-powered demos</span></div>
       </div>
     </div>
   </section>
@@ -390,10 +391,9 @@
         <div>
           <div class="flabel"><span class="es">Formación</span><span class="en">Education</span></div>
           <div class="tags">
-            <span class="es">Máster Information Systems for e-business · Universidad de Deusto (2001–2002)</span><span class="en">Master's Information Systems for e-business · Universidad de Deusto (2001–2002)</span>
-            <span class="es">Licenciatura Diseño de Imagen y Sonido · UBA, Buenos Aires (1991–1996)</span><span class="en">BA Image & Sound Design · UBA, Buenos Aires (1991–1996)</span>
-            <span class="es">Sostenibilidad · Acción contra el Hambre (Europass)</span><span class="en">Sustainability · Action Against Hunger (Europass)</span>
-            <span class="es">Nature-Based Solutions · UPM Madrid</span><span class="en">Nature-Based Solutions · UPM Madrid</span>
+            <span class="es">Máster Sistemas de Información y e-Business · Universidad de Deusto (2002)</span><span class="en">Master's in Information Systems for e-Business · Universidad de Deusto (2002)</span>
+            <span class="es">Licenciatura Diseño de Imagen y Sonido · UBA, Buenos Aires (1996)</span><span class="en">BA Image & Sound Design · UBA, Buenos Aires (1996)</span>
+            <span class="es">Sostenibilidad · Universidad Politécnica de Madrid (2025)</span><span class="en">Sustainability · Universidad Politécnica de Madrid (2025)</span>
           </div>
 
           <div class="flabel" style="margin-top:22px;"><span class="es">Contacto</span><span class="en">Contact</span></div>
@@ -409,270 +409,9 @@
   </div>
 
 
-  <!-- ===================== ADIDAS ===================== -->
-  <div class="company-group" id="work" style="scroll-margin-top:70px;">
-    <div id="adidas"></div>
-    <div class="company-header">
-      <div class="company-name">Adidas <span class="co-code">/ Wholesale</span></div>
-      <div class="co-count"><span class="es">2 casos</span><span class="en">2 cases</span></div>
-    </div>
-    <div class="cases">
-
-      <!-- ASSIST -->
-      <article class="case" id="assist">
-        <div class="case-tab">
-          <span class="case-id">ASSIST</span>
-          <span class="status build"><span class="dot"></span>
-            <span class="es">En construcción — rollout multi-país</span>
-            <span class="en">In build — multi-country rollout</span>
-          </span>
-        </div>
-        <div class="case-body">
-          <div class="stamp"><span class="es">En<br>curso</span><span class="en">In<br>progress</span></div>
-          <div>
-            <h3>ASSIST</h3>
-            <div class="client"><span class="es">Case management sobre Salesforce · Wholesale</span><span class="en">Salesforce-based case management · Wholesale</span></div>
-            <p class="desc">
-              <span class="es">Un sistema de gestión de casos para que los equipos que atienden a clientes de Wholesale puedan resolver compras, pedidos y órdenes en un solo lugar, en lugar de saltar entre herramientas desconectadas.</span>
-              <span class="en">A case management system so teams supporting Wholesale clients can resolve purchases, orders, and requests in one place, instead of jumping between disconnected tools.</span>
-            </p>
-            <div class="field">
-              <div class="flabel"><span class="es">Problema</span><span class="en">Problem</span></div>
-              <div class="fvalue">
-                <span class="es">Los clientes de Wholesale gestionan compras, pedidos y órdenes a través de procesos fragmentados, lo que genera fricción tanto para el cliente como para el equipo interno que debe resolver cada caso. ASSIST nace para centralizar esa gestión sobre una base de Salesforce.</span>
-                <span class="en">Wholesale clients manage purchases, orders, and requests through fragmented processes, creating friction for both the client and the internal team resolving each case. ASSIST centralizes that management on a Salesforce foundation.</span>
-              </div>
-            </div>
-            <div class="field">
-              <div class="flabel"><span class="es">Estado actual</span><span class="en">Current status</span></div>
-              <div class="fvalue">
-                <span class="es">Visión y bases del producto ya definidas. En etapa de construcción, con adopción creciente: el equipo lo está empezando a usar en cada vez más países.</span>
-                <span class="en">Product vision and foundations already defined. In build phase, with growing adoption as more countries start using it.</span>
-              </div>
-            </div>
-            <div class="tags">
-              <span>Case Management</span><span>Salesforce</span><span>B2B / Wholesale</span><span class="es">Multi-país</span><span class="en">Multi-country</span>
-            </div>
-          </div>
-          <div>
-            <div class="flabel" style="margin-bottom:14px;"><span class="es">Proceso</span><span class="en">Process</span></div>
-            <ul class="process-list">
-              <li><span class="pnum">01</span><div>
-                <div class="ptitle"><span class="es">Definición de visión</span><span class="en">Defining the vision</span></div>
-                <div class="pdesc"><span class="es">Sentar las bases del producto: qué resuelve, para quién y cómo se integra con Salesforce.</span><span class="en">Setting the product foundations: what it solves, for whom, and how it integrates with Salesforce.</span></div>
-              </div></li>
-              <li><span class="pnum">02</span><div>
-                <div class="ptitle"><span class="es">Demos funcionales con IA</span><span class="en">AI-powered functional demos</span></div>
-                <div class="pdesc"><span class="es">Prototipos de alta fidelidad para validar flujos antes de construir en producción.</span><span class="en">High-fidelity prototypes to validate flows before building in production.</span></div>
-              </div></li>
-              <li><span class="pnum">03</span><div>
-                <div class="ptitle"><span class="es">Construcción iterativa</span><span class="en">Iterative build</span></div>
-                <div class="pdesc"><span class="es">Desarrollo por fases, con foco en los flujos de mayor impacto para el equipo de atención.</span><span class="en">Phased development, focused on the highest-impact flows for the support team.</span></div>
-              </div></li>
-              <li><span class="pnum">04</span><div>
-                <div class="ptitle"><span class="es">Adopción multi-país</span><span class="en">Multi-country adoption</span></div>
-                <div class="pdesc"><span class="es">Rollout progresivo, incorporando feedback real de cada mercado en el que se activa.</span><span class="en">Progressive rollout, incorporating real feedback from each market as it goes live.</span></div>
-              </div></li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- CLICK -->
-      <article class="case placeholder" id="click">
-        <div class="case-tab">
-          <span class="case-id">CLICK</span>
-          <span class="status build"><span class="dot"></span>
-            <span class="es">Desarrollado con Claude Code</span>
-            <span class="en">Built with Claude Code</span>
-          </span>
-        </div>
-        <div class="case-body">
-          <div>
-            <h3>Click</h3>
-            <div class="client"><span class="es">Herramienta interna · Producción de assets</span><span class="en">Internal tool · Asset production</span></div>
-            <p class="desc">
-              <span class="es">Una herramienta para acelerar tareas repetitivas de producción de assets — redimensionar en lote y aplicar formato en masa — construida junto a Claude Code como acelerador de desarrollo.</span>
-              <span class="en">A tool to speed up repetitive asset-production tasks — bulk resizing and mass formatting — built alongside Claude Code as a development accelerator.</span>
-            </p>
-            <div class="field">
-              <div class="flabel"><span class="es">Problema</span><span class="en">Problem</span></div>
-              <div class="fvalue">
-                <span class="es">Redimensionar y formatear assets uno por uno consumía tiempo del equipo que podía destinarse a trabajo de mayor valor. Click automatiza ese trabajo repetitivo en operaciones masivas.</span>
-                <span class="en">Resizing and formatting assets one by one consumed time the team could spend on higher-value work. Click automates that repetitive work into bulk operations.</span>
-              </div>
-            </div>
-            <div class="field">
-              <div class="flabel"><span class="es">Funcionalidades clave</span><span class="en">Key features</span></div>
-              <div class="fvalue">Bulk resize · Mass formatting actions</div>
-            </div>
-            <div class="field">
-              <div class="flabel"><span class="es">Estado actual</span><span class="en">Current status</span></div>
-              <div class="fvalue"><span class="es">— Confirmame el estado: ¿en uso del equipo, piloto, etc.? —</span><span class="en">— Confirm status: in use by the team, pilot, etc.? —</span></div>
-            </div>
-          </div>
-          <div>
-            <div class="flabel" style="margin-bottom:14px;"><span class="es">Proceso</span><span class="en">Process</span></div>
-            <ul class="process-list">
-              <li><span class="pnum">01</span><div>
-                <div class="ptitle"><span class="es">Identificación del cuello de botella</span><span class="en">Identifying the bottleneck</span></div>
-                <div class="pdesc"><span class="es">Detección de tareas manuales repetitivas en el flujo de producción de assets.</span><span class="en">Spotting repetitive manual tasks in the asset production flow.</span></div>
-              </div></li>
-              <li><span class="pnum">02</span><div>
-                <div class="ptitle"><span class="es">Diseño + build con Claude Code</span><span class="en">Design + build with Claude Code</span></div>
-                <div class="pdesc"><span class="es">Diseño y desarrollo en paralelo, usando IA como acelerador para pasar de idea a herramienta funcional rápido.</span><span class="en">Design and development in parallel, using AI as an accelerator to go from idea to working tool fast.</span></div>
-              </div></li>
-              <li><span class="pnum">03</span><div>
-                <div class="ptitle">Bulk resize</div>
-                <div class="pdesc"><span class="es">Redimensionamiento de múltiples assets en una sola acción.</span><span class="en">Resizing multiple assets in a single action.</span></div>
-              </div></li>
-              <li><span class="pnum">04</span><div>
-                <div class="ptitle">Mass formatting actions</div>
-                <div class="pdesc"><span class="es">Aplicación de formato consistente a lotes completos de archivos.</span><span class="en">Applying consistent formatting across whole batches of files.</span></div>
-              </div></li>
-            </ul>
-          </div>
-          <div class="placeholder-note">
-            <b><span class="es">Nota:</span><span class="en">Note:</span></b>
-            <span class="es">armé esto con lo que mencionaste (bulk resize, mass formatting, Claude Code). Si querés, pasame más detalle del alcance completo o capturas y lo enriquezco.</span>
-            <span class="en">I built this from what you mentioned (bulk resize, mass formatting, Claude Code). Send more detail on full scope or screenshots and I'll enrich it.</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-
-  <!-- ===================== PEGA ===================== -->
-  <div class="company-group" id="pega">
-    <div class="company-header">
-      <div class="company-name">Pega</div>
-      <div class="co-count"><span class="es">0 casos</span><span class="en">0 cases</span></div>
-    </div>
-    <div class="cases">
-      <div class="empty-case">
-        <div class="et">
-          <b><span class="es">Sin casos aún</span><span class="en">No cases yet</span></b><br>
-          <span class="es">Pasame el proyecto de Pega y lo agrego con el mismo formato.</span>
-          <span class="en">Send me the Pega project and I'll add it in the same format.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== HEINEKEN ===================== -->
-  <div class="company-group" id="heineken">
-    <div class="company-header">
-      <div class="company-name">Heineken</div>
-      <div class="co-count"><span class="es">0 casos</span><span class="en">0 cases</span></div>
-    </div>
-    <div class="cases">
-      <div class="empty-case">
-        <div class="et">
-          <b><span class="es">Sin casos aún</span><span class="en">No cases yet</span></b><br>
-          <span class="es">Pasame el proyecto de Heineken y lo agrego con el mismo formato.</span>
-          <span class="en">Send me the Heineken project and I'll add it in the same format.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== ECI ===================== -->
-  <div class="company-group" id="eci">
-    <div class="company-header">
-      <div class="company-name">ECI <span class="co-code">/ El Corte Inglés</span></div>
-      <div class="co-count"><span class="es">0 casos</span><span class="en">0 cases</span></div>
-    </div>
-    <div class="cases">
-      <div class="empty-case">
-        <div class="et">
-          <b><span class="es">Sin casos aún</span><span class="en">No cases yet</span></b><br>
-          <span class="es">Pasame el proyecto de ECI y lo agrego con el mismo formato.</span>
-          <span class="en">Send me the ECI project and I'll add it in the same format.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== BBVA ===================== -->
-  <div class="company-group" id="bbva">
-    <div class="company-header">
-      <div class="company-name">BBVA</div>
-      <div class="co-count"><span class="es">0 casos</span><span class="en">0 cases</span></div>
-    </div>
-    <div class="cases">
-      <div class="empty-case">
-        <div class="et">
-          <b><span class="es">Sin casos aún</span><span class="en">No cases yet</span></b><br>
-          <span class="es">Pasame el proyecto de BBVA y lo agrego con el mismo formato.</span>
-          <span class="en">Send me the BBVA project and I'll add it in the same format.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== OTROS ===================== -->
-  <div class="company-group" id="otros">
-    <div class="company-header">
-      <div class="company-name"><span class="es">Otros</span><span class="en">Other</span></div>
-      <div class="co-count"><span class="es">1 caso</span><span class="en">1 case</span></div>
-    </div>
-    <div class="cases">
-
-      <!-- BOMBIERI -->
-      <article class="case" id="bombieri">
-        <div class="case-tab">
-          <span class="case-id">BOMBIERI</span>
-          <span class="status"><span class="dot"></span>
-            <span class="es">Entregado</span>
-            <span class="en">Delivered</span>
-          </span>
-        </div>
-        <div class="case-body">
-          <div>
-            <h3>Bombieri</h3>
-            <p class="desc">
-              <span class="es">Diseño de servicios freelance para Bombieri (mayo 2025 – enero 2026). Diseñé el sistema de trabajo interno de la consultora: framework MUEVE, arquitectura de servicios, catálogo de fichas, playbooks y mecanismos transversales.</span>
-              <span class="en">Freelance service design for Bombieri (May 2025 – Jan 2026). Designed the consultancy's internal working system: MUEVE framework, service architecture, service catalog, playbooks, and transversal mechanisms.</span>
-            </p>
-            <div class="field">
-              <div class="flabel"><span class="es">Alcance</span><span class="en">Scope</span></div>
-              <div class="fvalue">
-                <span class="es">Framework MUEVE (Confianza · Cultura · Procesos · Futuro) · Arquitectura de servicios y catálogo · Hub de estrategia GTM · Playbooks y mecanismos transversales · Programas formativos.</span>
-                <span class="en">MUEVE framework (Trust · Culture · Processes · Future) · Service architecture and catalog · GTM strategy hub · Playbooks and transversal mechanisms · Training programs.</span>
-              </div>
-            </div>
-            <div class="field">
-              <div class="flabel"><span class="es">Estado</span><span class="en">Status</span></div>
-              <div class="fvalue"><span class="es">Entregué todo lo planificado o solicitado.</span><span class="en">Delivered everything planned or requested.</span></div>
-            </div>
-          </div>
-          <div>
-            <div class="flabel" style="margin-bottom:14px;"><span class="es">Fases</span><span class="en">Phases</span></div>
-            <ul class="process-list">
-              <li><span class="pnum">01</span><div>
-                <div class="ptitle"><span class="es">Propuestas iniciales</span><span class="en">Initial proposals</span></div>
-                <div class="pdesc"><span class="es">Mayo 2025. Diseño de servicios para optimizar procesos internos y posicionar la oferta de IA.</span><span class="en">May 2025. Service design to optimise internal processes and position the AI offering.</span></div>
-              </div></li>
-              <li><span class="pnum">02</span><div>
-                <div class="ptitle"><span class="es">Framework MUEVE y hub GTM</span><span class="en">MUEVE framework and GTM hub</span></div>
-                <div class="pdesc"><span class="es">Agosto – octubre 2025. Nomenclatura, ejes narrativos, growth loop, blueprint y hub de estrategia go-to-market.</span><span class="en">Aug – Oct 2025. Nomenclature, narrative axes, growth loop, blueprint, and go-to-market strategy hub.</span></div>
-              </div></li>
-              <li><span class="pnum">03</span><div>
-                <div class="ptitle"><span class="es">Sistema y catálogo</span><span class="en">System and catalog</span></div>
-                <div class="pdesc"><span class="es">Diciembre 2025 – enero 2026. Sistema de trabajo, arquitectura del offering, catálogo de fichas de servicio y playbooks.</span><span class="en">Dec 2025 – Jan 2026. Working system, offering architecture, service-catalog specs, and playbooks.</span></div>
-              </div></li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-
   <footer>
     <div class="fmono">Portfolio 2026</div>
-    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · Product Design Lead · <span class="es">Estrategia</span><span class="en">Strategy</span> · Wholesale / Enterprise</div>
+    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · Product Design Lead · <span class="es">Estrategia</span><span class="en">Strategy</span> · Enterprise</div>
   </footer>
 
   <script>
