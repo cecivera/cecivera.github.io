@@ -30,16 +30,34 @@
     font-weight:100 900; font-style:italic; font-display:swap;
   }
   @font-face{
-    font-family:'Die Grotesk';
-    src:url('fonts/test-die-grotesk-vf-roman.woff2') format('woff2-variations'),
-        url('fonts/test-die-grotesk-vf-roman.woff2') format('woff2');
-    font-weight:100 900; font-style:normal; font-display:swap;
+    font-family:'Söhne';
+    src:url('fonts/test-soehne-buch.woff2') format('woff2');
+    font-weight:400; font-style:normal; font-display:swap;
   }
   @font-face{
-    font-family:'Die Grotesk';
-    src:url('fonts/test-die-grotesk-vf-italic.woff2') format('woff2-variations'),
-        url('fonts/test-die-grotesk-vf-italic.woff2') format('woff2');
-    font-weight:100 900; font-style:italic; font-display:swap;
+    font-family:'Söhne';
+    src:url('fonts/test-soehne-buch-kursiv.woff2') format('woff2');
+    font-weight:400; font-style:italic; font-display:swap;
+  }
+  @font-face{
+    font-family:'Söhne';
+    src:url('fonts/test-soehne-kraftig.woff2') format('woff2');
+    font-weight:500; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:'Söhne';
+    src:url('fonts/test-soehne-kraftig-kursiv.woff2') format('woff2');
+    font-weight:500; font-style:italic; font-display:swap;
+  }
+  @font-face{
+    font-family:'Söhne';
+    src:url('fonts/test-soehne-halbfett.woff2') format('woff2');
+    font-weight:600; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:'Söhne';
+    src:url('fonts/test-soehne-halbfett-kursiv.woff2') format('woff2');
+    font-weight:600; font-style:italic; font-display:swap;
   }
 </style>
 <style>
@@ -61,7 +79,7 @@
   body{
     background:var(--paper);
     color:var(--text);
-    font-family:'Die Grotesk', system-ui, sans-serif;
+    font-family:'Söhne', system-ui, sans-serif;
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
   }
@@ -81,7 +99,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    font-family:'Die Grotesk', system-ui, sans-serif;
+    font-family:'Söhne', system-ui, sans-serif;
     font-size:13px;
     letter-spacing:0.06em;
     text-transform:uppercase;
@@ -98,7 +116,7 @@
     text-transform:none;
   }
   .docket-bar .brand-tag{
-    font-family:'Die Grotesk', system-ui, sans-serif;
+    font-family:'Söhne', system-ui, sans-serif;
     font-size:11px;
     opacity:0.55;
     letter-spacing:0.08em;
@@ -111,7 +129,7 @@
   .docket-bar nav a.active{opacity:1; border-bottom:1px solid var(--accent);}
   .lang-switch{display:flex; gap:2px; border:1px solid rgba(250,243,234,0.3); border-radius:20px; padding:2px; flex-shrink:0;}
   .lang-switch button{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; letter-spacing:0.06em;
+    font-family:'Söhne', system-ui, sans-serif; font-size:12px; letter-spacing:0.06em;
     background:transparent; border:none; color:var(--paper); opacity:0.55;
     padding:5px 12px; border-radius:20px; cursor:pointer; text-transform:uppercase;
     transition:all .2s;
@@ -121,7 +139,7 @@
   /* ===== HERO ===== */
   .hero{ padding:120px 32px 90px; max-width:1100px; margin:0 auto; position:relative; }
   .hero .tag{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; letter-spacing:0.12em;
+    font-family:'Söhne', system-ui, sans-serif; font-size:12px; letter-spacing:0.12em;
     text-transform:uppercase; color:var(--accent-deep); margin-bottom:22px;
     display:flex; align-items:center; gap:10px;
   }
@@ -135,7 +153,7 @@
   .hero .role-strip{ margin-top:44px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid var(--line); }
   .role-strip div{ flex:1 1 160px; padding:16px 20px 0 4px; }
   .role-strip .k{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:10.5px; text-transform:uppercase;
+    font-family:'Söhne', system-ui, sans-serif; font-size:10.5px; text-transform:uppercase;
     letter-spacing:0.1em; color:var(--text-dim); margin-bottom:6px;
   }
   .role-strip .v{font-size:14.5px; font-weight:500; color:var(--ink);}
@@ -143,7 +161,7 @@
   /* ===== SECTION LABEL (top intro) ===== */
   .section-intro{ max-width:1100px; margin:0 auto; padding:70px 32px 20px; }
   .section-intro .eyebrow{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; letter-spacing:0.14em;
+    font-family:'Söhne', system-ui, sans-serif; font-size:12px; letter-spacing:0.14em;
     text-transform:uppercase; color:var(--accent-deep); margin-bottom:10px;
   }
   .section-intro h2{ font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; font-size:27px; color:var(--ink); max-width:40ch; }
@@ -161,10 +179,10 @@
     display:flex; align-items:baseline; gap:14px;
   }
   .company-header .company-name .co-code{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; color:var(--accent-deep); font-weight:400;
+    font-family:'Söhne', system-ui, sans-serif; font-size:12px; color:var(--accent-deep); font-weight:400;
   }
   .company-header .co-count{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:11.5px; color:var(--text-dim);
+    font-family:'Söhne', system-ui, sans-serif; font-size:11.5px; color:var(--text-dim);
     text-transform:uppercase; letter-spacing:0.08em;
   }
 
@@ -177,7 +195,7 @@
   .case-tab{
     display:flex; align-items:center; justify-content:space-between; padding:18px 26px;
     background:var(--paper-dim); border-bottom:1px solid var(--line);
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; letter-spacing:0.06em;
+    font-family:'Söhne', system-ui, sans-serif; font-size:12px; letter-spacing:0.06em;
     text-transform:uppercase; color:var(--text-dim);
   }
   .case-tab .case-id{color:var(--ink); font-weight:500;}
@@ -197,14 +215,14 @@
   }
   .case-body h3{ font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; font-size:32px; color:var(--ink); margin-bottom:10px; }
   .case-body .client{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px; color:var(--text-dim);
+    font-family:'Söhne', system-ui, sans-serif; font-size:12px; color:var(--text-dim);
     text-transform:uppercase; letter-spacing:0.06em; margin-bottom:22px;
   }
   .case-body .desc{ font-size:15.5px; color:var(--text-dim); margin-bottom:26px; max-width:44ch; }
 
   .field{margin-bottom:22px;}
   .field .flabel{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:10.5px; text-transform:uppercase;
+    font-family:'Söhne', system-ui, sans-serif; font-size:10.5px; text-transform:uppercase;
     letter-spacing:0.1em; color:var(--accent-deep); margin-bottom:7px;
   }
   .field .fvalue{font-size:14.5px; color:var(--text); line-height:1.6;}
@@ -215,13 +233,13 @@
     display:grid; grid-template-columns:28px 1fr; gap:14px; align-items:baseline;
   }
   .process-list li:last-child{border-bottom:1px solid var(--line);}
-  .process-list .pnum{ font-family:'Die Grotesk', system-ui, sans-serif; font-size:11px; color:var(--accent-deep); }
+  .process-list .pnum{ font-family:'Söhne', system-ui, sans-serif; font-size:11px; color:var(--accent-deep); }
   .process-list .ptitle{font-weight:600; font-size:14.5px; color:var(--ink); margin-bottom:3px;}
   .process-list .pdesc{font-size:13.5px; color:var(--text-dim);}
 
   .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;}
   .tags span{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:11px; padding:5px 10px;
+    font-family:'Söhne', system-ui, sans-serif; font-size:11px; padding:5px 10px;
     background:var(--paper-dim); border:1px solid var(--line); color:var(--ink-soft); border-radius:2px;
   }
   .contact-list{margin-top:12px; font-size:14px; line-height:1.9; color:var(--text);}
@@ -233,7 +251,7 @@
 
   .case.placeholder .placeholder-note{
     grid-column:1 / -1; margin-top:6px; padding:16px 18px; background:var(--paper-dim);
-    border:1px dashed var(--line); font-family:'Die Grotesk', system-ui, sans-serif; font-size:12px;
+    border:1px dashed var(--line); font-family:'Söhne', system-ui, sans-serif; font-size:12px;
     color:var(--text-dim); line-height:1.7;
   }
   .case.placeholder .placeholder-note b{color:var(--accent-deep);}
@@ -243,7 +261,7 @@
     display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;
     background:rgba(255,255,255,0.4);
   }
-  .empty-case .et{ font-family:'Die Grotesk', system-ui, sans-serif; font-size:12.5px; color:var(--text-dim); }
+  .empty-case .et{ font-family:'Söhne', system-ui, sans-serif; font-size:12.5px; color:var(--text-dim); }
   .empty-case .et b{color:var(--accent-deep); text-transform:uppercase; letter-spacing:0.06em; font-size:11px;}
 
   .stamp{
@@ -253,7 +271,7 @@
     transform:rotate(-8deg); opacity:0.9;
   }
   .stamp span{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:8.5px; letter-spacing:0.06em;
+    font-family:'Söhne', system-ui, sans-serif; font-size:8.5px; letter-spacing:0.06em;
     text-transform:uppercase; color:var(--accent-deep); line-height:1.3;
   }
   @media (max-width:640px){ .stamp{display:none;} }
@@ -261,7 +279,7 @@
   .docket-bar .left-stack{display:flex; flex-direction:column; gap:6px;}
   .docket-bar .left-sub{display:flex; gap:10px; align-items:center;}
   .docket-bar .wip{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:10px;
+    font-family:'Söhne', system-ui, sans-serif; font-size:10px;
     letter-spacing:0.18em; color:var(--accent); background:transparent;
     border:1px solid var(--accent); padding:2px 7px; border-radius:2px;
     font-weight:500;
@@ -270,7 +288,7 @@
     position:fixed; right:0; top:50%; transform:translateY(-50%);
     writing-mode:vertical-rl;
     background:var(--ink); color:var(--paper);
-    padding:16px 8px; font-family:'Die Grotesk', system-ui, sans-serif; font-size:11px;
+    padding:16px 8px; font-family:'Söhne', system-ui, sans-serif; font-size:11px;
     letter-spacing:0.2em; text-transform:uppercase; z-index:100;
     border:none; cursor:pointer; border-radius:2px 0 0 2px; opacity:0.9;
     transition:opacity .2s, background .2s;
@@ -285,7 +303,7 @@
   }
   .type-story.open{right:24px;}
   .type-story-eyebrow{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:10.5px;
+    font-family:'Söhne', system-ui, sans-serif; font-size:10.5px;
     letter-spacing:0.14em; text-transform:uppercase;
     color:var(--accent-deep); margin-bottom:20px;
   }
@@ -304,7 +322,7 @@
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
   }
   footer .fmono{
-    font-family:'Die Grotesk', system-ui, sans-serif; font-size:11.5px; color:var(--text-dim);
+    font-family:'Söhne', system-ui, sans-serif; font-size:11.5px; color:var(--text-dim);
     text-transform:uppercase; letter-spacing:0.08em;
   }
 </style>
@@ -323,9 +341,9 @@
       <span class="en">Designed by Kris Sowersby (Klim Type Foundry, New Zealand). High-contrast serif rooted in Anglo editorial tradition — originally commissioned by the Financial Times.</span>
     </div>
     <div class="type-item">
-      <strong>Die Grotesk</strong>
-      <span class="es">Diseñada por Kris Sowersby (Klim Type Foundry). Sans-serif grotesque contemporánea, con proporciones neutras y un carácter técnico funcional.</span>
-      <span class="en">Designed by Kris Sowersby (Klim Type Foundry). Contemporary grotesque sans-serif, with neutral proportions and a functional, technical character.</span>
+      <strong>Söhne</strong>
+      <span class="es">Diseñada por Kris Sowersby (Klim Type Foundry). Sans-serif grotesque inspirada en Akzidenz-Grotesk, con un carácter directo, neutral y técnicamente sólido.</span>
+      <span class="en">Designed by Kris Sowersby (Klim Type Foundry). Grotesque sans-serif inspired by Akzidenz-Grotesk, with a direct, neutral, technically solid character.</span>
     </div>
     <div class="type-item" style="border-top:1px solid var(--line); padding-top:14px; font-size:11px;">
       <span class="es">Ambas de <a href="https://klim.co.nz" target="_blank" style="color:var(--accent-deep);">klim.co.nz</a> — en licencia de prueba.</span>
