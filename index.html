@@ -133,8 +133,7 @@
   }
   .hero .subline{ margin-top:28px; font-size:18px; max-width:52ch; color:var(--text-dim); }
   .hero .role-strip{ margin-top:44px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid var(--line); }
-  .role-strip div{ flex:1 1 160px; padding:16px 20px 0 0; border-right:1px solid var(--line); }
-  .role-strip div:last-child{border-right:none;}
+  .role-strip div{ flex:1 1 160px; padding:16px 20px 0 4px; }
   .role-strip .k{
     font-family:'Die Grotesk', system-ui, sans-serif; font-size:10.5px; text-transform:uppercase;
     letter-spacing:0.1em; color:var(--text-dim); margin-bottom:6px;
@@ -227,6 +226,10 @@
   }
   .contact-list{margin-top:12px; font-size:14px; line-height:1.9; color:var(--text);}
   .contact-list a{color:var(--accent-deep); text-decoration:underline;}
+  .avatar{
+    width:120px; height:120px; border-radius:50%; object-fit:cover;
+    display:block; margin-bottom:24px; border:1px solid var(--line);
+  }
 
   .case.placeholder .placeholder-note{
     grid-column:1 / -1; margin-top:6px; padding:16px 18px; background:var(--paper-dim);
@@ -380,6 +383,7 @@
     <div class="case" style="margin-bottom:10px;">
       <div class="case-body" style="grid-template-columns:1.2fr 0.8fr;">
         <div>
+          <img src="assets/cecilia.jpg" alt="Cecilia Vera" class="avatar">
           <div class="field" style="margin-bottom:0;">
             <div class="flabel"><span class="es">Bio</span><span class="en">Bio</span></div>
             <div class="fvalue">
@@ -393,7 +397,7 @@
           <div class="tags">
             <span class="es">Máster Sistemas de Información y e-Business · Universidad de Deusto (2002)</span><span class="en">Master's in Information Systems for e-Business · Universidad de Deusto (2002)</span>
             <span class="es">Licenciatura Diseño de Imagen y Sonido · UBA, Buenos Aires (1996)</span><span class="en">BA Image & Sound Design · UBA, Buenos Aires (1996)</span>
-            <span class="es">Sostenibilidad · Universidad Politécnica de Madrid (2025)</span><span class="en">Sustainability · Universidad Politécnica de Madrid (2025)</span>
+            <span class="es">Sostenibilidad y emprendimiento · Universidad Politécnica de Madrid (2025)</span><span class="en">Sustainability & entrepreneurship · Universidad Politécnica de Madrid (2025)</span>
           </div>
 
           <div class="flabel" style="margin-top:22px;"><span class="es">Contacto</span><span class="en">Contact</span></div>
