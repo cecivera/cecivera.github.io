@@ -1,151 +1,585 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cecilia Vera</title>
+<title>Portfolio — Product Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,900&family=IBM+Plex+Mono:wght@400;500&family=Archivo+Narrow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  :root{
+    --ink:#1C1210;
+    --ink-soft:#4A342B;
+    --paper:#FFFFFF;
+    --paper-dim:#F3ECE4;
+    --line:#DCCBB8;
+    --accent:#E8551A;
+    --accent-deep:#B8420F;
+    --teal:#7A6A2E;
+    --text:#1C1210;
+    --text-dim:#5C4A3E;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--text);
+    font-family:'Archivo Narrow', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--accent); color:var(--white);}
+  a{color:inherit;}
 
-  :root {
-    --bg: #14161a;
-    --text: #f5f5f5;
-    --muted: #9a9ea6;
-    --accent: #c6ff3d;
-    --card: #1c1e23;
-    --line: #2a2d33;
+  /* language toggle logic */
+  body[data-lang="es"] .en{display:none;}
+  body[data-lang="en"] .es{display:none;}
+
+  /* ===== TOP DOCKET BAR ===== */
+  .docket-bar{
+    position:sticky; top:0; z-index:50;
+    background:var(--ink);
+    color:var(--paper);
+    padding:14px 32px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:'Archivo Narrow', sans-serif;
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    border-bottom:1px solid rgba(250,243,234,0.15);
+    overflow-x:auto;
+    gap:20px;
+  }
+  .docket-bar .left{display:flex; gap:24px; align-items:center; white-space:nowrap;}
+  .docket-bar .dot{width:6px; height:6px; border-radius:50%; background:var(--accent); display:inline-block; margin-right:8px; animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.35;}}
+  .docket-bar nav{display:flex; gap:22px; white-space:nowrap;}
+  .docket-bar nav a{text-decoration:none; opacity:0.75; transition:opacity .2s;}
+  .docket-bar nav a:hover{opacity:1;}
+  .lang-switch{display:flex; gap:2px; border:1px solid rgba(250,243,234,0.3); border-radius:20px; padding:2px; flex-shrink:0;}
+  .lang-switch button{
+    font-family:'Archivo Narrow', sans-serif; font-size:12px; letter-spacing:0.06em;
+    background:transparent; border:none; color:var(--paper); opacity:0.55;
+    padding:5px 12px; border-radius:20px; cursor:pointer; text-transform:uppercase;
+    transition:all .2s;
+  }
+  .lang-switch button.active{ background:var(--accent); opacity:1; color:var(--white); }
+
+  /* ===== HERO ===== */
+  .hero{ padding:120px 32px 90px; max-width:1100px; margin:0 auto; position:relative; }
+  .hero .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--accent-deep); margin-bottom:22px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .hero .tag::before{ content:""; width:28px; height:1px; background:var(--accent-deep); }
+  .hero h1{
+    font-family:'Source Serif 4', serif; font-weight:700; letter-spacing:-0.01em;
+    font-size:clamp(38px, 6vw, 60px); line-height:1.1; letter-spacing:-0.01em;
+    max-width:16ch; color:var(--ink);
+  }
+  .hero .subline{ margin-top:28px; font-size:18px; max-width:52ch; color:var(--text-dim); }
+  .hero .role-strip{ margin-top:44px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid var(--line); }
+  .role-strip div{ flex:1 1 160px; padding:16px 20px 0 0; border-right:1px solid var(--line); }
+  .role-strip div:last-child{border-right:none;}
+  .role-strip .k{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase;
+    letter-spacing:0.1em; color:var(--text-dim); margin-bottom:6px;
+  }
+  .role-strip .v{font-size:14.5px; font-weight:500; color:var(--ink);}
+
+  /* ===== SECTION LABEL (top intro) ===== */
+  .section-intro{ max-width:1100px; margin:0 auto; padding:70px 32px 20px; }
+  .section-intro .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--accent-deep); margin-bottom:10px;
+  }
+  .section-intro h2{ font-family:'Source Serif 4', serif; font-weight:700; font-size:27px; color:var(--ink); max-width:40ch; }
+
+  /* ===== COMPANY GROUP HEADER ===== */
+  .company-group{ max-width:1100px; margin:0 auto; padding:0 32px; scroll-margin-top:70px; }
+  .company-header{
+    display:flex; align-items:baseline; justify-content:space-between;
+    padding:46px 0 18px;
+    border-bottom:2px solid var(--ink);
+    margin-bottom:26px;
+  }
+  .company-header .company-name{
+    font-family:'Source Serif 4', serif; font-weight:700; font-size:25px; color:var(--ink);
+    display:flex; align-items:baseline; gap:14px;
+  }
+  .company-header .company-name .co-code{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--accent-deep); font-weight:400;
+  }
+  .company-header .co-count{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--text-dim);
+    text-transform:uppercase; letter-spacing:0.08em;
   }
 
-  * { box-sizing: border-box; }
+  .cases{ display:flex; flex-direction:column; gap:28px; padding-bottom:20px; }
 
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    display: flex;
-    justify-content: center;
-    padding: 100px 24px;
+  .case{
+    background:var(--white); border:1px solid var(--line); border-radius:2px;
+    position:relative; overflow:hidden; scroll-margin-top:70px;
+  }
+  .case-tab{
+    display:flex; align-items:center; justify-content:space-between; padding:18px 26px;
+    background:var(--paper-dim); border-bottom:1px solid var(--line);
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--text-dim);
+  }
+  .case-tab .case-id{color:var(--ink); font-weight:500;}
+  .status{
+    display:inline-flex; align-items:center; gap:7px; padding:5px 12px; border-radius:20px;
+    border:1px solid currentColor; font-size:10.5px;
+  }
+  .status .dot{width:6px; height:6px; border-radius:50%; background:currentColor;}
+  .status.live{color:var(--teal);}
+  .status.build{color:var(--accent-deep);}
+  .status.draft{color:#9A6B5B;}
+
+  .case-body{ padding:44px 44px 46px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; }
+  @media (max-width:820px){
+    .case-body{grid-template-columns:1fr; gap:32px; padding:32px 24px 36px;}
+    .case-tab{padding:14px 20px; flex-wrap:wrap; gap:10px;}
+  }
+  .case-body h3{ font-family:'Source Serif 4', serif; font-weight:700; font-size:32px; color:var(--ink); margin-bottom:10px; }
+  .case-body .client{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim);
+    text-transform:uppercase; letter-spacing:0.06em; margin-bottom:22px;
+  }
+  .case-body .desc{ font-size:15.5px; color:var(--text-dim); margin-bottom:26px; max-width:44ch; }
+
+  .field{margin-bottom:22px;}
+  .field .flabel{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase;
+    letter-spacing:0.1em; color:var(--accent-deep); margin-bottom:7px;
+  }
+  .field .fvalue{font-size:14.5px; color:var(--text); line-height:1.6;}
+
+  .process-list{list-style:none;}
+  .process-list li{
+    padding:14px 0; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:28px 1fr; gap:14px; align-items:baseline;
+  }
+  .process-list li:last-child{border-bottom:1px solid var(--line);}
+  .process-list .pnum{ font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--accent-deep); }
+  .process-list .ptitle{font-weight:600; font-size:14.5px; color:var(--ink); margin-bottom:3px;}
+  .process-list .pdesc{font-size:13.5px; color:var(--text-dim);}
+
+  .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;}
+  .tags span{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; padding:5px 10px;
+    background:var(--paper-dim); border:1px solid var(--line); color:var(--ink-soft); border-radius:2px;
   }
 
-  main { max-width: 640px; width: 100%; }
-
-  .eyebrow {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 16px;
+  .case.placeholder .placeholder-note{
+    grid-column:1 / -1; margin-top:6px; padding:16px 18px; background:var(--paper-dim);
+    border:1px dashed var(--line); font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--text-dim); line-height:1.7;
   }
+  .case.placeholder .placeholder-note b{color:var(--accent-deep);}
 
-  h1 {
-    font-size: 40px;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-    margin: 0 0 12px;
+  .empty-case{
+    border:1px dashed var(--line); border-radius:2px; padding:34px 40px;
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;
+    background:rgba(255,255,255,0.4);
   }
+  .empty-case .et{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--text-dim); }
+  .empty-case .et b{color:var(--accent-deep); text-transform:uppercase; letter-spacing:0.06em; font-size:11px;}
 
-  .role {
-    font-size: 18px;
-    color: var(--muted);
-    margin: 0 0 40px;
-    line-height: 1.5;
+  .stamp{
+    position:absolute; top:26px; right:26px; width:64px; height:64px;
+    border:1.5px solid var(--accent-deep); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    transform:rotate(-8deg); opacity:0.9;
   }
-
-  .section-title {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 40px 0 16px;
+  .stamp span{
+    font-family:'IBM Plex Mono', monospace; font-size:8.5px; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--accent-deep); line-height:1.3;
   }
+  @media (max-width:640px){ .stamp{display:none;} }
 
-  ul.links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  footer{
+    max-width:1100px; margin:60px auto 0; padding:40px 32px 60px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
   }
-
-  ul.links li a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 16px 20px;
-    color: var(--text);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: border-color 0.15s ease;
-  }
-
-  ul.links li a:hover { border-color: var(--accent); }
-
-  ul.links li a .arrow { color: var(--accent); font-weight: 700; }
-
-  p.bio {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text);
-    margin: 0 0 8px;
-  }
-
-  footer {
-    margin-top: 60px;
-    padding-top: 24px;
-    border-top: 1px solid var(--line);
-    font-size: 13px;
-    color: var(--muted);
+  footer .fmono{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--text-dim);
+    text-transform:uppercase; letter-spacing:0.08em;
   }
 </style>
 </head>
-<body>
-<div id="password-gate" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#111; color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:9999; font-family:sans-serif;">
-  <p style="margin-bottom:12px;">Enter password</p>
-  <input type="password" id="pw-input" style="padding:8px; font-size:16px; border-radius:4px; border:none;">
-  <button onclick="checkPassword()" style="margin-top:12px; padding:8px 16px; border-radius:4px; border:none; cursor:pointer;">Enter</button>
-  <p id="pw-error" style="color:#ff6b6b; margin-top:10px; display:none;">Incorrect password</p>
-</div>
+<body data-lang="es">
 
-<script>
-  const clave = "CeciVera2026!";
-  function checkPassword() {
-    const input = document.getElementById("pw-input").value;
-    if (input === clave) {
-      document.getElementById("password-gate").style.display = "none";
-    } else {
-      document.getElementById("pw-error").style.display = "block";
-    }
-  }
-</script>
-<main>
-  <p class="eyebrow">Product Designer · adidas Wholesale</p>
-  <h1>Cecilia Vera</h1>
-  <p class="role">Designing ASSIST and working on YARN, our CE&amp;C design system — currently focused on closing the gap between Figma and code for our FE team.</p>
+  <div class="docket-bar">
+    <div class="left"><span><span class="dot"></span>PORTFOLIO — REG. 2026</span></div>
+    <nav>
+      <a href="#sobre-mi"><span class="es">Sobre mí</span><span class="en">About</span></a>
+      <a href="#adidas">Adidas</a>
+      <a href="#pega">Pega</a>
+      <a href="#heineken">Heineken</a>
+      <a href="#eci">ECI</a>
+      <a href="#bbva">BBVA</a>
+      <a href="#otros"><span class="es">Otros</span><span class="en">Other</span></a>
+    </nav>
+    <div class="lang-switch">
+      <button class="active" data-set="es">ES</button>
+      <button data-set="en">EN</button>
+    </div>
+  </div>
 
-  <p class="bio">I run an internal course at adidas on <strong>Figma Dev Mode + GitHub</strong>, for designers and FE devs. Learning GitHub itself from the design side, gaps included — everything here is built and documented as I go.</p>
+  <section class="hero">
+    <div class="tag"><span class="es">Expediente de trabajo</span><span class="en">Work file</span></div>
+    <h1><span class="es">Visión, estrategia y diseño de producto.</span><span class="en">Vision, strategy, and product design.</span></h1>
+    <p class="subline">
+      <span class="es">Lidero la dirección de producto de estas iniciativas, no solo su interfaz: defino la estrategia, hago el research y llevo la propuesta a demos funcionales en Figma antes de construirla en producción. Casos organizados por cliente.</span>
+      <span class="en">I lead product direction on these initiatives, not just the interface: I define strategy, run research, and take proposals to functional demos in Figma before they're built in production. Cases organized by client.</span>
+    </p>
+    <div class="role-strip">
+      <div>
+        <div class="k"><span class="es">Rol</span><span class="en">Role</span></div>
+        <div class="v"><span class="es">Product Design Lead</span><span class="en">Product Design Lead</span></div>
+      </div>
+      <div>
+        <div class="k"><span class="es">Foco</span><span class="en">Focus</span></div>
+        <div class="v"><span class="es">Estrategia · Wholesale · Enterprise</span><span class="en">Strategy · Wholesale · Enterprise</span></div>
+      </div>
+      <div>
+        <div class="k"><span class="es">Stack de diseño</span><span class="en">Design stack</span></div>
+        <div class="v">Figma · Salesforce · Claude Code · <span class="es">Demos con IA</span><span class="en">AI-powered demos</span></div>
+      </div>
+      <div>
+        <div class="k"><span class="es">Clientes</span><span class="en">Clients</span></div>
+        <div class="v">06</div>
+      </div>
+    </div>
+  </section>
 
-  <div class="section-title">Projects</div>
-  <ul class="links">
-    <li><a href="https://github.com/cecivera/my-projects" target="_blank">Workshop prototypes &amp; docs <span class="arrow">→</span></a></li>
-    <li><a href="https://cecivera.github.io/my-projects/orders-prototype.html" target="_blank">Orders screen — live prototype <span class="arrow">→</span></a></li>
-    <li><a href="https://github.com/cecivera" target="_blank">All repositories <span class="arrow">→</span></a></li>
-  </ul>
+  <div class="section-intro" id="sobre-mi" style="padding-top:20px; padding-bottom:0;">
+    <div class="eyebrow"><span class="es">Sobre mí</span><span class="en">About</span></div>
+  </div>
+  <div class="company-group" style="padding-top:0;">
+    <div class="case" style="margin-bottom:10px;">
+      <div class="case-body" style="grid-template-columns:0.8fr 1.2fr;">
+        <div>
+          <h3>Cecilia Vera</h3>
+          <div class="client">Product Design Lead · Madrid · <a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" style="color:var(--accent-deep); text-decoration:underline;">LinkedIn ↗</a></div>
+          <div class="tags">
+            <span>Salesforce</span><span>Figma</span><span>Claude Code</span>
+            <span class="es">Wholesale / Enterprise</span><span class="en">Wholesale / Enterprise</span>
+            <span class="es">Journeys</span><span class="en">User Journeys</span><span>UI</span><span>UX</span>
+          </div>
+        </div>
+        <div>
+          <div class="field" style="margin-bottom:0;">
+            <div class="flabel"><span class="es">Bio breve</span><span class="en">Short bio</span></div>
+            <div class="fvalue">
+              <span class="es">Digital Product Designer en adidas, con más de 20 años en consultoría UX, diseño de producto y estrategia. Combino research, service design y workflows asistidos por IA para crear Minimum Lovable Products centrados en el usuario. Trabajo también con equipos y liderazgo en estrategia go-to-market, traduciendo valor técnico en narrativas de negocio, y formo a otros profesionales en storytelling y design thinking. Formación en sostenibilidad ambiental, económica y social — diseño pensando también en el planeta.</span>
+              <span class="en">Digital Product Designer at adidas, with 20+ years in UX consulting, product design, and strategy. I blend research, service design, and AI-assisted workflows to build user-centered Minimum Lovable Products. I also work with teams and leadership on go-to-market strategy, translating technical value into business narratives, and mentor others in storytelling and design thinking. Trained in environmental, economic, and social sustainability — I design with the planet in mind too.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <div class="section-title">Elsewhere</div>
-  <ul class="links">
-    <li><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank">LinkedIn <span class="arrow">→</span></a></li>
-    <li><a href="mailto:ceciliapvera@gmail.com">ceciliapvera@gmail.com <span class="arrow">→</span></a></li>
-  </ul>
 
-  <footer>Built while learning GitHub — this page itself is version-controlled at cecivera/cecivera.github.io.</footer>
-</main>
+  <div class="section-intro">
+    <div class="eyebrow"><span class="es">Expedientes por cliente</span><span class="en">Case files by client</span></div>
+    <h2>
+      <span class="es">Cada proyecto documentado como un caso: problema, proceso, estado actual.</span>
+      <span class="en">Each project documented as a case: problem, process, current status.</span>
+    </h2>
+  </div>
+
+  <!-- ===================== ADIDAS ===================== -->
+  <div class="company-group" id="adidas">
+    <div class="company-header">
+      <div class="company-name">Adidas <span class="co-code">/ Wholesale</span></div>
+      <div class="co-count"><span class="es">2 casos</span><span class="en">2 cases</span></div>
+    </div>
+    <div class="cases">
+
+      <!-- ASSIST -->
+      <article class="case" id="assist">
+        <div class="case-tab">
+          <span class="case-id">ADI-01 / ASSIST</span>
+          <span class="status build"><span class="dot"></span>
+            <span class="es">En construcción — rollout multi-país</span>
+            <span class="en">In build — multi-country rollout</span>
+          </span>
+        </div>
+        <div class="case-body">
+          <div class="stamp"><span class="es">En<br>curso</span><span class="en">In<br>progress</span></div>
+          <div>
+            <h3>ASSIST</h3>
+            <div class="client"><span class="es">Case management sobre Salesforce · Wholesale</span><span class="en">Salesforce-based case management · Wholesale</span></div>
+            <p class="desc">
+              <span class="es">Un sistema de gestión de casos para que los equipos que atienden a clientes de Wholesale puedan resolver compras, pedidos y órdenes en un solo lugar, en lugar de saltar entre herramientas desconectadas.</span>
+              <span class="en">A case management system so teams supporting Wholesale clients can resolve purchases, orders, and requests in one place, instead of jumping between disconnected tools.</span>
+            </p>
+            <div class="field">
+              <div class="flabel"><span class="es">Problema</span><span class="en">Problem</span></div>
+              <div class="fvalue">
+                <span class="es">Los clientes de Wholesale gestionan compras, pedidos y órdenes a través de procesos fragmentados, lo que genera fricción tanto para el cliente como para el equipo interno que debe resolver cada caso. ASSIST nace para centralizar esa gestión sobre una base de Salesforce.</span>
+                <span class="en">Wholesale clients manage purchases, orders, and requests through fragmented processes, creating friction for both the client and the internal team resolving each case. ASSIST centralizes that management on a Salesforce foundation.</span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="flabel"><span class="es">Estado actual</span><span class="en">Current status</span></div>
+              <div class="fvalue">
+                <span class="es">Visión y bases del producto ya definidas. En etapa de construcción, con adopción creciente: el equipo lo está empezando a usar en cada vez más países.</span>
+                <span class="en">Product vision and foundations already defined. In build phase, with growing adoption as more countries start using it.</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span>Case Management</span><span>Salesforce</span><span>B2B / Wholesale</span><span class="es">Multi-país</span><span class="en">Multi-country</span>
+            </div>
+          </div>
+          <div>
+            <div class="flabel" style="margin-bottom:14px;"><span class="es">Proceso</span><span class="en">Process</span></div>
+            <ul class="process-list">
+              <li><span class="pnum">01</span><div>
+                <div class="ptitle"><span class="es">Definición de visión</span><span class="en">Defining the vision</span></div>
+                <div class="pdesc"><span class="es">Sentar las bases del producto: qué resuelve, para quién y cómo se integra con Salesforce.</span><span class="en">Setting the product foundations: what it solves, for whom, and how it integrates with Salesforce.</span></div>
+              </div></li>
+              <li><span class="pnum">02</span><div>
+                <div class="ptitle"><span class="es">Demos funcionales con IA</span><span class="en">AI-powered functional demos</span></div>
+                <div class="pdesc"><span class="es">Prototipos de alta fidelidad para validar flujos antes de construir en producción.</span><span class="en">High-fidelity prototypes to validate flows before building in production.</span></div>
+              </div></li>
+              <li><span class="pnum">03</span><div>
+                <div class="ptitle"><span class="es">Construcción iterativa</span><span class="en">Iterative build</span></div>
+                <div class="pdesc"><span class="es">Desarrollo por fases, con foco en los flujos de mayor impacto para el equipo de atención.</span><span class="en">Phased development, focused on the highest-impact flows for the support team.</span></div>
+              </div></li>
+              <li><span class="pnum">04</span><div>
+                <div class="ptitle"><span class="es">Adopción multi-país</span><span class="en">Multi-country adoption</span></div>
+                <div class="pdesc"><span class="es">Rollout progresivo, incorporando feedback real de cada mercado en el que se activa.</span><span class="en">Progressive rollout, incorporating real feedback from each market as it goes live.</span></div>
+              </div></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- CLIC -->
+      <article class="case placeholder" id="clic">
+        <div class="case-tab">
+          <span class="case-id">ADI-02 / CLIC</span>
+          <span class="status build"><span class="dot"></span>
+            <span class="es">Desarrollado con Claude Code</span>
+            <span class="en">Built with Claude Code</span>
+          </span>
+        </div>
+        <div class="case-body">
+          <div>
+            <h3>Clic</h3>
+            <div class="client"><span class="es">Herramienta interna · Producción de assets</span><span class="en">Internal tool · Asset production</span></div>
+            <p class="desc">
+              <span class="es">Una herramienta para acelerar tareas repetitivas de producción de assets — redimensionar en lote y aplicar formato en masa — construida junto a Claude Code como acelerador de desarrollo.</span>
+              <span class="en">A tool to speed up repetitive asset-production tasks — bulk resizing and mass formatting — built alongside Claude Code as a development accelerator.</span>
+            </p>
+            <div class="field">
+              <div class="flabel"><span class="es">Problema</span><span class="en">Problem</span></div>
+              <div class="fvalue">
+                <span class="es">Redimensionar y formatear assets uno por uno consumía tiempo del equipo que podía destinarse a trabajo de mayor valor. Clic automatiza ese trabajo repetitivo en operaciones masivas.</span>
+                <span class="en">Resizing and formatting assets one by one consumed time the team could spend on higher-value work. Clic automates that repetitive work into bulk operations.</span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="flabel"><span class="es">Funcionalidades clave</span><span class="en">Key features</span></div>
+              <div class="fvalue">Bulk resize · Mass formatting actions</div>
+            </div>
+            <div class="field">
+              <div class="flabel"><span class="es">Estado actual</span><span class="en">Current status</span></div>
+              <div class="fvalue"><span class="es">— Confirmame el estado: ¿en uso del equipo, piloto, etc.? —</span><span class="en">— Confirm status: in use by the team, pilot, etc.? —</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="flabel" style="margin-bottom:14px;"><span class="es">Proceso</span><span class="en">Process</span></div>
+            <ul class="process-list">
+              <li><span class="pnum">01</span><div>
+                <div class="ptitle"><span class="es">Identificación del cuello de botella</span><span class="en">Identifying the bottleneck</span></div>
+                <div class="pdesc"><span class="es">Detección de tareas manuales repetitivas en el flujo de producción de assets.</span><span class="en">Spotting repetitive manual tasks in the asset production flow.</span></div>
+              </div></li>
+              <li><span class="pnum">02</span><div>
+                <div class="ptitle"><span class="es">Diseño + build con Claude Code</span><span class="en">Design + build with Claude Code</span></div>
+                <div class="pdesc"><span class="es">Diseño y desarrollo en paralelo, usando IA como acelerador para pasar de idea a herramienta funcional rápido.</span><span class="en">Design and development in parallel, using AI as an accelerator to go from idea to working tool fast.</span></div>
+              </div></li>
+              <li><span class="pnum">03</span><div>
+                <div class="ptitle">Bulk resize</div>
+                <div class="pdesc"><span class="es">Redimensionamiento de múltiples assets en una sola acción.</span><span class="en">Resizing multiple assets in a single action.</span></div>
+              </div></li>
+              <li><span class="pnum">04</span><div>
+                <div class="ptitle">Mass formatting actions</div>
+                <div class="pdesc"><span class="es">Aplicación de formato consistente a lotes completos de archivos.</span><span class="en">Applying consistent formatting across whole batches of files.</span></div>
+              </div></li>
+            </ul>
+          </div>
+          <div class="placeholder-note">
+            <b><span class="es">Nota:</span><span class="en">Note:</span></b>
+            <span class="es">armé esto con lo que mencionaste (bulk resize, mass formatting, Claude Code). Si querés, pasame más detalle del alcance completo o capturas y lo enriquezco.</span>
+            <span class="en">I built this from what you mentioned (bulk resize, mass formatting, Claude Code). Send more detail on full scope or screenshots and I'll enrich it.</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ===================== PEGA ===================== -->
+  <div class="company-group" id="pega">
+    <div class="company-header">
+      <div class="company-name">Pega</div>
+      <div class="co-count"><span class="es">0 casos</span><span class="en">0 cases</span></div>
+    </div>
+    <div class="cases">
+      <div class="empty-case">
+        <div class="et">
+          <b><span class="es">Sin casos aún</span><span class="en">No cases yet</span></b><br>
+          <span class="es">Pasame el proyecto de Pega y lo agrego con el mismo formato.</span>
+          <span class="en">Send me the Pega project and I'll add it in the same format.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEINEKEN ===================== -->
+  <div class="company-group" id="heineken">
+    <div class="company-header">
+      <div class="company-name">Heineken</div>
+      <div class="co-count"><span class="es">0 casos</span><span class="en">0 cases</span></div>
+    </div>
+    <div class="cases">
+      <div class="empty-case">
+        <div class="et">
+          <b><span class="es">Sin casos aún</span><span class="en">No cases yet</span></b><br>
+          <span class="es">Pasame el proyecto de Heineken y lo agrego con el mismo formato.</span>
+          <span class="en">Send me the Heineken project and I'll add it in the same format.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== ECI ===================== -->
+  <div class="company-group" id="eci">
+    <div class="company-header">
+      <div class="company-name">ECI <span class="co-code">/ El Corte Inglés</span></div>
+      <div class="co-count"><span class="es">0 casos</span><span class="en">0 cases</span></div>
+    </div>
+    <div class="cases">
+      <div class="empty-case">
+        <div class="et">
+          <b><span class="es">Sin casos aún</span><span class="en">No cases yet</span></b><br>
+          <span class="es">Pasame el proyecto de ECI y lo agrego con el mismo formato.</span>
+          <span class="en">Send me the ECI project and I'll add it in the same format.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== BBVA ===================== -->
+  <div class="company-group" id="bbva">
+    <div class="company-header">
+      <div class="company-name">BBVA</div>
+      <div class="co-count"><span class="es">0 casos</span><span class="en">0 cases</span></div>
+    </div>
+    <div class="cases">
+      <div class="empty-case">
+        <div class="et">
+          <b><span class="es">Sin casos aún</span><span class="en">No cases yet</span></b><br>
+          <span class="es">Pasame el proyecto de BBVA y lo agrego con el mismo formato.</span>
+          <span class="en">Send me the BBVA project and I'll add it in the same format.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== OTROS ===================== -->
+  <div class="company-group" id="otros">
+    <div class="company-header">
+      <div class="company-name"><span class="es">Otros</span><span class="en">Other</span></div>
+      <div class="co-count"><span class="es">1 caso</span><span class="en">1 case</span></div>
+    </div>
+    <div class="cases">
+
+      <!-- BOMBIERI -->
+      <article class="case placeholder" id="bombieri">
+        <div class="case-tab">
+          <span class="case-id">OTR-01 / BOMBIERI</span>
+          <span class="status draft"><span class="dot"></span>
+            <span class="es">Propuesta — a validar contigo</span>
+            <span class="en">Draft — pending your review</span>
+          </span>
+        </div>
+        <div class="case-body">
+          <div>
+            <h3>Bombieri</h3>
+            <div class="client"><span class="es">Cliente fuera de Adidas</span><span class="en">Client outside Adidas</span></div>
+            <p class="desc">
+              <span class="es">Borrador de posicionamiento. Ajustá cliente, alcance y cifras reales — dejé la estructura y el tono listos.</span>
+              <span class="en">Draft positioning. Adjust client, scope, and real figures — the structure and tone are ready.</span>
+            </p>
+            <div class="field">
+              <div class="flabel"><span class="es">Problema (propuesta)</span><span class="en">Problem (draft)</span></div>
+              <div class="fvalue">
+                <span class="es">Un flujo operativo que dependía de procesos manuales o dispersos entre herramientas, generando pérdida de tiempo y errores para el equipo interno y fricción para el cliente final.</span>
+                <span class="en">An operational flow that relied on manual or scattered processes across tools, causing lost time, errors for the internal team, and friction for the end client.</span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="flabel"><span class="es">Estado actual</span><span class="en">Current status</span></div>
+              <div class="fvalue"><span class="es">— Confirmame: ¿lanzado, en construcción o piloto? —</span><span class="en">— Confirm: launched, in build, or pilot? —</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="flabel" style="margin-bottom:14px;"><span class="es">Proceso (propuesta)</span><span class="en">Process (draft)</span></div>
+            <ul class="process-list">
+              <li><span class="pnum">01</span><div>
+                <div class="ptitle"><span class="es">Research y diagnóstico</span><span class="en">Research and diagnosis</span></div>
+                <div class="pdesc"><span class="es">Mapeo del proceso actual con el equipo y los clientes afectados.</span><span class="en">Mapping the current process with the team and affected clients.</span></div>
+              </div></li>
+              <li><span class="pnum">02</span><div>
+                <div class="ptitle"><span class="es">Definición de estrategia</span><span class="en">Defining strategy</span></div>
+                <div class="pdesc"><span class="es">Alcance, prioridades y caso de negocio para justificar la inversión de diseño.</span><span class="en">Scope, priorities, and business case to justify the design investment.</span></div>
+              </div></li>
+              <li><span class="pnum">03</span><div>
+                <div class="ptitle"><span class="es">Prototipado y validación</span><span class="en">Prototyping and validation</span></div>
+                <div class="pdesc"><span class="es">Demos funcionales para testear con usuarios reales antes de construir.</span><span class="en">Functional demos to test with real users before building.</span></div>
+              </div></li>
+              <li><span class="pnum">04</span><div>
+                <div class="ptitle"><span class="es">Entrega e impacto</span><span class="en">Delivery and impact</span></div>
+                <div class="pdesc"><span class="es">Lanzamiento y métricas de adopción / eficiencia ganada.</span><span class="en">Launch and adoption / efficiency-gain metrics.</span></div>
+              </div></li>
+            </ul>
+          </div>
+          <div class="placeholder-note">
+            <b><span class="es">Nota:</span><span class="en">Note:</span></b>
+            <span class="es">no tengo los hechos reales de Bombieri. Decime en una línea qué es, qué resolvía y para quién, y ajusto el contenido sin tocar el diseño.</span>
+            <span class="en">I don't have the real facts on Bombieri. Tell me in one line what it is, what it solved, and for whom, and I'll adjust the content without touching the design.</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="fmono">Portfolio v1 · <span class="es">Rev. Agosto 2026</span><span class="en">Rev. August 2026</span></div>
+    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · Product Design Lead · <span class="es">Estrategia</span><span class="en">Strategy</span> · Wholesale / Enterprise</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-switch button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        document.body.setAttribute('data-lang', btn.dataset.set);
+        document.querySelectorAll('.lang-switch button').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+      });
+    });
+  </script>
+
 </body>
 </html>
