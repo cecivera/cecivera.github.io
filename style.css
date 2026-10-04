@@ -1,8 +1,9 @@
-/* A quiet, single-column portfolio. No external fonts or dependencies. */
+/* A quiet, single-column portfolio with self-hosted Inter. */
+@font-face { font-family:Inter; src:url("fonts/inter-latin-wght-normal.woff2") format("woff2"); font-style:normal; font-weight:100 900; font-display:swap; }
 :root { --ink:#202020; --text:#202020; --text-dim:#595959; --accent-deep:#595959; }
 * { box-sizing:border-box; }
-html { scroll-padding-top:24px; }
-body { max-width:760px; margin:0 auto; padding:64px 28px 32px; background:#fafaf8; color:var(--text); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; overflow-wrap:anywhere; }
+html { scroll-padding-top:24px; background:#ffffff; color-scheme:light; }
+body { max-width:760px; margin:0 auto; padding:64px 28px 32px; background:#fff; color:var(--text); font:16px/1.65 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; overflow-wrap:anywhere; }
 a { color:inherit; text-underline-offset:4px; }
 a:hover { text-decoration-thickness:2px; }
 :focus-visible { outline:2px solid #202020; outline-offset:5px; }
@@ -20,7 +21,7 @@ nav a.active { text-decoration-thickness:2px; }
 .lang-switch button { padding:0; border:0; background:none; color:#595959; font:inherit; cursor:pointer; }
 .lang-switch button.active { color:#202020; text-decoration:underline; text-underline-offset:4px; }
 .hero { margin-bottom:48px; }
-.subline { margin-top:20px; color:var(--text-dim); }
+.subline { margin-top:20px; color:#000000; }
 .role-strip { display:flex; flex-wrap:wrap; gap:24px; margin-top:28px; }
 .role-strip>div { flex:1 1 160px; }
 .k,.flabel,.eyebrow,.client,.proto-label { color:var(--text-dim); font-size:13px; margin-bottom:8px; }
@@ -47,8 +48,81 @@ details[open]>summary { list-style-type:disclosure-open; }
 .case-images img { display:block; width:100%; height:auto; margin:16px 0; }
 .images-pair { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .contact-list { line-height:2; }
-footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim); display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; }
+footer { margin-top:56px; padding-top:20px; font-size:14px; color:var(--text); display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; }
 @media(max-width:520px) { body { padding:32px 20px; } .docket-bar { gap:16px; margin-bottom:44px; } .docket-bar .left { flex-basis:100%; } .images-pair { grid-template-columns:1fr; } }
 
-.tools { margin-top:48px; }
-.tools-note { color:var(--text-dim); font-size:14px; }
+.tools { margin-top:28px; }
+
+
+.contact { margin-top:48px; }
+
+/* Education and tools share the main text typography and color. */
+.education-list { display:flex; flex-direction:column; gap:8px; font:inherit; color:var(--text); }
+.tools, .tools p { font:inherit; color:var(--text); }
+
+.contact-inline { display:flex; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:8px 24px; line-height:1.65; text-align:center; }
+.contact-inline a { text-decoration:none; }
+
+.bio-education .case-body { padding-bottom:0; }
+.bio-education .fvalue p:last-child { margin-bottom:0; }
+
+/* Keep the homepage bio close to the introduction. */
+body:has(.bio-education) .hero { margin-bottom:20px; }
+.bio-education .field { margin-top:0; }
+
+.education { margin-top:28px; }
+.education p { margin-bottom:0; }
+
+/* Header and footer share the same understated typography. */
+.docket-bar, footer { font-weight:400; }
+.docket-bar .brand-name { font-weight:400; }
+
+/* Projects use the same restrained text scale as the about page. */
+.work-page .company-name { font-size:16px; font-weight:400; }
+.work-page .case-tab, .work-page h3, .work-page .client, .work-page .pdesc, .work-page .tags { font-size:16px; font-weight:400; line-height:1.65; color:var(--text); }
+.work-page h3 { letter-spacing:0; }
+.work-page main > .company-group:first-child .company-header { padding-top:0; }
+
+/* Match navigation and footer to the Bio/Education/Tools labels. */
+.docket-bar, footer { font-size:13px; color:var(--text-dim); font-weight:400; }
+.docket-bar a, footer a { color:inherit !important; text-decoration:none !important; }
+.lang-switch button, .lang-switch button.active { color:var(--text-dim); }
+
+.work-page .company-name { font-size:13px; color:var(--text-dim); font-weight:400; line-height:1.65; }
+
+/* Match company-section gaps to Bio / Education / Tools (28px). */
+.work-page .company-group + .company-group { margin-top:28px; }
+.work-page .company-header { padding-top:0; }
+.work-page .cases { margin-bottom:0; }
+.work-page .cases > .case:last-child .case-body { padding-bottom:0; }
+.work-page .cases > .case:last-child .case-body > div:last-child > :last-child { margin-bottom:0; }
+
+/* Bring adidas examples closer to the product overview. */
+#adidas .cases > article:first-child .case-body { padding-bottom:0; }
+#adidas .cases > article:first-child .field { margin-bottom:12px; }
+.examples-label { margin-top:0; margin-bottom:0; }
+
+/* Compact example accordions with a small, quiet disclosure marker. */
+.work-page details.case > summary.case-tab { padding:6px 0; list-style:none; text-transform:lowercase; }
+.work-page details.case > summary.case-tab::-webkit-details-marker { display:none; }
+.work-page details.case > summary.case-tab::before { content:""; display:inline-block; width:0; height:0; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid currentColor; margin-right:8px; vertical-align:middle; }
+.work-page details.case[open] > summary.case-tab::before { transform:rotate(90deg); }
+
+/* Consistent overview-to-examples spacing for every company. */
+.work-page .cases > article:has(+ .examples-label) .case-body { padding-bottom:0; }
+.work-page .cases > article:has(+ .examples-label) .case-body > div > :last-child { margin-bottom:12px; }
+.work-page .examples-label { margin-top:12px; margin-bottom:0; }
+#adidas .examples-label { margin-top:0; }
+
+.other-section > summary { cursor:pointer; list-style:none; padding:6px 0; }
+.other-section > summary::-webkit-details-marker { display:none; }
+.other-section > summary::before { content:""; display:inline-block; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid currentColor; margin-right:8px; vertical-align:middle; }
+.other-section[open] > summary::before { transform:rotate(90deg); }
+
+.other-section > summary { display:block; }
+.other-section > summary::marker { content:""; }
+
+.other-section > .cases { padding-top:12px; }
+.other-tech-label { margin-top:28px; }
+#film-books .case-body { padding-bottom:0; }
+#film-books .case-body p:last-child { margin-bottom:0; }

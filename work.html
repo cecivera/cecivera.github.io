@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cecilia Vera — Proyectos</title>
 
 
-<link rel="stylesheet" href="style.css">
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=white-2">
 <script src="language.js" defer></script>
 </head>
-<body data-lang="es">
+<body data-lang="en" class="work-page">
 
 
 
@@ -27,33 +28,35 @@
       <a href="work.html" class="active" aria-current="page"><span class="es">Proyectos</span><span class="en">Work</span></a>
     </nav>
     <div class="lang-switch">
-      <button data-set="en" aria-pressed="false">EN</button>
-      <button class="active" data-set="es" aria-pressed="true">ES</button>
+      <button class="active" data-set="en" aria-pressed="true">EN</button>
+      <button data-set="es" aria-pressed="false">ES</button>
     </div>
   </div>
 
   <main>
-  <div class="section-intro">
-    <h1><span class="es">Proyectos</span><span class="en">Selected work</span></h1>
-    <h2>
-      <span class="es">Cada proyecto documentado como un caso: problema, proceso, estado actual.</span>
-      <span class="en">Each project documented as a case: problem, process, current status.</span>
-    </h2>
-  </div>
 
   <div class="company-group" id="adidas">
     <div class="company-header">
       <div class="company-name">Adidas</div>
     </div>
     <div class="cases">
+      <article class="case">
+        <div class="case-body">
+          <p><span class="es">Diseño end-to-end de aplicaciones B2B para el canal mayorista, desde herramientas de pedidos hasta plataformas de gestión de casos. Colaboración con los equipos de Producto e Ingeniería, incorporando IA para pasar de diseños estáticos a prototipos interactivos que facilitan el trabajo con stakeholders. Alineación entre sistemas de diseño y librerías de componentes, manteniendo Figma y código sincronizados como una única fuente de referencia.</span><span class="en">End-to-end design of B2B wholesale applications, from ordering tools to case management platforms. Close collaboration with Product and Engineering teams, integrating AI into design workflows to move from static mockups to interactive prototypes for stakeholder engagement. Alignment between design systems and component libraries, keeping Figma and code in sync as a single source of truth.</span></p>
+          <div class="field">
+            <div class="flabel"><span class="es">Productos</span><span class="en">Products</span></div>
+            <div class="fvalue"><span class="es">Ecosistema de herramientas B2B para el canal mayorista: gestión de casos y pedidos (ASSIST y CLICK).</span><span class="en">B2B wholesale tools ecosystem: case management and ordering (ASSIST and CLICK).</span></div>
+          </div>
+        </div>
+      </article>
 
+      <div class="flabel examples-label"><span class="es">Ejemplos</span><span class="en">Examples</span></div>
       <!-- ASSIST -->
       <details class="case" id="assist"><summary class="case-tab">
           <span class="case-id">ASSIST</span>
         </summary>
         <div class="case-body">
           <div>
-            <h3>ASSIST</h3>
             <div class="client"><span class="es">Case management sobre Salesforce · Enterprise</span><span class="en">Salesforce-based case management · Enterprise</span></div>
             <p class="desc">
               <span class="es">Un sistema de gestión de casos para que los equipos que atienden a clientes de Enterprise puedan resolver compras, pedidos y órdenes en un solo lugar, en lugar de saltar entre herramientas desconectadas.</span>
@@ -104,12 +107,9 @@
       </details>
 
       <!-- CLICK -->
-      <details class="case" id="click"><summary class="case-tab">
-          <span class="case-id">CLICK</span>
-        </summary>
+      <details class="case" id="click"><summary class="case-tab"><span class="case-id">Click — Digital Showroom</span></summary>
         <div class="case-body">
           <div>
-            <h3>Click — Digital Showroom</h3>
             <div class="client"><span class="es">Diseño end-to-end · Research a Design QA</span><span class="en">End-to-end design · Research to Design QA</span></div>
             <p class="desc">
               <span class="es">Herramienta para acelerar tareas repetitivas de producción de assets: redimensionado en lote y aplicación de formato en masa.</span>
@@ -134,20 +134,14 @@
       </details>
 
       <!-- DESIGN SYSTEM -->
-      <details class="case" id="design-system"><summary class="case-tab">
-          <span class="case-id"><span class="es">Design system</span><span class="en">Design system</span></span>
-        </summary>
+      <details class="case" id="design-system"><summary class="case-tab"><span class="case-id"><span class="es">Componentes y librerías · Librerías multi-app</span><span class="en">Components and libraries · Multi-app libraries</span></span></summary>
         <div class="case-body">
           <div>
-            <h3><span class="es">Componentes y librerías</span><span class="en">Components and libraries</span></h3>
-            <div class="client"><span class="es">Design system · Librerías multi-app</span><span class="en">Design system · Multi-app libraries</span></div>
             <p class="desc">
-              <span class="es">Creación de componentes y mantenimiento del design system y de las librerías Figma de distintas aplicaciones internas de Adidas.</span>
-              <span class="en">Creating components and maintaining the design system and Figma libraries across several internal Adidas applications.</span>
+              <span class="es">Auditoría, creación y mantenimiento de sistemas de diseño, componentes y librerías para distintas aplicaciones internas de adidas, manteniendo el diseño en Figma y los componentes en código alineados como una única fuente de referencia.</span>
+              <span class="en">Auditing, creating, and maintaining design systems, components, and libraries across internal adidas applications, keeping Figma designs and code components aligned as a single source of truth.</span>
             </p>
-            <div class="tags">
-              <span>Figma</span><span>Design System</span><span class="es">Componentes</span><span class="en">Components</span><span class="es">Librerías</span><span class="en">Libraries</span>
-            </div>
+
           </div>
         </div>
       </details>
@@ -161,13 +155,11 @@
       <div class="company-name">Pega <span class="co-code">/ Pegasystems</span></div>
     </div>
     <div class="cases">
-      <details class="case"><summary class="case-tab">
-          <span class="case-id">GTM · DEMOX</span>
-        </summary>
+      <article class="case"><div class="case-tab">
+          <span class="case-id">Principal Product Designer · GTM · DEMOX</span>
+        </div>
         <div class="case-body">
           <div>
-            <h3><span class="es">Proceso UX de demos para Go-To-Market</span><span class="en">Full UX Demo GTM process</span></h3>
-            <div class="client"><span class="es">Principal UX Enterprise Designer & Researcher</span><span class="en">Principal UX Enterprise Designer & Researcher</span></div>
             <p class="desc">
               <span class="es">Dentro del área Discovery, liderando la creación de demos para distintos sectores y estrategias de participación, con un diferencial en storytelling, ResearchOps para sistematizar información cualitativa, y foco en el Go-To-Market de aplicaciones no-code / low-code para Citizen Developers.</span>
               <span class="en">Within the Discovery area, leading the creation of demos for various sectors and participation strategies, with a differential in storytelling, ResearchOps for systematising qualitative information, and focus on the Go-To-Market of no-code / low-code applications for Citizen Developers.</span>
@@ -185,91 +177,17 @@
             </div>
           </div>
         </div>
-      </details>
+      </article>
+
+      <div class="flabel examples-label"><span class="es">Ejemplos</span><span class="en">Examples</span></div>
+
+
+
 
       <details class="case" name="pega-cases">
-        <summary class="case-tab">
-          <span class="case-id">BANCO ITAÚ · CDH</span>
-        </summary>
+        <summary class="case-tab"><span class="case-id"><span class="es">Omni-Channel Customer Service</span><span class="en">Omni-Channel Customer Service</span></span></summary>
         <div class="case-body">
           <div>
-            <h3><span class="es">Banco Itaú — Customer Decision Hub demo</span><span class="en">Banco Itaú — Customer Decision Hub demo</span></h3>
-            <div class="client"><span class="es">Principal UX Designer / Project Lead · 2022–2023</span><span class="en">Principal UX Designer / Project Lead · 2022–2023</span></div>
-            <p class="desc">
-              <span class="es">Creación de una demo para un gran banco de Latinoamérica que muestra algunas de las funcionalidades más potentes de la aplicación CDH (Customer Decision Hub) de Pega. Se muestran desde la perspectiva de los agentes que gestionan la herramienta (backoffice) y de los usuarios finales (People) a través del sitio web de una compañía ficticia llamada "U+".</span>
-              <span class="en">Creation of a demo for a large bank in Latin America showing some of the most powerful functionalities of Pega's CDH (Customer Decision Hub) application. Shown from the perspective of agents who manage the tool (backoffice) and end users (People) through the website of a fictitious company called "U+".</span>
-              <br><a href="https://www.figma.com/proto/l2fOH4IEy2Z1PJtXHGGYku/Published_Itau%CC%81-CDH%2BPlatform?page-id=0%3A1&type=design&node-id=603-13261&viewport=735%2C643%2C0.06&scaling=scale-down-width&starting-point-node-id=603%3A13261" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Link to click-through prototype ↗</a>
-            </p>
-            <div class="field">
-              <div class="flabel"><span class="es">Funcionalidades</span><span class="en">Functionalities</span></div>
-              <div class="fvalue">
-                <ul style="margin-left:18px;">
-                  <li><span class="es">Añadir un usuario a una póliza de coche</span><span class="en">Adding a user to a car policy</span></li>
-                  <li><span class="es">Actualizar la dirección postal de un asegurado</span><span class="en">Updating a policyholder's mailing address</span></li>
-                  <li><span class="es">Cancelar comisiones cobradas por error a un cliente</span><span class="en">Cancelling commissions charged to a client by mistake</span></li>
-                  <li><span class="es">Cliente que decide compartir sus datos con otro banco en busca de un servicio y atención más eficientes</span><span class="en">User deciding to share their details with another bank in search of more efficient customer service and care</span></li>
-                  <li>Localization</li>
-                </ul>
-              </div>
-            </div>
-            <div class="field">
-              <div class="flabel"><span class="es">Tareas realizadas</span><span class="en">Tasks performed</span></div>
-              <div class="fvalue">
-                <span class="es">Creación de guiones con clientes internos (SC — Solution Consultant y AE — Account Executive), personalización de pantallas y funcionalidades del CDH basadas en demos en vivo y vídeos sobre el funcionamiento de la aplicación.</span>
-                <span class="en">Script creation with internal clients (SC — Solution Consultant and AE — Account Executive), customisation of CDH screens and functionalities based on live demos and videos on how the application works.</span>
-              </div>
-            </div>
-          </div>
-          <div class="case-images">
-            <img src="assets/pega/banco-itau/306.png" alt="Banco Itaú CDH — Casos de uso (cover)">
-            <img src="assets/pega/banco-itau/308.png" alt="Banco Itaú CDH — Voice AI backoffice">
-            <img src="assets/pega/banco-itau/309.png" alt="Banco Itaú CDH — U+Bank CRM view">
-            <img src="assets/pega/banco-itau/312.png" alt="Banco Itaú CDH — journey flowchart">
-            <img src="assets/pega/banco-itau/310.png" alt="Banco Itaú CDH — Visão Geral / Open Finance">
-            <img src="assets/pega/banco-itau/311.png" alt="Banco Itaú CDH — mobile view">
-          </div>
-        </div>
-      </details>
-
-      <details class="case" name="pega-cases">
-        <summary class="case-tab">
-          <span class="case-id">GARTNER · CDH</span>
-        </summary>
-        <div class="case-body">
-          <div>
-            <h3><span class="es">Gartner — Customer Decision Hub demo</span><span class="en">Gartner — Customer Decision Hub demo</span></h3>
-            <div class="client"><span class="es">Principal UX Designer · 2022–2023</span><span class="en">Principal UX Designer · 2022–2023</span></div>
-            <p class="desc">
-              <span class="es">Las compañías intentan diseñar el customer journey perfecto, pero los clientes siempre eligen su propio camino — ellos tienen el control. Con Pega, el enfoque se transforma: la IA prioriza entre todos los journeys posibles y cambia automáticamente entre vender, atender y retener en tiempo real, según cambian las necesidades del cliente.</span>
-              <span class="en">Companies try to script the perfect customer journey, but customers always choose their own path — they're in control. That's why with Pega you'll transform your approach, using AI to prioritise across all potential journeys and automatically shift between selling, serving, and retaining in real-time as customers' needs change.</span>
-              <br><a href="https://www.figma.com/proto/U4eixMRzUQzW9khH8oTz1p/Gartner-CDH-Demo?page-id=759%3A7733&type=design&node-id=1583-137089&viewport=5821%2C903%2C0.06&scaling=min-zoom&starting-point-node-id=1583%3A137089" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Click-through — Customer Decision Hub flow ↗</a>
-              <br><a href="https://www.figma.com/proto/U4eixMRzUQzW9khH8oTz1p/Gartner-CDH-Demo?page-id=2%3A18562&type=design&node-id=804-62241&viewport=1411%2C-105%2C0.45&scaling=min-zoom&starting-point-node-id=804%3A62241" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:6px;">Click-through — Customer flow ↗</a>
-            </p>
-            <div class="field">
-              <div class="flabel"><span class="es">Contexto</span><span class="en">Context</span></div>
-              <div class="fvalue">
-                <span class="es">Industry: Communications Service Providers · Product Area: Customer Decision Hub · Solution Area: Customer Engagement · Topic: IA y Decisioning.</span>
-                <span class="en">Industry: Communications Service Providers · Product Area: Customer Decision Hub · Solution Area: Customer Engagement · Topic: AI and Decisioning.</span>
-              </div>
-            </div>
-          </div>
-          <div class="case-images">
-            <img src="assets/pega/gartner/306.png" alt="Gartner CDH — Customer Profile Viewer">
-            <img src="assets/pega/gartner/307.png" alt="Gartner CDH — Journey timeline">
-            <img src="assets/pega/gartner/308.png" alt="Gartner CDH — U-Bank customer view">
-            <img src="assets/pega/gartner/309.png" alt="Gartner CDH — Customer form">
-            <img src="assets/pega/gartner/310.png" alt="Gartner CDH — Metrics dashboard">
-          </div>
-        </div>
-      </details>
-
-      <details class="case" name="pega-cases">
-        <summary class="case-tab">
-          <span class="case-id">OMNI-CHANNEL · CUSTOMER SERVICE</span>
-        </summary>
-        <div class="case-body">
-          <div>
-            <h3><span class="es">Omni-Channel Customer Service</span><span class="en">Omni-Channel Customer Service</span></h3>
             <div class="client"><span class="es">Principal UX Designer · 2022–2023</span><span class="en">Principal UX Designer · 2022–2023</span></div>
             <p class="desc">
               <span class="es">Click-through de 352 pantallas sobre Workflow Automation. El customer engagement asistido por IA ayuda a las aseguradoras a ofrecer interacciones personalizadas y proactivas, reducir costes y brindar experiencias fluidas a sus clientes en el canal, lugar y momento que prefieran.</span>
@@ -296,12 +214,9 @@
       </details>
 
       <details class="case" name="pega-cases">
-        <summary class="case-tab">
-          <span class="case-id">JOURNEY MAP & PERSONA · GUIDE</span>
-        </summary>
+        <summary class="case-tab"><span class="case-id"><span class="es">Guía para completar un Journey Map y definición de Persona</span><span class="en">Guide to completing a Journey Map and Persona definition</span></span></summary>
         <div class="case-body">
           <div>
-            <h3><span class="es">Guía para completar un Journey Map y definición de Persona</span><span class="en">Guide to completing a Journey Map and Persona definition</span></h3>
             <div class="client"><span class="es">Principal UX Designer · 2022–2023</span><span class="en">Principal UX Designer · 2022–2023</span></div>
             <p class="desc">
               <span class="es">Creación de una guía en PowerPoint y, posteriormente, de una herramienta automatizada dentro de la plataforma Pega, como guía para completar un Journey Map y una definición de Persona para uso interno del equipo de ventas y pre-ventas (Solution Consultants, Account Executives, Demo Principals, etc.).</span>
@@ -318,12 +233,9 @@
       </details>
 
       <details class="case" name="pega-cases">
-        <summary class="case-tab">
-          <span class="case-id">PEGA DEMO MANAGER · RESEARCH</span>
-        </summary>
+        <summary class="case-tab"><span class="case-id"><span class="es">Pega Demo Manager Research — Automation Demo tooling</span><span class="en">Pega Demo Manager Research — Automation Demo tooling</span></span></summary>
         <div class="case-body">
           <div>
-            <h3><span class="es">Pega Demo Manager Research — Automation Demo tooling</span><span class="en">Pega Demo Manager Research — Automation Demo tooling</span></h3>
             <div class="client"><span class="es">Principal UX Designer · 2022–2023</span><span class="en">Principal UX Designer · 2022–2023</span></div>
             <p class="desc">
               <span class="es">Research cualitativo con los heaviest users de PEGA Demo Manager para entender de primera mano cómo utilizan la herramienta, además de sus expectativas, pain points, necesidades y preferencias al entregar una demo en vivo. Objetivo: conocer y comprender la perspectiva del usuario para hacer de PDM una herramienta más user-friendly, desarrollar nuevas funcionalidades y ahorrarle tiempo al usuario.</span>
@@ -353,28 +265,23 @@
       <div class="company-name">Heineken</div>
     </div>
     <div class="cases">
-      <details class="case"><summary class="case-tab">
-          <span class="case-id">RESEARCH LEAD</span>
-        </summary>
+      <article class="case">
         <div class="case-body">
           <div>
-            <h3><span class="es">Research Lead en Heineken España</span><span class="en">Research Lead at Heineken Spain</span></h3>
-            <div class="client"><span class="es">Research Lead · 2021</span><span class="en">Research Lead · 2021</span></div>
+            <h3>Research Lead · 2021</h3>
             <p class="desc">
               <span class="es">Liderazgo de la transformación Cloud Workplace en España, estableciendo nuevas prácticas operativas digitales en la organización. Diseño y ejecución de programas piloto y estrategias de adopción en colaboración con Digital & Transformation, habilitando el alineamiento organizacional y un rollout escalable. Contribución al rediseño del modelo tecnológico post-pandemia de Heineken España en torno a una experiencia diaria más simple y centrada en el empleado.</span>
               <span class="en">Led the Cloud Workplace transformation in Spain, establishing new digital operating practices across the organisation. Designed and executed pilot programmes and adoption strategies in partnership with Digital & Transformation, enabling organisational alignment and scalable rollout. Helped Heineken Spain reshape its post-pandemic technology model around a more employee-centred, simplified day-to-day experience.</span>
             </p>
           </div>
         </div>
-      </details>
+      </article>
 
+      <div class="flabel examples-label"><span class="es">Ejemplos</span><span class="en">Examples</span></div>
       <details class="case" name="heineken-cases">
-        <summary class="case-tab">
-          <span class="case-id">MODERN WORKPLACE</span>
-        </summary>
+        <summary class="case-tab"><span class="case-id"><span class="es">Modern Workplace, investigación</span><span class="en">Modern Workplace research</span></span></summary>
         <div class="case-body">
           <div>
-            <h3><span class="es">Modern Workplace, investigación</span><span class="en">Modern Workplace research</span></h3>
             <div class="client"><span class="es">Research Lead · 2021</span><span class="en">Research Lead · 2021</span></div>
             <p class="desc">
               <span class="es"><strong>¿Qué es Modern Workplace?</strong> Modern Workplace es la transformación del modelo tecnológico de HEINEKEN España centrada en sus empleados. Un nuevo entorno de trabajo propuesto por D&T que pone a los usuarios en el centro y busca simplificar su día a día.</span>
@@ -409,46 +316,18 @@
       <div class="company-name">ECI <span class="co-code">/ El Corte Inglés</span></div>
     </div>
     <div class="cases">
-      <details class="case"><summary class="case-tab">
-          <span class="case-id">SERVICE DESIGN · UX LEAD</span>
-        </summary>
+      <article class="case">
         <div class="case-body">
           <div>
-            <h3><span class="es">Service Designer y UX Lead en El Corte Inglés</span><span class="en">Service Designer & UX Lead at El Corte Inglés</span></h3>
-            <div class="client"><span class="es">Service Designer & UX Lead · 2018–2019</span><span class="en">Service Designer & UX Lead · 2018–2019</span></div>
+            <h3>Service Designer &amp; UX Lead · 2018–2019</h3>
             <p class="desc">
               <span class="es">Definición de estrategias de servicio y roadmaps de transformación alineados con los objetivos corporativos. Traducción de insights cualitativos y cuantitativos en iniciativas estructuradas que impulsan la optimización operativa y fortalecen las capacidades digitales entre distintas unidades de negocio. Comunicación con clientes finales para sistematizar información cualitativa (ResearchOps), análisis de datos cuantitativos para generar insights accionables de mejora de producto, y revisión documental orientada a la precisión y la calidad.</span>
               <span class="en">Definition of service strategies and transformation roadmaps aligned with corporate objectives. Qualitative and quantitative insights translated into structured initiatives driving operational optimisation and digital capability enhancement across business units. Communication with end customers to systematise qualitative information (ResearchOps), quantitative analysis to generate actionable insights for product improvement, and documentation review oriented to accuracy and quality.</span>
             </p>
           </div>
         </div>
-      </details>
+      </article>
 
-      <details class="case" name="eci-cases">
-        <summary class="case-tab">
-          <span class="case-id">LUXURY CHANNEL</span>
-        </summary>
-        <div class="case-body">
-          <div>
-            <h3><span class="es">El Corte Inglés — Luxury Channel</span><span class="en">El Corte Inglés — Luxury Channel</span></h3>
-            <div class="client"><span class="es">Service Designer & UX Design Lead · 2018–2019</span><span class="en">Service Designer & UX Design Lead · 2018–2019</span></div>
-            <p class="desc">
-              <span class="es">Traslado de la experiencia de compra luxury offline de ECI al canal online, conectando con consumidores que no tienen estas marcas a su alcance porque solo hay unas pocas tiendas de lujo en España. La web se plantea como un espacio lujoso orientado a la conversión y al buen servicio, buscando diferenciarse del sitio principal de El Corte Inglés.</span>
-              <span class="en">Transfer of the ECI luxury shopping experience offline to the online channel, connecting with consumers who do not have these brands at their fingertips because there are only a few luxury shops throughout Spain. The website is intended to be a luxurious space oriented towards conversion and good service, seeking to differentiate from the El Corte Inglés main website.</span>
-            </p>
-          </div>
-          <div class="case-images">
-            <img src="assets/eci/luxury-channel/305.png" alt="Luxury Channel — store photos + product grid">
-            <img src="assets/eci/luxury-channel/306.png" alt="Luxury Channel — layout wireframes / design system">
-            <img src="assets/eci/luxury-channel/307.png" alt="Luxury Channel — product detail wireframe">
-            <img src="assets/eci/luxury-channel/308.png" alt="Luxury Channel — full product grid">
-            <img src="assets/eci/luxury-channel/309.png" alt="Luxury Channel — CMS backend product form">
-            <img src="assets/eci/luxury-channel/310.png" alt="Luxury Channel — backend product listing">
-            <img src="assets/eci/luxury-channel/311.png" alt="Luxury Channel — Instagram-style feed">
-            <img src="assets/eci/luxury-channel/312.png" alt="Luxury Channel — mobile product detail">
-          </div>
-        </div>
-      </details>
     </div>
   </div>
 
@@ -458,74 +337,53 @@
       <div class="company-name">BBVA</div>
     </div>
     <div class="cases">
-      <details class="case"><summary class="case-tab">
-          <span class="case-id">DIGITAL INNOVATION & TRANSFORMATION LEAD</span>
-        </summary>
+      <article class="case">
         <div class="case-body">
           <div>
-            <h3><span class="es">Digital Innovation & Transformation Lead en BBVA</span><span class="en">Digital Innovation & Transformation Lead at BBVA</span></h3>
-            <div class="client"><span class="es">Digital Innovation & Transformation Lead · 2017</span><span class="en">Digital Innovation & Transformation Lead · 2017</span></div>
+            <h3>Digital Innovation &amp; Transformation Lead · 2017</h3>
             <p class="desc">
               <span class="es">Liderazgo del lanzamiento end-to-end de dos productos digitales entre las unidades de España y Global, definiendo propuestas de valor, roadmaps de ejecución y estrategias de go-to-market bajo plazos acelerados. Ambos productos pasaron de concepto a lanzamiento al mercado en menos de un año, coordinando equipos de investigación, diseño e ingeniería entre BBVA España y Global.</span>
               <span class="en">End-to-end launch of two digital products across Spain and global units, defining value propositions, execution roadmaps, and go-to-market strategies under accelerated timelines. Both products taken from concept to market launch in under a year, coordinating research, design, and engineering teams across BBVA Spain and Global.</span>
             </p>
           </div>
         </div>
-      </details>
+      </article>
 
-      <details class="case" name="bbva-cases">
-        <summary class="case-tab">
-          <span class="case-id">BABY PLANNER</span>
-        </summary>
-        <div class="case-body">
-          <div>
-            <h3><span class="es">Baby Planner</span><span class="en">Baby Planner</span></h3>
-            <div class="client"><span class="es">Design Lead · BBVA España y Global · 2017</span><span class="en">Design Lead · BBVA Spain & Global · 2017</span></div>
-            <p class="desc">
-              <span class="es">Baby Planner es una herramienta digital para familias en crecimiento. "¿Estoy preparado/a?" es la gran pregunta antes de la llegada de un bebé. Ampliar la familia es una decisión que cambia los hábitos de las personas. Según estimaciones de BBVA Research, las familias con un hijo menor de tres años gastan un 10% más que las que no tienen hijos. ¿Existe alguna forma de saber cuánto costará un bebé? ¿Podemos prepararnos?</span>
-              <span class="en">Baby Planner is a digital tool for growing families. "Am I ready?" — that's the big question before the arrival of a baby. Enlarging the family is a decision that changes people's habits. According to BBVA Research estimates, families with a child under three years of age spend 10% more than those without. Is there any way of knowing how much a baby will cost? Can we prepare for it?</span>
-            </p>
-          </div>
-          <div class="case-images">
-            <img src="assets/bbva/baby-planner/Picture.png" alt="Baby Planner — design research team + mockup">
-            <img src="assets/bbva/baby-planner/image 19.png" alt="Baby Planner — wireframe flow + dashboard">
-            <img src="assets/bbva/baby-planner/image 20.png" alt="Baby Planner — user journey map">
-          </div>
-        </div>
-      </details>
     </div>
   </div>
 
   <!-- ===================== OTROS ===================== -->
   <div class="company-group" id="otros">
-    <div class="company-header">
-      <div class="company-name"><span class="es">Otros</span><span class="en">Other</span></div>
-    </div>
+    <details class="other-section">
+      <summary class="company-name"><span class="es">Otros</span><span class="en">Other</span></summary>
     <div class="cases">
+      <div class="flabel"><span class="es">Cine</span><span class="en">Cinema</span></div>
+      <article class="case" id="film-books">
+        <div class="case-body">
+          <p><span class="es">Autoría de <em>Cómo hacer cine</em>, una colección de cinco libros de cine con entrevistas a más de 250 profesionales del cine español, publicados en Madrid.</span><span class="en">Author of <em>Cómo hacer cine</em>, a collection of five books on film featuring interviews with more than 250 professionals from the Spanish film industry, published in Madrid.</span></p>
+          <p><span class="es">Beca en Dirección de Largometrajes de Ibermedia (Programa de Cooperación Iberoamericana), enero de 1999, y beca en Producción de Largometrajes de la AECI (Agencia Española de Cooperación Internacional), enero de 1997. Ambas vinculadas a la Universidad de Buenos Aires y realizadas en BocaBoca Producciones, S.L., Madrid.</span><span class="en">Scholarship in Feature Film Directing awarded by Ibermedia (Ibero-American Cooperation Programme), January 1999, and scholarship in Feature Film Production awarded by AECI (Spanish Agency for International Cooperation), January 1997. Both associated with the University of Buenos Aires and undertaken at BocaBoca Producciones, S.L., Madrid.</span></p>
+        </div>
+      </article>
 
+      <div class="flabel other-tech-label"><span class="es">Tecnología</span><span class="en">Tech</span></div>
       <!-- BOMBIERI -->
-      <details class="case" id="bombieri"><summary class="case-tab">
-          <span class="case-id">SERVICE DESIGN · FREELANCE</span>
-        </summary>
+      <article class="case" id="bombieri">
         <div class="case-body">
           <div>
-            <h3>Bombieri</h3>
-            <div class="client"><span class="es">Service Designer freelance · Mayo 2025 – Enero 2026</span><span class="en">Freelance Service Designer · May 2025 – Jan 2026</span></div>
+            <h3><span class="es">Bombieri · Mayo 2025 – Enero 2026</span><span class="en">Bombieri · May 2025 – Jan 2026</span></h3>
             <p class="desc">
               <span class="es">Diseño del sistema de trabajo interno de una consultora tecnológica argentina: framework de lectura del cambio, arquitectura de servicios, catálogo de fichas, playbooks y mecanismos transversales. Trabajo en tres fases sucesivas — propuestas iniciales, framework MUEVE + hub GTM, y sistema de trabajo + catálogo.</span>
               <span class="en">Design of the internal working system for an Argentine tech consultancy: framework for reading organisational change, service architecture, service-catalog specs, playbooks, and transversal mechanisms. Three successive phases — initial proposals, MUEVE framework + GTM hub, and working system + catalog.</span>
             </p>
           </div>
         </div>
-      </details>
+      </article>
 
+      <div class="flabel examples-label"><span class="es">Ejemplos</span><span class="en">Examples</span></div>
       <details class="case" name="bombieri-cases">
-        <summary class="case-tab">
-          <span class="case-id">FRAMEWORK · MUEVE</span>
-        </summary>
+        <summary class="case-tab"><span class="case-id"><span class="es">Framework MUEVE</span><span class="en">MUEVE Framework</span></span></summary>
         <div class="case-body">
           <div>
-            <h3><span class="es">Framework MUEVE</span><span class="en">MUEVE Framework</span></h3>
             <div class="client"><span class="es">Ago – Oct 2025</span><span class="en">Aug – Oct 2025</span></div>
             <p class="desc">
               <span class="es">Framework de lectura del cambio organizacional articulado en cuatro ejes — Confianza · Cultura · Procesos · Futuro — con una capa transversal de Difusión y Evangelización que "nunca se apaga". Combina un Growth Loop (narrativa cíclica externa) con un Blueprint (herramienta interna con frontstage, backstage, soporte e indicadores). Inspirado en la First Movers Coalition del World Economic Forum.</span>
@@ -547,12 +405,9 @@
       </details>
 
       <details class="case" name="bombieri-cases">
-        <summary class="case-tab">
-          <span class="case-id">SISTEMA DE TRABAJO · CATÁLOGO</span>
-        </summary>
+        <summary class="case-tab"><span class="case-id"><span class="es">Sistema de trabajo y catálogo de servicios</span><span class="en">Working system and service catalog</span></span></summary>
         <div class="case-body">
           <div>
-            <h3><span class="es">Sistema de trabajo y catálogo de servicios</span><span class="en">Working system and service catalog</span></h3>
             <div class="client"><span class="es">Dic 2025 – Ene 2026</span><span class="en">Dec 2025 – Jan 2026</span></div>
             <p class="desc">
               <span class="es">Sistema de trabajo interno: arquitectura del offering (servicios principales, módulos, actividades), modalidades de contratación (Colaboración continua / Proyecto de alcance cerrado), niveles 0–3 y seis categorías comerciales (Estrategia · Gobernanza · Tecnología · Operaciones · Capacitación · Programas). Catálogo con más de 11 fichas de servicio, cada una con propuesta al cliente y criterios internos de ejecución, precios orientativos por mercado (LATAM / EU-USA) y criterios de elegibilidad ("NO vender si…"). Definición de mecanismos transversales (Problem Framing, Discovery, Research, Priorización, Transferencia, Gobernanza) con toolkit de artefactos y playbook desarrollado de Problem Framing.</span>
@@ -583,12 +438,13 @@
       </details>
 
     </div>
+    </details>
   </div>
 
   </main>
   <footer>
     <div class="fmono">Portfolio 2026</div>
-    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" rel="noopener noreferrer" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · Product Design Lead · <span class="es">Estrategia</span><span class="en">Strategy</span> · Enterprise</div>
+    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" rel="noopener noreferrer" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · <a href="CV-Cecilia-Vera-Battaglia.pdf" target="_blank" rel="noopener noreferrer"><span class="es">Descargar CV</span><span class="en">Download CV</span></a></div>
   </footer>
 
 

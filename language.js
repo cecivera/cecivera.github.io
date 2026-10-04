@@ -7,9 +7,9 @@ function setLanguage(lang) {
     button.setAttribute('aria-pressed', String(active));
   });
 }
-let initialLanguage = 'es';
-try { initialLanguage = sessionStorage.getItem('portfolio-language') || 'es'; } catch (_) {}
-setLanguage(initialLanguage === 'en' ? 'en' : 'es');
+let initialLanguage = 'en';
+try { initialLanguage = sessionStorage.getItem('portfolio-language') || 'en'; } catch (_) {}
+setLanguage(initialLanguage === 'es' ? 'es' : 'en');
 document.querySelectorAll('[data-set]').forEach(button => {
   button.addEventListener('click', () => {
     setLanguage(button.dataset.set);
