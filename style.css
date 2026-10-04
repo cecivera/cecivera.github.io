@@ -52,6 +52,5 @@ footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim
 @media(max-width:520px) { body { padding:32px 20px; } .docket-bar { gap:16px; margin-bottom:44px; } .docket-bar .left { flex-basis:100%; } .images-pair { grid-template-columns:1fr; } }
 
 .tools { margin-top:48px; }
-.tools-note { color:var(--text-dim); font-size:14px; }
 
 .intro-title { font-size:20px; line-height:1.5; letter-spacing:0; }
