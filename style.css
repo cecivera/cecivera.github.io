@@ -89,3 +89,10 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 .lang-switch button, .lang-switch button.active { color:var(--text-dim); }
 
 .work-page .company-name { font-size:13px; color:var(--text-dim); font-weight:400; line-height:1.65; }
+
+/* Match company-section gaps to Bio / Education / Tools (28px). */
+.work-page .company-group + .company-group { margin-top:28px; }
+.work-page .company-header { padding-top:0; }
+.work-page .cases { margin-bottom:0; }
+.work-page .cases > .case:last-child .case-body { padding-bottom:0; }
+.work-page .cases > .case:last-child .case-body > div:last-child > :last-child { margin-bottom:0; }
