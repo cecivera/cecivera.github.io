@@ -129,3 +129,7 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 
 /* Indicate the current page in either language. */
 .docket-bar nav a[aria-current="page"] { text-decoration:underline !important; text-decoration-thickness:1.5px !important; text-underline-offset:4px; }
+
+/* Use a fixed marker column so source whitespace cannot shift labels. */
+.work-page details.case > summary.case-tab { display:flex; align-items:center; gap:8px; }
+.work-page details.case > summary.case-tab::before { flex-shrink:0; margin-right:0; }
