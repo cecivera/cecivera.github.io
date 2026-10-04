@@ -60,7 +60,7 @@ footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim
 .education-list { display:flex; flex-direction:column; gap:8px; font:inherit; color:var(--text); }
 .tools, .tools p { font:inherit; color:var(--text); }
 
-.contact-inline { display:flex; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:8px 24px; line-height:1.65; text-align:center; }
+.contact-inline { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:8px 24px; line-height:1.65; text-align:center; }
 .contact-inline a { text-decoration:none; }
 
 .bio-education .case-body { padding-bottom:0; }
