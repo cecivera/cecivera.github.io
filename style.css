@@ -76,3 +76,9 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 /* Header and footer share the same understated typography. */
 .docket-bar, footer { font-weight:400; }
 .docket-bar .brand-name { font-weight:400; }
+
+/* Projects use the same restrained text scale as the about page. */
+.work-page .company-name { font-size:16px; font-weight:400; }
+.work-page .case-tab, .work-page h3, .work-page .client, .work-page .pdesc, .work-page .tags { font-size:16px; font-weight:400; line-height:1.65; color:var(--text); }
+.work-page h3 { letter-spacing:0; }
+.work-page main > .company-group:first-child .company-header { padding-top:0; }
