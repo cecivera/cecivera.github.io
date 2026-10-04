@@ -137,3 +137,12 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 /* Selected language uses weight rather than a second underline. */
 .lang-switch button { text-decoration:none; font-weight:400; }
 .lang-switch button.active { text-decoration:none; font-weight:600; }
+
+/* One client at a time, without cards or borders. */
+.work-page .company-group + .company-group { margin-top:16px; }
+.client-section > summary { display:block; cursor:pointer; list-style:none; padding:10px 0; font-size:16px; color:var(--text); font-weight:500; }
+.client-section > summary::-webkit-details-marker { display:none; }
+.client-section > summary::marker { content:""; }
+.client-section > summary::before { content:""; display:inline-block; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid currentColor; margin-right:8px; vertical-align:middle; }
+.client-section[open] > summary::before { transform:rotate(90deg); }
+.client-section > .cases { padding-top:8px; padding-bottom:16px; }
