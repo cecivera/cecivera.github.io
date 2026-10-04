@@ -53,3 +53,5 @@ footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim
 
 .tools { margin-top:48px; }
 .tools-note { color:var(--text-dim); font-size:14px; }
+
+.intro-title { font-size:20px; line-height:1.5; letter-spacing:0; }
