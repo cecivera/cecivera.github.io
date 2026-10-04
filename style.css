@@ -107,3 +107,9 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 .work-page details.case > summary.case-tab::-webkit-details-marker { display:none; }
 .work-page details.case > summary.case-tab::before { content:""; display:inline-block; width:0; height:0; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid currentColor; margin-right:8px; vertical-align:middle; }
 .work-page details.case[open] > summary.case-tab::before { transform:rotate(90deg); }
+
+/* Consistent overview-to-examples spacing for every company. */
+.work-page .cases > article:has(+ .examples-label) .case-body { padding-bottom:0; }
+.work-page .cases > article:has(+ .examples-label) .case-body > div > :last-child { margin-bottom:12px; }
+.work-page .examples-label { margin-top:12px; margin-bottom:0; }
+#adidas .examples-label { margin-top:0; }
