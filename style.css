@@ -96,3 +96,8 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 .work-page .cases { margin-bottom:0; }
 .work-page .cases > .case:last-child .case-body { padding-bottom:0; }
 .work-page .cases > .case:last-child .case-body > div:last-child > :last-child { margin-bottom:0; }
+
+/* Bring adidas examples closer to the product overview. */
+#adidas .cases > article:first-child .case-body { padding-bottom:0; }
+#adidas .cases > article:first-child .field { margin-bottom:12px; }
+.examples-label { margin-top:0; margin-bottom:0; }
