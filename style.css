@@ -1,5 +1,5 @@
 /* A quiet, single-column portfolio. No external fonts or dependencies. */
-:root { --ink:#202020; --text:#202020; --text-dim:#595959; --accent-deep:#595959; --line:#deded9; }
+:root { --ink:#202020; --text:#202020; --text-dim:#595959; --accent-deep:#595959; }
 * { box-sizing:border-box; }
 html { scroll-padding-top:24px; }
 body { max-width:760px; margin:0 auto; padding:64px 28px 32px; background:#fafaf8; color:var(--text); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; overflow-wrap:anywhere; }
@@ -27,9 +27,9 @@ nav a.active { text-decoration-thickness:2px; }
 .v { font-size:14px; }
 .section-intro { margin:40px 0 20px; }
 .section-intro h2 { margin-top:8px; }
-.company-header { padding:28px 0 12px; border-bottom:1px solid var(--line); }
+.company-header { padding:28px 0 12px; }
 .cases { margin-bottom:32px; }
-.case { border-bottom:1px solid var(--line); }
+.case { }
 .case-tab { padding:18px 0; font-size:15px; }
 summary.case-tab { cursor:pointer; display:list-item; list-style:disclosure-closed inside; }
 details[open]>summary { list-style-type:disclosure-open; }
@@ -48,5 +48,5 @@ details[open]>summary { list-style-type:disclosure-open; }
 .case-images img { display:block; width:100%; height:auto; margin:16px 0; }
 .images-pair { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .contact-list { line-height:2; }
-footer { border-top:1px solid var(--line); margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim); display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; }
+footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim); display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; }
 @media(max-width:520px) { body { padding:32px 20px; } .docket-bar { gap:16px; margin-bottom:44px; } .docket-bar .left { flex-basis:100%; } .images-pair { grid-template-columns:1fr; } }
