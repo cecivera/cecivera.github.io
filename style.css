@@ -133,3 +133,7 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 /* Use a fixed marker column so source whitespace cannot shift labels. */
 .work-page details.case > summary.case-tab { display:flex; align-items:center; gap:8px; }
 .work-page details.case > summary.case-tab::before { flex-shrink:0; margin-right:0; }
+
+/* Selected language uses weight rather than a second underline. */
+.lang-switch button { text-decoration:none; font-weight:400; }
+.lang-switch button.active { text-decoration:none; font-weight:600; }
