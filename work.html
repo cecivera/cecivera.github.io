@@ -9,6 +9,7 @@
 <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css?v=white-2">
 <script src="language.js" defer></script>
+<script src="clients.js" defer></script>
 </head>
 <body data-lang="en" class="work-page">
 
@@ -34,6 +35,15 @@
   </div>
 
   <main>
+  <nav class="client-tabs" aria-label="Clients">
+    <button type="button" data-client="adidas" aria-pressed="true">adidas</button>
+    <button type="button" data-client="pega" aria-pressed="false">Pega</button>
+    <button type="button" data-client="heineken" aria-pressed="false">Heineken</button>
+    <button type="button" data-client="eci" aria-pressed="false">El Corte Inglés</button>
+    <button type="button" data-client="bbva" aria-pressed="false">BBVA</button>
+    <button type="button" data-client="otros" aria-pressed="false"><span class="es">Otros</span><span class="en">Other</span></button>
+  </nav>
+
 
   <div class="company-group" id="adidas">
     <section class="client-section">

@@ -150,3 +150,11 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 /* Company names are plain headings, never disclosure controls. */
 .work-page .client-title { font-size:16px; font-weight:600; color:var(--text); margin:0 0 12px; line-height:1.65; }
 .work-page .company-group + .company-group { margin-top:36px; }
+
+.client-tabs { display:none; flex-wrap:wrap; gap:12px 20px; margin-bottom:28px; }
+.client-tabs button { background:none; border:0; padding:0; color:var(--text); font:inherit; cursor:pointer; }
+.client-tabs button[aria-pressed="true"] { font-weight:600; }
+.work-page.clients-ready .client-tabs { display:flex; }
+.work-page.clients-ready .company-group { margin-top:0; }
+.work-page.clients-ready .client-title { display:none; }
+.company-group[hidden] { display:none; }
