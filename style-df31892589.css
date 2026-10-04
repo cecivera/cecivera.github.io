@@ -176,3 +176,10 @@ body.work-page { height:100vh; height:100dvh; display:flex; flex-direction:colum
 .work-page main { flex:1 1 auto; min-height:0; overflow-y:auto; scrollbar-gutter:stable; }
 .work-page footer { flex-shrink:0; margin-top:20px; padding-top:12px; background:#fff; }
 @media (max-width:520px) { .work-page .docket-bar { margin-bottom:24px; } .work-page footer { margin-top:12px; } }
+
+.info-fold > summary { display:block; cursor:pointer; list-style:none; }
+.info-fold > summary::-webkit-details-marker { display:none; }
+.info-fold > summary::marker { content:""; }
+.info-fold > summary::before { content:""; display:inline-block; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid currentColor; margin-right:8px; vertical-align:middle; }
+.info-fold[open] > summary::before { transform:rotate(90deg); }
+.info-fold > p { margin-top:12px; }
