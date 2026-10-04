@@ -126,3 +126,53 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 .other-tech-label { margin-top:28px; }
 #film-books .case-body { padding-bottom:0; }
 #film-books .case-body p:last-child { margin-bottom:0; }
+
+/* Indicate the current page in either language. */
+.docket-bar nav a[aria-current="page"] { text-decoration:underline !important; text-decoration-thickness:1.5px !important; text-underline-offset:4px; }
+
+/* Use a fixed marker column so source whitespace cannot shift labels. */
+.work-page details.case > summary.case-tab { display:flex; align-items:center; gap:8px; }
+.work-page details.case > summary.case-tab::before { flex-shrink:0; margin-right:0; }
+
+/* Selected language uses weight rather than a second underline. */
+.lang-switch button { text-decoration:none; font-weight:400; }
+.lang-switch button.active { text-decoration:none; font-weight:600; }
+
+/* One client at a time, without cards or borders. */
+.work-page .company-group + .company-group { margin-top:16px; }
+.client-section > summary { display:block; cursor:pointer; list-style:none; padding:10px 0; font-size:16px; color:var(--text); font-weight:500; }
+.client-section > summary::-webkit-details-marker { display:none; }
+.client-section > summary::marker { content:""; }
+.client-section > summary::before { content:""; display:inline-block; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid currentColor; margin-right:8px; vertical-align:middle; }
+.client-section[open] > summary::before { transform:rotate(90deg); }
+.client-section > .cases { padding-top:8px; padding-bottom:16px; }
+
+/* Company names are plain headings, never disclosure controls. */
+.work-page .client-title { font-size:16px; font-weight:600; color:var(--text); margin:0 0 12px; line-height:1.65; }
+.work-page .company-group + .company-group { margin-top:36px; }
+
+.client-tabs { display:none; flex-wrap:wrap; gap:12px 20px; margin-bottom:28px; }
+.client-tabs button { background:none; border:0; padding:0; color:var(--text); font:inherit; cursor:pointer; }
+.client-tabs button[aria-pressed="true"] { font-weight:600; }
+.work-page.clients-ready .client-tabs { display:flex; }
+.work-page.clients-ready .company-group { margin-top:0; }
+.work-page.clients-ready .client-title { display:none; }
+.company-group[hidden] { display:none; }
+
+/* Start every client panel at the exact same baseline. */
+.work-page.clients-ready .client-section > .cases { padding-top:0; }
+.work-page.clients-ready .cases > article:first-child .case-tab { padding:0; margin:0 0 16px; }
+.work-page.clients-ready .cases > article:first-child .case-body { padding-top:0; }
+.work-page.clients-ready .cases > article:first-child .case-body > div { margin-top:0; }
+.work-page.clients-ready .cases > article:first-child h3 { margin-top:0; margin-bottom:16px; }
+
+.definition-title { font-size:clamp(24px,4vw,32px); line-height:1.25; font-weight:500; letter-spacing:-.02em; color:#000; }
+.experience-intro { color:#000; margin-top:24px; }
+
+/* Pin the footer only on Work; About keeps natural page scrolling. */
+html:has(body.work-page) { height:100%; }
+body.work-page { height:100vh; height:100dvh; display:flex; flex-direction:column; overflow:hidden; }
+.work-page .docket-bar { flex-shrink:0; }
+.work-page main { flex:1 1 auto; min-height:0; overflow-y:auto; scrollbar-gutter:stable; }
+.work-page footer { flex-shrink:0; margin-top:20px; padding-top:12px; background:#fff; }
+@media (max-width:520px) { .work-page .docket-bar { margin-bottom:24px; } .work-page footer { margin-top:12px; } }

@@ -9,6 +9,7 @@
 <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css?v=white-2">
 <script src="language.js" defer></script>
+<script src="clients.js" defer></script>
 </head>
 <body data-lang="en" class="work-page">
 
@@ -34,14 +35,23 @@
   </div>
 
   <main>
+  <nav class="client-tabs" aria-label="Clients">
+    <button type="button" data-client="adidas" aria-pressed="true">Adidas</button>
+    <button type="button" data-client="pega" aria-pressed="false">Pega</button>
+    <button type="button" data-client="heineken" aria-pressed="false">Heineken</button>
+    <button type="button" data-client="eci" aria-pressed="false">El Corte Inglés</button>
+    <button type="button" data-client="bbva" aria-pressed="false">BBVA</button>
+    <button type="button" data-client="otros" aria-pressed="false"><span class="es">Otros</span><span class="en">Other</span></button>
+  </nav>
+
 
   <div class="company-group" id="adidas">
-    <div class="company-header">
-      <div class="company-name">Adidas</div>
-    </div>
+    <section class="client-section">
+      <h2 class="client-title">Adidas</h2>
     <div class="cases">
       <article class="case">
         <div class="case-body">
+          <h3>Product Designer · Digital Retail and Wholesale</h3>
           <p><span class="es">Diseño end-to-end de aplicaciones B2B para el canal mayorista, desde herramientas de pedidos hasta plataformas de gestión de casos. Colaboración con los equipos de Producto e Ingeniería, incorporando IA para pasar de diseños estáticos a prototipos interactivos que facilitan el trabajo con stakeholders. Alineación entre sistemas de diseño y librerías de componentes, manteniendo Figma y código sincronizados como una única fuente de referencia.</span><span class="en">End-to-end design of B2B wholesale applications, from ordering tools to case management platforms. Close collaboration with Product and Engineering teams, integrating AI into design workflows to move from static mockups to interactive prototypes for stakeholder engagement. Alignment between design systems and component libraries, keeping Figma and code in sync as a single source of truth.</span></p>
           <div class="field">
             <div class="flabel"><span class="es">Productos</span><span class="en">Products</span></div>
@@ -74,16 +84,6 @@
                 <span class="es">Los clientes de Enterprise gestionan compras, pedidos y órdenes a través de procesos fragmentados, lo que genera fricción tanto para el cliente como para el equipo interno que debe resolver cada caso. ASSIST nace para centralizar esa gestión sobre una base de Salesforce.</span>
                 <span class="en">Enterprise clients manage purchases, orders, and requests through fragmented processes, creating friction for both the client and the internal team resolving each case. ASSIST centralizes that management on a Salesforce foundation.</span>
               </div>
-            </div>
-            <div class="field">
-              <div class="flabel"><span class="es">Herramientas utilizadas</span><span class="en">Tools used</span></div>
-              <div class="fvalue">
-                <span class="es">Notion con agentes fue fundamental para crear una base de datos que permitió definir la visión del producto, las personas y los jobs to be done de ASSIST.</span>
-                <span class="en">Notion with agents was fundamental to building a database to define ASSIST’s product vision, personas, and jobs to be done.</span>
-              </div>
-            </div>
-            <div class="tags">
-              <span>Case Management</span><span>Salesforce</span><span>B2B / Enterprise</span>
             </div>
           </div>
           <div>
@@ -147,13 +147,13 @@
       </details>
 
     </div>
+    </section>
   </div>
 
   <!-- ===================== PEGA ===================== -->
   <div class="company-group" id="pega">
-    <div class="company-header">
-      <div class="company-name">Pega <span class="co-code">/ Pegasystems</span></div>
-    </div>
+    <section class="client-section">
+      <h2 class="client-title">Pega <span class="co-code">/ Pegasystems</span></h2>
     <div class="cases">
       <article class="case"><div class="case-tab">
           <span class="case-id">Principal Product Designer · GTM · DEMOX</span>
@@ -167,13 +167,6 @@
             <div class="field">
               <div class="flabel"><span class="es">Productos</span><span class="en">Products</span></div>
               <div class="fvalue">Pega Platform · CDH · Pega Customer Service · Pega Sales Automation</div>
-            </div>
-            <div class="field">
-              <div class="flabel"><span class="es">Logros</span><span class="en">Achievements</span></div>
-              <div class="fvalue">
-                <span class="es">Mejora de los estándares de los distintos formatos de demo, del video performance y de los entregables para clientes internos y externos dentro de Go-To-Market / DemoX.</span>
-                <span class="en">Improvement of standards for different demo formats, video performance, and deliverables for internal and external customers within Go-To-Market / DemoX.</span>
-              </div>
             </div>
           </div>
         </div>
@@ -257,18 +250,18 @@
       </details>
 
     </div>
+    </section>
   </div>
 
   <!-- ===================== HEINEKEN ===================== -->
   <div class="company-group" id="heineken">
-    <div class="company-header">
-      <div class="company-name">Heineken</div>
-    </div>
+    <section class="client-section">
+      <h2 class="client-title">Heineken</h2>
     <div class="cases">
       <article class="case">
         <div class="case-body">
+          <h3>Lead Researcher · 2021</h3>
           <div>
-            <h3>Research Lead · 2021</h3>
             <p class="desc">
               <span class="es">Liderazgo de la transformación Cloud Workplace en España, estableciendo nuevas prácticas operativas digitales en la organización. Diseño y ejecución de programas piloto y estrategias de adopción en colaboración con Digital & Transformation, habilitando el alineamiento organizacional y un rollout escalable. Contribución al rediseño del modelo tecnológico post-pandemia de Heineken España en torno a una experiencia diaria más simple y centrada en el empleado.</span>
               <span class="en">Led the Cloud Workplace transformation in Spain, establishing new digital operating practices across the organisation. Designed and executed pilot programmes and adoption strategies in partnership with Digital & Transformation, enabling organisational alignment and scalable rollout. Helped Heineken Spain reshape its post-pandemic technology model around a more employee-centred, simplified day-to-day experience.</span>
@@ -276,45 +269,14 @@
           </div>
         </div>
       </article>
-
-      <div class="flabel examples-label"><span class="es">Ejemplos</span><span class="en">Examples</span></div>
-      <details class="case" name="heineken-cases">
-        <summary class="case-tab"><span class="case-id"><span class="es">Modern Workplace, investigación</span><span class="en">Modern Workplace research</span></span></summary>
-        <div class="case-body">
-          <div>
-            <div class="client"><span class="es">Research Lead · 2021</span><span class="en">Research Lead · 2021</span></div>
-            <p class="desc">
-              <span class="es"><strong>¿Qué es Modern Workplace?</strong> Modern Workplace es la transformación del modelo tecnológico de HEINEKEN España centrada en sus empleados. Un nuevo entorno de trabajo propuesto por D&T que pone a los usuarios en el centro y busca simplificar su día a día.</span>
-              <span class="en"><strong>What is Modern Workplace?</strong> Modern Workplace is the transformation of the technological model of HEINEKEN Spain focused on its employees. A new work environment proposed by D&T, which places users at the center and seeks to simplify their day-to-day life.</span>
-            </p>
-            <div class="field">
-              <div class="flabel"><span class="es">Líneas de trabajo</span><span class="en">Lines of work</span></div>
-              <div class="fvalue">Pilot · <span class="es">Investigación cualitativa</span><span class="en">Qualitative research</span> · Rollout</div>
-            </div>
-            <div class="field">
-              <div class="flabel"><span class="es">Contexto</span><span class="en">Context</span></div>
-              <div class="fvalue">
-                <span class="es">Tras la pandemia, Heineken España buscó transformar su modelo tecnológico creando un nuevo entorno de trabajo que pusiera al empleado en el centro y simplificara su día a día.</span>
-                <span class="en">Following the pandemic, Heineken Spain sought to transform its technology model by creating a new working environment that put the employee at the centre to simplify their day-to-day work.</span>
-              </div>
-            </div>
-          </div>
-          <div class="case-images">
-            <img src="assets/heineken/modern-workplace/305.png" alt="Modern Workplace — Introduction: Lines of work (Pilot/Research/Rollout)">
-            <img src="assets/heineken/modern-workplace/306.png" alt="Modern Workplace — Pilot: Why we do it (metrics + screens)">
-            <img src="assets/heineken/modern-workplace/308.png" alt="Modern Workplace — Roll-out: What it consists of (services diagram)">
-            <img src="assets/heineken/modern-workplace/309.png" alt="Modern Workplace — Research: Preliminary conclusions">
-          </div>
-        </div>
-      </details>
     </div>
+    </section>
   </div>
 
   <!-- ===================== ECI ===================== -->
   <div class="company-group" id="eci">
-    <div class="company-header">
-      <div class="company-name">ECI <span class="co-code">/ El Corte Inglés</span></div>
-    </div>
+    <section class="client-section">
+      <h2 class="client-title">El Corte Inglés</h2>
     <div class="cases">
       <article class="case">
         <div class="case-body">
@@ -329,18 +291,18 @@
       </article>
 
     </div>
+    </section>
   </div>
 
   <!-- ===================== BBVA ===================== -->
   <div class="company-group" id="bbva">
-    <div class="company-header">
-      <div class="company-name">BBVA</div>
-    </div>
+    <section class="client-section">
+      <h2 class="client-title">BBVA</h2>
     <div class="cases">
       <article class="case">
         <div class="case-body">
           <div>
-            <h3>Digital Innovation &amp; Transformation Lead · 2017</h3>
+            <h3>Lead Product Designer · 2017</h3>
             <p class="desc">
               <span class="es">Liderazgo del lanzamiento end-to-end de dos productos digitales entre las unidades de España y Global, definiendo propuestas de valor, roadmaps de ejecución y estrategias de go-to-market bajo plazos acelerados. Ambos productos pasaron de concepto a lanzamiento al mercado en menos de un año, coordinando equipos de investigación, diseño e ingeniería entre BBVA España y Global.</span>
               <span class="en">End-to-end launch of two digital products across Spain and global units, defining value propositions, execution roadmaps, and go-to-market strategies under accelerated timelines. Both products taken from concept to market launch in under a year, coordinating research, design, and engineering teams across BBVA Spain and Global.</span>
@@ -350,22 +312,15 @@
       </article>
 
     </div>
+    </section>
   </div>
 
   <!-- ===================== OTROS ===================== -->
   <div class="company-group" id="otros">
-    <details class="other-section">
-      <summary class="company-name"><span class="es">Otros</span><span class="en">Other</span></summary>
+    <section class="client-section">
+      <h2 class="client-title"><span class="es">Otros</span><span class="en">Other</span></h2>
     <div class="cases">
-      <div class="flabel"><span class="es">Cine</span><span class="en">Cinema</span></div>
-      <article class="case" id="film-books">
-        <div class="case-body">
-          <p><span class="es">Autoría de <em>Cómo hacer cine</em>, una colección de cinco libros de cine con entrevistas a más de 250 profesionales del cine español, publicados en Madrid.</span><span class="en">Author of <em>Cómo hacer cine</em>, a collection of five books on film featuring interviews with more than 250 professionals from the Spanish film industry, published in Madrid.</span></p>
-          <p><span class="es">Beca en Dirección de Largometrajes de Ibermedia (Programa de Cooperación Iberoamericana), enero de 1999, y beca en Producción de Largometrajes de la AECI (Agencia Española de Cooperación Internacional), enero de 1997. Ambas vinculadas a la Universidad de Buenos Aires y realizadas en BocaBoca Producciones, S.L., Madrid.</span><span class="en">Scholarship in Feature Film Directing awarded by Ibermedia (Ibero-American Cooperation Programme), January 1999, and scholarship in Feature Film Production awarded by AECI (Spanish Agency for International Cooperation), January 1997. Both associated with the University of Buenos Aires and undertaken at BocaBoca Producciones, S.L., Madrid.</span></p>
-        </div>
-      </article>
-
-      <div class="flabel other-tech-label"><span class="es">Tecnología</span><span class="en">Tech</span></div>
+      <div class="flabel"><span class="es">Tecnología</span><span class="en">Tech</span></div>
       <!-- BOMBIERI -->
       <article class="case" id="bombieri">
         <div class="case-body">
@@ -421,30 +376,26 @@
               </div>
             </div>
           </div>
-          <div class="case-images">
-            <div class="images-pair">
-              <img src="assets/bombieri/arquitectura-estrategica.png" alt="Arquitectura estratégica de Bombieri — 3 capas">
-              <img src="assets/bombieri/NIVELES.png" alt="Niveles del sistema de trabajo Bombieri">
-            </div>
-            <img src="assets/bombieri/Tabla.png" alt="Tabla del sistema — Categoría, Documento, Rol/Función, Estado recomendado, Definición">
-            <div class="images-pair">
-              <img src="assets/bombieri/radar-cultura.png" alt="Radar Cultura — dimensiones culturales por fase">
-              <img src="assets/bombieri/radar-mueve.png" alt="Radar MUEVE — dimensiones por fase">
-            </div>
-            <img src="assets/bombieri/Canvas de confianza.png" alt="Canvas de Confianza — herramienta del framework MUEVE">
-            <img src="assets/bombieri/EX - UX - CX.png" alt="EX / UX / CX — mapeo de experiencias empleado, usuario, cliente" style="max-width:520px; width:100%; margin:0 auto;">
-          </div>
+
         </div>
       </details>
 
+      <div class="flabel other-tech-label"><span class="es">Cine</span><span class="en">Cinema</span></div>
+      <article class="case" id="film-books">
+        <div class="case-body">
+          <p><span class="es">Autoría de <em>Cómo hacer cine</em>, una colección de cinco libros de cine con entrevistas a más de 250 profesionales del cine español, publicados en Madrid.</span><span class="en">Author of <em>Cómo hacer cine</em>, a collection of five books on film featuring interviews with more than 250 professionals from the Spanish film industry, published in Madrid.</span></p>
+          <p><span class="es">Beca en Dirección de Largometrajes de Ibermedia (Programa de Cooperación Iberoamericana), enero de 1999, y beca en Producción de Largometrajes de la AECI (Agencia Española de Cooperación Internacional), enero de 1997. Ambas vinculadas a la Universidad de Buenos Aires y realizadas en BocaBoca Producciones, S.L., Madrid.</span><span class="en">Scholarship in Feature Film Directing awarded by Ibermedia (Ibero-American Cooperation Programme), January 1999, and scholarship in Feature Film Production awarded by AECI (Spanish Agency for International Cooperation), January 1997. Both associated with the University of Buenos Aires and undertaken at BocaBoca Producciones, S.L., Madrid.</span></p>
+        </div>
+      </article>
+
     </div>
-    </details>
+    </section>
   </div>
 
   </main>
   <footer>
     <div class="fmono">Portfolio 2026</div>
-    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" rel="noopener noreferrer" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · <a href="CV-Cecilia-Vera-Battaglia.pdf" target="_blank" rel="noopener noreferrer"><span class="es">Descargar CV</span><span class="en">Download CV</span></a></div>
+    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" rel="noopener noreferrer" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · <a href="Cecilia%20Vera%20Battaglia%20-%20CV.pdf" target="_blank" rel="noopener noreferrer"><span class="es">Descargar CV</span><span class="en">Download CV</span></a></div>
   </footer>
 
 
