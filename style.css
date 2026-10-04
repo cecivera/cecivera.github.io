@@ -126,3 +126,6 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 .other-tech-label { margin-top:28px; }
 #film-books .case-body { padding-bottom:0; }
 #film-books .case-body p:last-child { margin-bottom:0; }
+
+/* Indicate the current page in either language. */
+.docket-bar nav a[aria-current="page"] { text-decoration:underline !important; text-decoration-thickness:1.5px !important; text-underline-offset:4px; }
