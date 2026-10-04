@@ -55,3 +55,8 @@ footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim
 
 
 .contact { margin-top:48px; }
+
+/* Education and tools share the main text typography and color. */
+.education-list { display:flex; flex-direction:column; gap:8px; font:inherit; color:var(--text); }
+.tools, .tools p { font:inherit; color:var(--text); }
+.education-label { font:inherit; color:var(--text); margin-bottom:8px; }
