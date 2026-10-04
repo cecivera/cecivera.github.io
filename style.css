@@ -121,3 +121,8 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 
 .other-section > summary { display:block; }
 .other-section > summary::marker { content:""; }
+
+.other-section > .cases { padding-top:12px; }
+.other-tech-label { margin-top:28px; }
+#film-books .case-body { padding-bottom:0; }
+#film-books .case-body p:last-child { margin-bottom:0; }
