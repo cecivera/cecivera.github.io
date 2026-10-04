@@ -158,3 +158,10 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 .work-page.clients-ready .company-group { margin-top:0; }
 .work-page.clients-ready .client-title { display:none; }
 .company-group[hidden] { display:none; }
+
+/* Start every client panel at the exact same baseline. */
+.work-page.clients-ready .client-section > .cases { padding-top:0; }
+.work-page.clients-ready .cases > article:first-child .case-tab { padding:0; margin:0 0 16px; }
+.work-page.clients-ready .cases > article:first-child .case-body { padding-top:0; }
+.work-page.clients-ready .cases > article:first-child .case-body > div { margin-top:0; }
+.work-page.clients-ready .cases > article:first-child h3 { margin-top:0; margin-bottom:16px; }
