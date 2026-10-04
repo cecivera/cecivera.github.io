@@ -12,7 +12,7 @@ h1,h2,h3,p { margin:0 0 16px; }
 h1 { font-size:clamp(30px,6vw,42px); line-height:1.2; letter-spacing:-.035em; font-weight:500; }
 h2,.company-name { font-size:20px; font-weight:500; }
 h3 { font-size:23px; font-weight:500; line-height:1.3; }
-.docket-bar { display:flex; flex-wrap:wrap; gap:20px; align-items:center; margin-bottom:64px; font-size:14px; }
+.docket-bar { display:flex; flex-wrap:wrap; gap:20px; align-items:center; margin-bottom:64px; font-size:16px; }
 .docket-bar .left { flex:1 1 220px; }
 .brand-name { font-weight:500; }
 .left-sub,.dot,.hero .tag,.co-code,.co-count { display:none; }
