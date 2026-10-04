@@ -183,3 +183,34 @@ body.work-page { height:100vh; height:100dvh; display:flex; flex-direction:colum
 .info-fold > summary::before { content:""; display:inline-block; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid currentColor; margin-right:8px; vertical-align:middle; }
 .info-fold[open] > summary::before { transform:rotate(90deg); }
 .info-fold > p { margin-top:12px; }
+
+/* Comfortable tablet spacing and touch targets, preserving the desktop layout. */
+.prototype-requirement { display:block; margin-top:4px; font-size:13px; color:var(--text-dim); }
+@media (max-width:760px) {
+  body { padding:40px 24px 28px; }
+  .docket-bar { gap:12px 20px; margin-bottom:36px; }
+  .docket-bar nav a, .lang-switch button, .client-tabs button {
+    display:inline-flex; align-items:center; min-height:44px;
+  }
+  .lang-switch button, .client-tabs button { padding:0 8px; }
+  .lang-switch { gap:8px; }
+  .client-tabs { gap:4px 12px; margin-bottom:20px; }
+  .work-page details.case > summary.case-tab,
+  .other-section > summary, .info-fold > summary { min-height:44px; padding-top:10px; padding-bottom:10px; }
+  html:has(body.work-page) { height:auto; }
+  body.work-page { height:auto; min-height:100dvh; overflow:visible; }
+  .work-page main { flex:1 0 auto; overflow:visible; scrollbar-gutter:auto; }
+  .work-page footer { margin-top:36px; }
+}
+@media (max-width:520px) {
+  body { padding:28px 20px; }
+  .docket-bar { margin-bottom:28px; }
+  .work-page .docket-bar { margin-bottom:24px; }
+  .work-page footer { margin-top:28px; }
+}
+/* Short landscape screens also need the full page for reading projects. */
+@media (max-height:520px) and (orientation:landscape) {
+  html:has(body.work-page) { height:auto; }
+  body.work-page { height:auto; min-height:100dvh; overflow:visible; }
+  .work-page main { flex:1 0 auto; overflow:visible; scrollbar-gutter:auto; }
+}
