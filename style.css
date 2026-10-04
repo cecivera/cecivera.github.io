@@ -113,3 +113,8 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 .work-page .cases > article:has(+ .examples-label) .case-body > div > :last-child { margin-bottom:12px; }
 .work-page .examples-label { margin-top:12px; margin-bottom:0; }
 #adidas .examples-label { margin-top:0; }
+
+.other-section > summary { cursor:pointer; list-style:none; padding:6px 0; }
+.other-section > summary::-webkit-details-marker { display:none; }
+.other-section > summary::before { content:""; display:inline-block; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid currentColor; margin-right:8px; vertical-align:middle; }
+.other-section[open] > summary::before { transform:rotate(90deg); }
