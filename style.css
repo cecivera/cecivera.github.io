@@ -51,7 +51,7 @@ details[open]>summary { list-style-type:disclosure-open; }
 footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim); display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; }
 @media(max-width:520px) { body { padding:32px 20px; } .docket-bar { gap:16px; margin-bottom:44px; } .docket-bar .left { flex-basis:100%; } .images-pair { grid-template-columns:1fr; } }
 
-.tools { margin-top:48px; }
+.tools { margin-top:28px; }
 
 
 .contact { margin-top:48px; }
@@ -61,3 +61,6 @@ footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim
 .tools, .tools p { font:inherit; color:var(--text); }
 
 .contact-inline { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 24px; line-height:1.65; }
+
+.bio-education .case-body { padding-bottom:0; }
+.bio-education .fvalue p:last-child { margin-bottom:0; }
