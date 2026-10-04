@@ -21,7 +21,7 @@ nav a.active { text-decoration-thickness:2px; }
 .lang-switch button { padding:0; border:0; background:none; color:#595959; font:inherit; cursor:pointer; }
 .lang-switch button.active { color:#202020; text-decoration:underline; text-underline-offset:4px; }
 .hero { margin-bottom:48px; }
-.subline { margin-top:20px; color:var(--text-dim); }
+.subline { margin-top:20px; color:#000000; }
 .role-strip { display:flex; flex-wrap:wrap; gap:24px; margin-top:28px; }
 .role-strip>div { flex:1 1 160px; }
 .k,.flabel,.eyebrow,.client,.proto-label { color:var(--text-dim); font-size:13px; margin-bottom:8px; }
