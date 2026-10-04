@@ -165,3 +165,6 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 .work-page.clients-ready .cases > article:first-child .case-body { padding-top:0; }
 .work-page.clients-ready .cases > article:first-child .case-body > div { margin-top:0; }
 .work-page.clients-ready .cases > article:first-child h3 { margin-top:0; margin-bottom:16px; }
+
+.definition-title { font-size:clamp(24px,4vw,32px); line-height:1.25; font-weight:500; letter-spacing:-.02em; color:#000; }
+.experience-intro { color:#000; margin-top:24px; }
