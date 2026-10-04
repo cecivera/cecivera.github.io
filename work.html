@@ -3,372 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — Product Design</title>
-<style>
-  @font-face{
-    font-family:'Financier Display';
-    src:url('fonts/test-financier-display-vf-roman.woff2') format('woff2-variations'),
-        url('fonts/test-financier-display-vf-roman.woff2') format('woff2');
-    font-weight:100 900; font-style:normal; font-display:swap;
-  }
-  @font-face{
-    font-family:'Financier Display';
-    src:url('fonts/test-financier-display-vf-italic.woff2') format('woff2-variations'),
-        url('fonts/test-financier-display-vf-italic.woff2') format('woff2');
-    font-weight:100 900; font-style:italic; font-display:swap;
-  }
-  @font-face{
-    font-family:'Financier Text';
-    src:url('fonts/test-financier-text-vf-roman.woff2') format('woff2-variations'),
-        url('fonts/test-financier-text-vf-roman.woff2') format('woff2');
-    font-weight:100 900; font-style:normal; font-display:swap;
-  }
-  @font-face{
-    font-family:'Financier Text';
-    src:url('fonts/test-financier-text-vf-italic.woff2') format('woff2-variations'),
-        url('fonts/test-financier-text-vf-italic.woff2') format('woff2');
-    font-weight:100 900; font-style:italic; font-display:swap;
-  }
-  @font-face{
-    font-family:'Söhne';
-    src:url('fonts/test-soehne-buch.woff2') format('woff2');
-    font-weight:400; font-style:normal; font-display:swap;
-  }
-  @font-face{
-    font-family:'Söhne';
-    src:url('fonts/test-soehne-buch-kursiv.woff2') format('woff2');
-    font-weight:400; font-style:italic; font-display:swap;
-  }
-  @font-face{
-    font-family:'Söhne';
-    src:url('fonts/test-soehne-kraftig.woff2') format('woff2');
-    font-weight:500; font-style:normal; font-display:swap;
-  }
-  @font-face{
-    font-family:'Söhne';
-    src:url('fonts/test-soehne-kraftig-kursiv.woff2') format('woff2');
-    font-weight:500; font-style:italic; font-display:swap;
-  }
-  @font-face{
-    font-family:'Söhne';
-    src:url('fonts/test-soehne-halbfett.woff2') format('woff2');
-    font-weight:600; font-style:normal; font-display:swap;
-  }
-  @font-face{
-    font-family:'Söhne';
-    src:url('fonts/test-soehne-halbfett-kursiv.woff2') format('woff2');
-    font-weight:600; font-style:italic; font-display:swap;
-  }
-</style>
-<style>
-  :root{
-    --ink:#151515;
-    --ink-soft:#3A3A3A;
-    --paper:#FFFFFF;
-    --paper-dim:#EDEDED;
-    --line:#CECECE;
-    --accent:#7A7A7A;
-    --accent-deep:#5F5F5F;
-    --teal:#686868;
-    --text:#151515;
-    --text-dim:#4E4E4E;
-    --white:#FFFFFF;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--paper);
-    color:var(--text);
-    font-family:'Söhne', system-ui, sans-serif;
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  ::selection{background:var(--accent); color:var(--white);}
-  a{color:inherit;}
+<title>Cecilia Vera — Proyectos</title>
 
-  /* language toggle logic */
-  body[data-lang="es"] .en{display:none;}
-  body[data-lang="en"] .es{display:none;}
 
-  /* ===== TOP DOCKET BAR ===== */
-  .docket-bar{
-    position:sticky; top:0; z-index:50;
-    background:var(--ink);
-    color:var(--paper);
-    padding:14px 32px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-family:'Söhne', system-ui, sans-serif;
-    font-size:13px;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    border-bottom:1px solid rgba(250,243,234,0.15);
-    overflow-x:auto;
-    gap:20px;
-  }
-  .docket-bar .left{display:flex; gap:14px; align-items:baseline; white-space:nowrap;}
-  .docket-bar .brand-name{
-    font-family:'Financier Display', 'Financier Text', Georgia, serif;
-    font-weight:700;
-    font-size:15px;
-    letter-spacing:0;
-    text-transform:none;
-  }
-  .docket-bar .brand-tag{
-    font-family:'Söhne', system-ui, sans-serif;
-    font-size:11px;
-    opacity:0.55;
-    letter-spacing:0.08em;
-  }
-  .docket-bar .dot{width:6px; height:6px; border-radius:50%; background:var(--accent); display:inline-block; margin-right:8px; animation:pulse 2.4s ease-in-out infinite;}
-  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.35;}}
-  .docket-bar nav{display:flex; gap:22px; white-space:nowrap;}
-  .docket-bar nav a{text-decoration:none; opacity:0.75; transition:opacity .2s;}
-  .docket-bar nav a:hover{opacity:1;}
-  .docket-bar nav a.active{opacity:1; border-bottom:1px solid var(--accent);}
-  .lang-switch{display:flex; gap:2px; border:1px solid rgba(250,243,234,0.3); border-radius:20px; padding:2px; flex-shrink:0;}
-  .lang-switch button{
-    font-family:'Söhne', system-ui, sans-serif; font-size:12px; letter-spacing:0.06em;
-    background:transparent; border:none; color:var(--paper); opacity:0.55;
-    padding:5px 12px; border-radius:20px; cursor:pointer; text-transform:uppercase;
-    transition:all .2s;
-  }
-  .lang-switch button.active{ background:var(--accent); opacity:1; color:var(--white); }
-
-  /* ===== HERO ===== */
-  .hero{ padding:120px 32px 90px; max-width:1100px; margin:0 auto; position:relative; }
-  .hero .tag{
-    font-family:'Söhne', system-ui, sans-serif; font-size:12px; letter-spacing:0.12em;
-    text-transform:uppercase; color:var(--accent-deep); margin-bottom:22px;
-    display:flex; align-items:center; gap:10px;
-  }
-  .hero .tag::before{ content:""; width:28px; height:1px; background:var(--accent-deep); }
-  .hero h1{
-    font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; letter-spacing:-0.01em;
-    font-size:clamp(38px, 6vw, 60px); line-height:1.1; letter-spacing:-0.01em;
-    max-width:16ch; color:var(--ink);
-  }
-  .hero .subline{ margin-top:28px; font-size:18px; max-width:52ch; color:var(--text-dim); }
-  .hero .role-strip{ margin-top:44px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid var(--line); }
-  .role-strip div{ flex:1 1 160px; padding:16px 20px 0 0; border-right:1px solid var(--line); }
-  .role-strip div:last-child{border-right:none;}
-  .role-strip .k{
-    font-family:'Söhne', system-ui, sans-serif; font-size:10.5px; text-transform:uppercase;
-    letter-spacing:0.1em; color:var(--text-dim); margin-bottom:6px;
-  }
-  .role-strip .v{font-size:14.5px; font-weight:500; color:var(--ink);}
-
-  /* ===== SECTION LABEL (top intro) ===== */
-  .section-intro{ max-width:1100px; margin:0 auto; padding:70px 32px 20px; }
-  .section-intro .eyebrow{
-    font-family:'Söhne', system-ui, sans-serif; font-size:12px; letter-spacing:0.14em;
-    text-transform:uppercase; color:var(--accent-deep); margin-bottom:10px;
-  }
-  .section-intro h2{ font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; font-size:27px; color:var(--ink); max-width:40ch; }
-
-  /* ===== COMPANY GROUP HEADER ===== */
-  .company-group{ max-width:1100px; margin:0 auto; padding:0 32px; scroll-margin-top:70px; }
-  .company-header{
-    display:flex; align-items:baseline; justify-content:space-between;
-    padding:46px 0 18px;
-    border-bottom:2px solid var(--ink);
-    margin-bottom:26px;
-  }
-  .company-header .company-name{
-    font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; font-size:25px; color:var(--ink);
-    display:flex; align-items:baseline; gap:14px;
-  }
-  .company-header .company-name .co-code{
-    font-family:'Söhne', system-ui, sans-serif; font-size:12px; color:var(--accent-deep); font-weight:400;
-  }
-  .company-header .co-count{
-    font-family:'Söhne', system-ui, sans-serif; font-size:11.5px; color:var(--text-dim);
-    text-transform:uppercase; letter-spacing:0.08em;
-  }
-
-  .cases{ display:flex; flex-direction:column; gap:28px; padding-bottom:20px; }
-
-  .case{
-    background:var(--white); border:1px solid var(--line); border-radius:2px;
-    position:relative; overflow:hidden; scroll-margin-top:70px;
-  }
-  .case-tab{
-    display:flex; align-items:center; justify-content:space-between; padding:18px 26px;
-    background:var(--paper-dim); border-bottom:1px solid var(--line);
-    font-family:'Söhne', system-ui, sans-serif; font-size:12px; letter-spacing:0.06em;
-    text-transform:uppercase; color:var(--text-dim);
-  }
-  .case-tab .case-id{color:var(--ink); font-weight:500;}
-  .status{
-    display:inline-flex; align-items:center; gap:7px; padding:5px 12px; border-radius:20px;
-    border:1px solid currentColor; font-size:10.5px;
-  }
-  .status .dot{width:6px; height:6px; border-radius:50%; background:currentColor;}
-  .status.live{color:var(--teal);}
-  .status.build{color:var(--accent-deep);}
-  .status.draft{color:#777777;}
-
-  .case-body{ padding:44px 44px 46px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; }
-  @media (max-width:820px){
-    .case-body{grid-template-columns:1fr; gap:32px; padding:32px 24px 36px;}
-    .case-tab{padding:14px 20px; flex-wrap:wrap; gap:10px;}
-  }
-  .case-body h3{ font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700; font-size:32px; color:var(--ink); margin-bottom:10px; }
-  .case-body .client{
-    font-family:'Söhne', system-ui, sans-serif; font-size:12px; color:var(--text-dim);
-    text-transform:uppercase; letter-spacing:0.06em; margin-bottom:22px;
-  }
-  .case-body .desc{ font-size:15.5px; color:var(--text-dim); margin-bottom:26px; max-width:44ch; }
-
-  .field{margin-bottom:22px;}
-  .proto-label{font-family:'Söhne', system-ui, sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent-deep); display:block; margin-top:10px; margin-bottom:2px;}
-  .field .flabel{
-    font-family:'Söhne', system-ui, sans-serif; font-size:10.5px; text-transform:uppercase;
-    letter-spacing:0.1em; color:var(--accent-deep); margin-bottom:7px;
-  }
-  .field .fvalue{font-size:14.5px; color:var(--text); line-height:1.6;}
-
-  .process-list{list-style:none;}
-  .process-list li{
-    padding:14px 0; border-top:1px solid var(--line);
-    display:grid; grid-template-columns:28px 1fr; gap:14px; align-items:baseline;
-  }
-  .process-list li:last-child{border-bottom:1px solid var(--line);}
-  .process-list .pnum{ font-family:'Söhne', system-ui, sans-serif; font-size:11px; color:var(--accent-deep); }
-  .process-list .ptitle{font-weight:600; font-size:14.5px; color:var(--ink); margin-bottom:3px;}
-  .process-list .pdesc{font-size:13.5px; color:var(--text-dim);}
-
-  .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;}
-  .tags span{
-    font-family:'Söhne', system-ui, sans-serif; font-size:11px; padding:5px 10px;
-    background:var(--paper-dim); border:1px solid var(--line); color:var(--ink-soft); border-radius:2px;
-  }
-  /* accordion */
-  details.case > summary.case-tab{
-    cursor:pointer; list-style:none;
-    position:relative; padding-right:44px;
-  }
-  details.case > summary.case-tab::-webkit-details-marker{display:none;}
-  details.case > summary.case-tab::after{
-    content:"+"; position:absolute; right:22px; top:50%;
-    transform:translateY(-50%); font-size:20px; color:var(--accent-deep);
-    font-weight:400; transition:transform .15s;
-  }
-  details.case[open] > summary.case-tab::after{content:"−";}
-  details.case[open] > summary.case-tab{border-bottom:1px solid var(--line);}
-  .case-images{grid-column:1 / -1; display:flex; flex-direction:column; gap:16px; margin-top:26px; padding-top:26px; border-top:1px solid var(--line);}
-  .case-images img{width:100%; height:auto; border:none; border-radius:2px; display:block;}
-  .case-images .images-pair{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  .case-images .images-pair img{width:100%;}
-  .contact-list{margin-top:12px; font-size:14px; line-height:1.9; color:var(--text);}
-  .contact-list a{color:var(--accent-deep); text-decoration:underline;}
-
-  .case.placeholder .placeholder-note{
-    grid-column:1 / -1; margin-top:6px; padding:16px 18px; background:var(--paper-dim);
-    border:1px dashed var(--line); font-family:'Söhne', system-ui, sans-serif; font-size:12px;
-    color:var(--text-dim); line-height:1.7;
-  }
-  .case.placeholder .placeholder-note b{color:var(--accent-deep);}
-
-  .empty-case{
-    border:1px dashed var(--line); border-radius:2px; padding:34px 40px;
-    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;
-    background:rgba(255,255,255,0.4);
-  }
-  .empty-case .et{ font-family:'Söhne', system-ui, sans-serif; font-size:12.5px; color:var(--text-dim); }
-  .empty-case .et b{color:var(--accent-deep); text-transform:uppercase; letter-spacing:0.06em; font-size:11px;}
-
-  .stamp{
-    position:absolute; top:26px; right:26px; width:64px; height:64px;
-    border:1.5px solid var(--accent-deep); border-radius:50%;
-    display:flex; align-items:center; justify-content:center; text-align:center;
-    transform:rotate(-8deg); opacity:0.9;
-  }
-  .stamp span{
-    font-family:'Söhne', system-ui, sans-serif; font-size:8.5px; letter-spacing:0.06em;
-    text-transform:uppercase; color:var(--accent-deep); line-height:1.3;
-  }
-  @media (max-width:640px){ .stamp{display:none;} }
-
-  .docket-bar .left-stack{display:flex; flex-direction:column; gap:6px;}
-  .docket-bar .left-sub{display:flex; gap:10px; align-items:center;}
-  .docket-bar .wip{
-    font-family:'Söhne', system-ui, sans-serif; font-size:10px;
-    letter-spacing:0.18em; color:var(--accent); background:transparent;
-    border:1px solid var(--accent); padding:2px 7px; border-radius:2px;
-    font-weight:500;
-  }
-  .type-cta{
-    position:fixed; right:0; top:50%; transform:translateY(-50%);
-    writing-mode:vertical-rl;
-    background:var(--ink); color:var(--paper);
-    padding:16px 8px; font-family:'Söhne', system-ui, sans-serif; font-size:11px;
-    letter-spacing:0.2em; text-transform:uppercase; z-index:100;
-    border:none; cursor:pointer; border-radius:2px 0 0 2px; opacity:0.9;
-    transition:opacity .2s, background .2s;
-  }
-  .type-cta:hover{opacity:1; background:var(--accent);}
-  .type-story{
-    position:fixed; right:-380px; top:50%; transform:translateY(-50%);
-    width:320px; max-width:90vw; max-height:80vh; overflow-y:auto;
-    background:var(--paper); border:1px solid var(--line);
-    padding:32px 26px 26px; z-index:101;
-    transition:right .3s ease; box-shadow:-6px 6px 28px rgba(0,0,0,0.10);
-  }
-  .type-story.open{right:24px;}
-  .type-story-eyebrow{
-    font-family:'Söhne', system-ui, sans-serif; font-size:10.5px;
-    letter-spacing:0.14em; text-transform:uppercase;
-    color:var(--accent-deep); margin-bottom:20px;
-  }
-  .type-story-close{
-    position:absolute; top:8px; right:12px; background:transparent;
-    border:none; font-size:22px; line-height:1; cursor:pointer; color:var(--text-dim);
-  }
-  .type-item{margin-bottom:18px; font-size:13px; line-height:1.55; color:var(--text-dim);}
-  .type-item strong{
-    display:block; font-family:'Financier Display', 'Financier Text', Georgia, serif; font-weight:700;
-    font-size:15px; color:var(--ink); margin-bottom:4px; letter-spacing:0;
-    text-transform:none;
-  }
-  footer{
-    max-width:1100px; margin:60px auto 0; padding:40px 32px 60px; border-top:1px solid var(--line);
-    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
-  }
-  footer .fmono{
-    font-family:'Söhne', system-ui, sans-serif; font-size:11.5px; color:var(--text-dim);
-    text-transform:uppercase; letter-spacing:0.08em;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
+<script src="language.js" defer></script>
 </head>
-<body data-lang="en">
+<body data-lang="es">
 
-  <button class="type-cta" onclick="document.getElementById('type-story').classList.toggle('open')" aria-label="Typography">
-    <span class="es">Tipografía</span><span class="en">Typography</span>
-  </button>
-  <aside id="type-story" class="type-story">
-    <button class="type-story-close" onclick="document.getElementById('type-story').classList.remove('open')" aria-label="Cerrar">×</button>
-    <div class="type-story-eyebrow"><span class="es">Tipografías</span><span class="en">Typography</span></div>
-    <p style="font-size:12px; color:var(--text-dim); margin-bottom:20px; line-height:1.55;">
-      <span class="es">Ambas diseñadas por Kris Sowersby, fundador de <a href="https://klim.co.nz" target="_blank" style="color:var(--accent-deep);">Klim Type Foundry</a> (Wellington, Nueva Zelanda, 2005). Klim combina conocimiento histórico con un artesanado contemporáneo riguroso. Sowersby recibió el Certificate of Excellence del Type Directors Club de Nueva York, es miembro de Alliance Graphique Internationale y ganó el John Britten Black Pin — la máxima distinción del diseño en Nueva Zelanda — en 2015.</span>
-      <span class="en">Both designed by Kris Sowersby, founder of <a href="https://klim.co.nz" target="_blank" style="color:var(--accent-deep);">Klim Type Foundry</a> (Wellington, New Zealand, 2005). Klim combines historical knowledge with rigorous contemporary craft. Sowersby has received the Type Directors Club (NYC) Certificate of Excellence, is a member of Alliance Graphique Internationale, and won the John Britten Black Pin — New Zealand's highest design award — in 2015.</span>
-    </p>
-    <div class="type-item">
-      <strong>Financier</strong>
-      <span class="es">Serif de contraste alto inspirada en la tradición editorial anglosajona — originalmente encargada por el Financial Times.</span>
-      <span class="en">High-contrast serif rooted in Anglo editorial tradition — originally commissioned by the Financial Times.</span>
-    </div>
-    <div class="type-item">
-      <strong>Söhne</strong>
-      <span class="es">"El recuerdo de Akzidenz-Grotesk enmarcado por la realidad de Helvetica". Captura la materialidad analógica del <em>Standard Medium</em> usado en el legendario sistema de señalética de Unimark para el metro de Nueva York.</span>
-      <span class="en">"The memory of Akzidenz-Grotesk framed through the reality of Helvetica." Captures the analogue materiality of <em>Standard Medium</em> used in Unimark's legendary wayfinding system for the NYC subway.</span>
-    </div>
-    <div class="type-item" style="border-top:1px solid var(--line); padding-top:14px; font-size:11px;">
-      <span class="es">Ambas de <a href="https://klim.co.nz" target="_blank" style="color:var(--accent-deep);">klim.co.nz</a> — en licencia de prueba.</span>
-      <span class="en">Both from <a href="https://klim.co.nz" target="_blank" style="color:var(--accent-deep);">klim.co.nz</a> — trial license.</span>
-    </div>
-  </aside>
+
 
   <div class="docket-bar">
     <div class="left">
@@ -379,18 +22,19 @@
         </div>
       </div>
     </div>
-    <nav>
+    <nav aria-label="Principal">
       <a href="index.html"><span class="es">Sobre mí</span><span class="en">About</span></a>
-      <a href="work.html" class="active">Work</a>
+      <a href="work.html" class="active" aria-current="page"><span class="es">Proyectos</span><span class="en">Work</span></a>
     </nav>
     <div class="lang-switch">
-      <button class="active" data-set="en">EN</button>
-      <button data-set="es">ES</button>
+      <button data-set="en" aria-pressed="false">EN</button>
+      <button class="active" data-set="es" aria-pressed="true">ES</button>
     </div>
   </div>
 
+  <main>
   <div class="section-intro">
-    <div class="eyebrow">Work</div>
+    <h1><span class="es">Proyectos</span><span class="en">Selected work</span></h1>
     <h2>
       <span class="es">Cada proyecto documentado como un caso: problema, proceso, estado actual.</span>
       <span class="en">Each project documented as a case: problem, process, current status.</span>
@@ -404,10 +48,9 @@
     <div class="cases">
 
       <!-- ASSIST -->
-      <article class="case" id="assist">
-        <div class="case-tab">
+      <details class="case" id="assist"><summary class="case-tab">
           <span class="case-id">ASSIST</span>
-        </div>
+        </summary>
         <div class="case-body">
           <div>
             <h3>ASSIST</h3>
@@ -417,16 +60,23 @@
               <span class="en">A case management system so teams supporting Enterprise clients can resolve purchases, orders, and requests in one place, instead of jumping between disconnected tools.</span>
               <span class="es proto-label">Enlace a prototipo de visión hecho con AI:</span>
               <span class="en proto-label">Link to AI-built vision prototype:</span>
-              <a href="https://assist-demo.ceciliapvera.workers.dev/" target="_blank" style="color:var(--accent-deep); text-decoration:underline; display:block;">Product vision, from forms to conversation ↗</a>
+              <a href="https://assist-demo.ceciliapvera.workers.dev/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:block;">Product vision, from forms to conversation ↗</a>
               <span class="es proto-label">Enlace a prototipo funcional hecho con AI:</span>
               <span class="en proto-label">Link to AI-built functional prototype:</span>
-              <a href="https://assist-poc-072026.ceciliapvera.workers.dev/" target="_blank" style="color:var(--accent-deep); text-decoration:underline; display:block;">ASSIST · Salesforce — POC (cada caso descrito en "Choose a case") ↗</a>
+              <a href="https://assist-poc-072026.ceciliapvera.workers.dev/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:block;">ASSIST · Salesforce — POC (cada caso descrito en "Choose a case") ↗</a>
             </p>
             <div class="field">
               <div class="flabel"><span class="es">Problema</span><span class="en">Problem</span></div>
               <div class="fvalue">
                 <span class="es">Los clientes de Enterprise gestionan compras, pedidos y órdenes a través de procesos fragmentados, lo que genera fricción tanto para el cliente como para el equipo interno que debe resolver cada caso. ASSIST nace para centralizar esa gestión sobre una base de Salesforce.</span>
                 <span class="en">Enterprise clients manage purchases, orders, and requests through fragmented processes, creating friction for both the client and the internal team resolving each case. ASSIST centralizes that management on a Salesforce foundation.</span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="flabel"><span class="es">Herramientas utilizadas</span><span class="en">Tools used</span></div>
+              <div class="fvalue">
+                <span class="es">Notion con agentes fue fundamental para crear una base de datos que permitió definir la visión del producto, las personas y los jobs to be done de ASSIST.</span>
+                <span class="en">Notion with agents was fundamental to building a database to define ASSIST’s product vision, personas, and jobs to be done.</span>
               </div>
             </div>
             <div class="tags">
@@ -451,13 +101,12 @@
             </ul>
           </div>
         </div>
-      </article>
+      </details>
 
       <!-- CLICK -->
-      <article class="case" id="click">
-        <div class="case-tab">
+      <details class="case" id="click"><summary class="case-tab">
           <span class="case-id">CLICK</span>
-        </div>
+        </summary>
         <div class="case-body">
           <div>
             <h3>Click — Digital Showroom</h3>
@@ -467,7 +116,7 @@
               <span class="en">Tool to speed up repetitive asset-production tasks: bulk resizing and mass formatting.</span>
               <span class="es proto-label">Enlace a prototipo funcional hecho con AI:</span>
               <span class="en proto-label">Link to AI-built functional prototype:</span>
-              <a href="https://mass-formatting-actions.ceciliapvera.workers.dev/" target="_blank" style="color:var(--accent-deep); text-decoration:underline; display:block;">Mass formatting actions and Advanced filter and sorting ↗</a>
+              <a href="https://mass-formatting-actions.ceciliapvera.workers.dev/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:block;">Mass formatting actions and Advanced filter and sorting ↗</a>
             </p>
             <div class="field">
               <div class="flabel"><span class="es">Problema</span><span class="en">Problem</span></div>
@@ -482,13 +131,12 @@
             </div>
           </div>
         </div>
-      </article>
+      </details>
 
       <!-- DESIGN SYSTEM -->
-      <article class="case" id="design-system">
-        <div class="case-tab">
+      <details class="case" id="design-system"><summary class="case-tab">
           <span class="case-id"><span class="es">Design system</span><span class="en">Design system</span></span>
-        </div>
+        </summary>
         <div class="case-body">
           <div>
             <h3><span class="es">Componentes y librerías</span><span class="en">Components and libraries</span></h3>
@@ -502,7 +150,7 @@
             </div>
           </div>
         </div>
-      </article>
+      </details>
 
     </div>
   </div>
@@ -513,10 +161,9 @@
       <div class="company-name">Pega <span class="co-code">/ Pegasystems</span></div>
     </div>
     <div class="cases">
-      <article class="case">
-        <div class="case-tab">
+      <details class="case"><summary class="case-tab">
           <span class="case-id">GTM · DEMOX</span>
-        </div>
+        </summary>
         <div class="case-body">
           <div>
             <h3><span class="es">Proceso UX de demos para Go-To-Market</span><span class="en">Full UX Demo GTM process</span></h3>
@@ -538,7 +185,7 @@
             </div>
           </div>
         </div>
-      </article>
+      </details>
 
       <details class="case" name="pega-cases">
         <summary class="case-tab">
@@ -551,7 +198,7 @@
             <p class="desc">
               <span class="es">Creación de una demo para un gran banco de Latinoamérica que muestra algunas de las funcionalidades más potentes de la aplicación CDH (Customer Decision Hub) de Pega. Se muestran desde la perspectiva de los agentes que gestionan la herramienta (backoffice) y de los usuarios finales (People) a través del sitio web de una compañía ficticia llamada "U+".</span>
               <span class="en">Creation of a demo for a large bank in Latin America showing some of the most powerful functionalities of Pega's CDH (Customer Decision Hub) application. Shown from the perspective of agents who manage the tool (backoffice) and end users (People) through the website of a fictitious company called "U+".</span>
-              <br><a href="https://www.figma.com/proto/l2fOH4IEy2Z1PJtXHGGYku/Published_Itau%CC%81-CDH%2BPlatform?page-id=0%3A1&type=design&node-id=603-13261&viewport=735%2C643%2C0.06&scaling=scale-down-width&starting-point-node-id=603%3A13261" target="_blank" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Link to click-through prototype ↗</a>
+              <br><a href="https://www.figma.com/proto/l2fOH4IEy2Z1PJtXHGGYku/Published_Itau%CC%81-CDH%2BPlatform?page-id=0%3A1&type=design&node-id=603-13261&viewport=735%2C643%2C0.06&scaling=scale-down-width&starting-point-node-id=603%3A13261" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Link to click-through prototype ↗</a>
             </p>
             <div class="field">
               <div class="flabel"><span class="es">Funcionalidades</span><span class="en">Functionalities</span></div>
@@ -595,8 +242,8 @@
             <p class="desc">
               <span class="es">Las compañías intentan diseñar el customer journey perfecto, pero los clientes siempre eligen su propio camino — ellos tienen el control. Con Pega, el enfoque se transforma: la IA prioriza entre todos los journeys posibles y cambia automáticamente entre vender, atender y retener en tiempo real, según cambian las necesidades del cliente.</span>
               <span class="en">Companies try to script the perfect customer journey, but customers always choose their own path — they're in control. That's why with Pega you'll transform your approach, using AI to prioritise across all potential journeys and automatically shift between selling, serving, and retaining in real-time as customers' needs change.</span>
-              <br><a href="https://www.figma.com/proto/U4eixMRzUQzW9khH8oTz1p/Gartner-CDH-Demo?page-id=759%3A7733&type=design&node-id=1583-137089&viewport=5821%2C903%2C0.06&scaling=min-zoom&starting-point-node-id=1583%3A137089" target="_blank" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Click-through — Customer Decision Hub flow ↗</a>
-              <br><a href="https://www.figma.com/proto/U4eixMRzUQzW9khH8oTz1p/Gartner-CDH-Demo?page-id=2%3A18562&type=design&node-id=804-62241&viewport=1411%2C-105%2C0.45&scaling=min-zoom&starting-point-node-id=804%3A62241" target="_blank" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:6px;">Click-through — Customer flow ↗</a>
+              <br><a href="https://www.figma.com/proto/U4eixMRzUQzW9khH8oTz1p/Gartner-CDH-Demo?page-id=759%3A7733&type=design&node-id=1583-137089&viewport=5821%2C903%2C0.06&scaling=min-zoom&starting-point-node-id=1583%3A137089" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Click-through — Customer Decision Hub flow ↗</a>
+              <br><a href="https://www.figma.com/proto/U4eixMRzUQzW9khH8oTz1p/Gartner-CDH-Demo?page-id=2%3A18562&type=design&node-id=804-62241&viewport=1411%2C-105%2C0.45&scaling=min-zoom&starting-point-node-id=804%3A62241" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:6px;">Click-through — Customer flow ↗</a>
             </p>
             <div class="field">
               <div class="flabel"><span class="es">Contexto</span><span class="en">Context</span></div>
@@ -627,7 +274,7 @@
             <p class="desc">
               <span class="es">Click-through de 352 pantallas sobre Workflow Automation. El customer engagement asistido por IA ayuda a las aseguradoras a ofrecer interacciones personalizadas y proactivas, reducir costes y brindar experiencias fluidas a sus clientes en el canal, lugar y momento que prefieran.</span>
               <span class="en">A click-through made of 352 screens, about Workflow Automation. AI-enabled customer engagement helps Insurance providers deliver personalised and proactive interactions, reduce cost, and provide seamless experiences to their customers in their preferred channel, location, and time.</span>
-              <br><a href="https://www.figma.com/proto/Zh5kLoIrt7Rzmv16PwFL4O/Omni-Channel-Customer-Service?page-id=700%3A120472&type=design&node-id=700-160856&viewport=19409%2C20610%2C0.31&scaling=scale-down-width&starting-point-node-id=700%3A160856" target="_blank" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Click-through — Omni-Channel Customer Service ↗</a>
+              <br><a href="https://www.figma.com/proto/Zh5kLoIrt7Rzmv16PwFL4O/Omni-Channel-Customer-Service?page-id=700%3A120472&type=design&node-id=700-160856&viewport=19409%2C20610%2C0.31&scaling=scale-down-width&starting-point-node-id=700%3A160856" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Click-through — Omni-Channel Customer Service ↗</a>
             </p>
             <div class="field">
               <div class="flabel"><span class="es">Contexto</span><span class="en">Context</span></div>
@@ -681,8 +328,8 @@
             <p class="desc">
               <span class="es">Research cualitativo con los heaviest users de PEGA Demo Manager para entender de primera mano cómo utilizan la herramienta, además de sus expectativas, pain points, necesidades y preferencias al entregar una demo en vivo. Objetivo: conocer y comprender la perspectiva del usuario para hacer de PDM una herramienta más user-friendly, desarrollar nuevas funcionalidades y ahorrarle tiempo al usuario.</span>
               <span class="en">Qualitative research conducted to learn first-hand how the heaviest users of PEGA Demo Manager use the tool. Also, to understand their expectations, pain points, needs, and likes when delivering a live demo. The goal is to know and understand user perspectives to make PDM a more user-friendly tool, develop new features, and save users time.</span>
-              <br><a href="https://www.figma.com/file/STCVjXq3ELReEOVw7rg50R/Profiles-%5BPega-real-personas%5D?type=design&node-id=79%3A939&t=V09nNQE5yHzY0SOH-1" target="_blank" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Link to Profiles — Pega real personas ↗</a>
-              <br><a href="https://docs.google.com/presentation/d/15VvNPcRK_osKYGzYnjl7CAR1ECziQ_gL/edit?usp=sharing&ouid=109473249056253500300&rtpof=true&sd=true" target="_blank" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:6px;">Link to Results — presentation ↗</a>
+              <br><a href="https://www.figma.com/file/STCVjXq3ELReEOVw7rg50R/Profiles-%5BPega-real-personas%5D?type=design&node-id=79%3A939&t=V09nNQE5yHzY0SOH-1" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:10px;">Link to Profiles — Pega real personas ↗</a>
+              <br><a href="https://docs.google.com/presentation/d/15VvNPcRK_osKYGzYnjl7CAR1ECziQ_gL/edit?usp=sharing&ouid=109473249056253500300&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" style="color:var(--accent-deep); text-decoration:underline; display:inline-block; margin-top:6px;">Link to Results — presentation ↗</a>
             </p>
           </div>
           <div class="case-images">
@@ -706,10 +353,9 @@
       <div class="company-name">Heineken</div>
     </div>
     <div class="cases">
-      <article class="case">
-        <div class="case-tab">
+      <details class="case"><summary class="case-tab">
           <span class="case-id">RESEARCH LEAD</span>
-        </div>
+        </summary>
         <div class="case-body">
           <div>
             <h3><span class="es">Research Lead en Heineken España</span><span class="en">Research Lead at Heineken Spain</span></h3>
@@ -720,7 +366,7 @@
             </p>
           </div>
         </div>
-      </article>
+      </details>
 
       <details class="case" name="heineken-cases">
         <summary class="case-tab">
@@ -763,10 +409,9 @@
       <div class="company-name">ECI <span class="co-code">/ El Corte Inglés</span></div>
     </div>
     <div class="cases">
-      <article class="case">
-        <div class="case-tab">
+      <details class="case"><summary class="case-tab">
           <span class="case-id">SERVICE DESIGN · UX LEAD</span>
-        </div>
+        </summary>
         <div class="case-body">
           <div>
             <h3><span class="es">Service Designer y UX Lead en El Corte Inglés</span><span class="en">Service Designer & UX Lead at El Corte Inglés</span></h3>
@@ -777,7 +422,7 @@
             </p>
           </div>
         </div>
-      </article>
+      </details>
 
       <details class="case" name="eci-cases">
         <summary class="case-tab">
@@ -813,10 +458,9 @@
       <div class="company-name">BBVA</div>
     </div>
     <div class="cases">
-      <article class="case">
-        <div class="case-tab">
+      <details class="case"><summary class="case-tab">
           <span class="case-id">DIGITAL INNOVATION & TRANSFORMATION LEAD</span>
-        </div>
+        </summary>
         <div class="case-body">
           <div>
             <h3><span class="es">Digital Innovation & Transformation Lead en BBVA</span><span class="en">Digital Innovation & Transformation Lead at BBVA</span></h3>
@@ -827,7 +471,7 @@
             </p>
           </div>
         </div>
-      </article>
+      </details>
 
       <details class="case" name="bbva-cases">
         <summary class="case-tab">
@@ -860,10 +504,9 @@
     <div class="cases">
 
       <!-- BOMBIERI -->
-      <article class="case" id="bombieri">
-        <div class="case-tab">
+      <details class="case" id="bombieri"><summary class="case-tab">
           <span class="case-id">SERVICE DESIGN · FREELANCE</span>
-        </div>
+        </summary>
         <div class="case-body">
           <div>
             <h3>Bombieri</h3>
@@ -874,7 +517,7 @@
             </p>
           </div>
         </div>
-      </article>
+      </details>
 
       <details class="case" name="bombieri-cases">
         <summary class="case-tab">
@@ -942,20 +585,13 @@
     </div>
   </div>
 
+  </main>
   <footer>
     <div class="fmono">Portfolio 2026</div>
-    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · Product Design Lead · <span class="es">Estrategia</span><span class="en">Strategy</span> · Enterprise</div>
+    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" rel="noopener noreferrer" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · Product Design Lead · <span class="es">Estrategia</span><span class="en">Strategy</span> · Enterprise</div>
   </footer>
 
-  <script>
-    document.querySelectorAll('.lang-switch button').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        document.body.setAttribute('data-lang', btn.dataset.set);
-        document.querySelectorAll('.lang-switch button').forEach(function(b){ b.classList.remove('active'); });
-        btn.classList.add('active');
-      });
-    });
-  </script>
+
 
 </body>
 </html>
