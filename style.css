@@ -146,3 +146,7 @@ body:has(.bio-education) .hero { margin-bottom:20px; }
 .client-section > summary::before { content:""; display:inline-block; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid currentColor; margin-right:8px; vertical-align:middle; }
 .client-section[open] > summary::before { transform:rotate(90deg); }
 .client-section > .cases { padding-top:8px; padding-bottom:16px; }
+
+/* Company names are plain headings, never disclosure controls. */
+.work-page .client-title { font-size:16px; font-weight:600; color:var(--text); margin:0 0 12px; line-height:1.65; }
+.work-page .company-group + .company-group { margin-top:36px; }
