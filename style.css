@@ -36,7 +36,6 @@ details[open]>summary { list-style-type:disclosure-open; }
 .case-body { display:block; padding:8px 0 28px; }
 .case-body>div+div { margin-top:28px; }
 .field { margin:24px 0; }
-.avatar { width:80px; height:80px; object-fit:cover; border-radius:50%; margin-bottom:24px; }
 .tags { display:flex; flex-wrap:wrap; gap:8px 16px; font-size:13px; color:var(--text-dim); }
 .process-list { padding-left:20px; }
 .process-list li { margin:16px 0; }
@@ -50,3 +49,6 @@ details[open]>summary { list-style-type:disclosure-open; }
 .contact-list { line-height:2; }
 footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim); display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; }
 @media(max-width:520px) { body { padding:32px 20px; } .docket-bar { gap:16px; margin-bottom:44px; } .docket-bar .left { flex-basis:100%; } .images-pair { grid-template-columns:1fr; } }
+
+.tools { margin-top:48px; }
+.tools-note { color:var(--text-dim); font-size:14px; }
