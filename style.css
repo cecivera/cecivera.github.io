@@ -69,3 +69,6 @@ footer { margin-top:56px; padding-top:20px; font-size:12px; color:var(--text-dim
 /* Keep the homepage bio close to the introduction. */
 body:has(.bio-education) .hero { margin-bottom:20px; }
 .bio-education .field { margin-top:0; }
+
+.education { margin-top:28px; }
+.education p { margin-bottom:0; }
