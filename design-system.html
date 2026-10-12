@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Is our design system AI-ready? · Cecilia Vera</title>
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style-29fc6bef70.css">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body data-lang="en" class="case-study">
+  <div class="docket-bar">
+    <div class="left">
+      <div class="left-stack">
+        <span class="brand-name"><span class="dot"></span>Cecilia Vera · Product Design Lead</span>
+        <div class="left-sub">
+          <span class="brand-tag">Portfolio 2026</span>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="Principal">
+      <a href="index.html"><span class="es">Sobre mí</span><span class="en">About</span></a>
+      <a href="work.html" class="active" aria-current="page"><span class="es">Proyectos</span><span class="en">Work</span></a>
+    </nav>
+  </div>
+<main>
+<a href="work.html">← Back to Work</a>
+<div class="case-content">
+<p class="eyebrow">Case study &middot; Design system &middot; Private draft</p>
+<h1>Is our design system AI-ready?</h1>
+<section class="case-summary">
+<h3><span class="es">Descripción</span><span class="en">Description</span></h3>
+<p><span class="es">Un marco de auditoría de seis dimensiones para evaluar cómo un sistema de diseño de herramientas mayoristas puede apoyar flujos asistidos por IA.</span><span class="en">A six-dimension audit framework to assess how a wholesale-tools design system can support AI-assisted workflows.</span></p>
+<h3><span class="es">Definición del problema</span><span class="en">Problem statement</span></h3>
+<p><span class="es">La IA necesita tokens, APIs, documentación y estructuras coherentes; las diferencias entre diseño y código y la falta de gobernanza pueden generar errores y divergencias.</span><span class="en">AI needs consistent tokens, APIs, documentation, and structures; design–code mismatches and missing governance can lead to errors and drift.</span></p>
+<h3><span class="es">Qué creé</span><span class="en">What I created</span></h3>
+<p><span class="es">Una guía de evaluación de 0 a 5 para arquitectura de tokens, APIs de componentes, paridad diseño–código, estructura, gobernanza y preparación de flujos con IA.</span><span class="en">A 0–5 assessment guide covering token architecture, component APIs, design–code parity, structure, governance, and AI workflow readiness.</span></p>
+<h3><span class="es">Aprendizajes clave</span><span class="en">Key learnings</span></h3>
+<p><span class="es">Pendiente: el borrador aún no incluye los hallazgos al aplicar la auditoría ni las acciones realizadas.</span><span class="en">Pending: the draft does not yet include findings from applying the audit or the actions taken.</span></p>
+</section>
+
+<p class="lead">Six dimensions determine how well a design system can support AI-assisted workflows. Score yourself honestly: this is for your benefit, not a report card. The gaps you find are exactly where the leverage is.</p>
+
+<section>
+  <h2>My role</h2>
+  <p>Lead product designer of the design system audit for wholesale tools.</p>
+</section>
+
+<section>
+  <h2>How to score</h2>
+  <div class="scale">
+    <div><b>0</b><span>Not in place. This dimension doesn&rsquo;t exist in any meaningful form.</span></div>
+    <div><b>1&ndash;2</b><span>Early or ad hoc. Some effort exists but it&rsquo;s inconsistent and undocumented.</span></div>
+    <div><b>3</b><span>Partially established. Works in some areas but has notable gaps or drift.</span></div>
+    <div><b>4&ndash;5</b><span>Strong foundation. Documented, consistent and actively maintained.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>The six dimensions</h2>
+
+  <div class="dim">
+    <h2><span>01 / Token Architecture</span><span>0&ndash;5</span></h2>
+    <h3>Tokens are the vocabulary AI uses to understand your system</h3>
+    <p>Well-named, tiered tokens (primitive, semantic, component) give AI agents the foundation they need to generate on-brand results.</p>
+    <ul>
+      <li>Your tokens are named semantically (e.g., color.action.primary, not blue-500)</li>
+      <li>Token tiers are defined: primitives, semantic aliases and component-level tokens are distinct</li>
+      <li>Tokens are available in a format tools can consume (JSON, CSS variables, Figma Variables)</li>
+      <li>Token documentation is current and accessible to the full team</li>
+    </ul>
+  </div>
+
+  <div class="dim">
+    <h2><span>02 / Component API Quality</span><span>0&ndash;5</span></h2>
+    <h3>AI-assisted code generation is only as good as the component API it has to work with</h3>
+    <p>A strong API means less prompt engineering and more reliable output.</p>
+    <ul>
+      <li>Components follow consistent prop naming conventions across the library</li>
+      <li>All variants and states are documented and reflected in the codebase</li>
+      <li>Component behavior (default, disabled, loading, error) follows predictable patterns</li>
+      <li>Props and their expected values are documented in a way an AI tool could reference</li>
+    </ul>
+  </div>
+
+  <div class="dim">
+    <h2><span>03 / Design-to-Code Parity</span><span>0&ndash;5</span></h2>
+    <h3>When Figma components don&rsquo;t match their code counterparts, AI tools make mistakes</h3>
+    <p>AI tools working across both surfaces need the design layer to be a reliable source of truth. Parity makes that possible.</p>
+    <ul>
+      <li>Figma component names match their code counterparts exactly</li>
+      <li>Design tokens in Figma are mapped and synced to code tokens</li>
+      <li>Figma component variants reflect what actually exists in production code</li>
+      <li>There is a defined process for keeping Figma and code in sync as components evolve</li>
+    </ul>
+  </div>
+
+  <div class="dim">
+    <h2><span>04 / Layer &amp; Structure Hygiene</span><span>0&ndash;5</span></h2>
+    <h3>A file full of &ldquo;Frame 47&rdquo; is unreadable to an agent</h3>
+    <p>AI tools that read Figma files rely on layer names and structure. Semantic names let an agent navigate, extract and generate accurately.</p>
+    <ul>
+      <li>Layers in your Figma files are named descriptively and consistently</li>
+      <li>Components use Auto Layout rather than fixed frames wherever applicable</li>
+      <li>Design files are organized with a clear hierarchy (library vs. product vs. drafts)</li>
+      <li>Naming conventions are documented and enforced (through review or tooling)</li>
+    </ul>
+  </div>
+
+  <div class="dim">
+    <h2><span>05 / Governance &amp; Contribution Model</span><span>0&ndash;5</span></h2>
+    <h3>Without governance, AI contributions create drift instead of progress</h3>
+    <p>AI tools can propose changes and generate new components. Without a governance model, those contributions pull the system apart.</p>
+    <ul>
+      <li>There is a defined process for proposing and contributing new components</li>
+      <li>Component ownership is clear: someone is accountable for quality and updates</li>
+      <li>Breaking changes follow a documented versioning and communication process</li>
+      <li>At least one person (or team) is responsible for system health and evolution</li>
+    </ul>
+  </div>
+
+  <div class="dim">
+    <h2><span>06 / AI Workflow Readiness</span><span>0&ndash;5</span></h2>
+    <h3>At least one repeatable AI-assisted workflow, not just conversations about it</h3>
+    <p>The teams getting ahead right now have a workflow they actually repeat.</p>
+    <ul>
+      <li>Your team has experimented with at least one AI tool in a design system context</li>
+      <li>At least one repeatable AI-assisted workflow is in use today (token generation, docs, code review&hellip;)</li>
+      <li>System documentation is clear and machine-readable, not just human-friendly</li>
+      <li>The team shares an understanding of where AI can and cannot be trusted in your workflow</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Your score</h2>
+  <p>Score all six dimensions and add them up. The result is a map of where the leverage is, not a grade.</p>
+  <div class="todo">To fill in: what I found when I applied this to our system, and what we did about it.</div>
+</section>
+
+<section>
+  <h2>Screens</h2>
+  <p class="todo">Captures go here: save them in the <b>ds-shots</b> folder as image 00.png, image 01.png and so on, in the order you want them. They appear automatically and open at full size in a new tab.</p>
+  <div class="gallery" id="g"></div>
+</section>
+
+</div>
+</main>
+  <footer>
+    <div class="fmono">Portfolio 2026</div>
+    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" rel="noopener noreferrer" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · <a href="Cecilia%20Vera%20Battaglia%20-%20CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></div>
+  </footer>
+<script>
+const g = document.getElementById('g');
+for (let i = 0; i <= 60; i++) {
+  const figure = document.createElement('figure');
+  const link = document.createElement('a');
+  const image = new Image();
+  const source = 'ds-shots/image ' + String(i).padStart(2, '0') + '.png';
+  image.loading = 'lazy';
+  image.alt = 'Design system screen ' + (i + 1);
+  image.onerror = () => figure.remove();
+  image.src = source;
+  link.href = source;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.append(image);
+  const caption = document.createElement('figcaption');
+  caption.textContent = String(i + 1);
+  figure.append(link, caption);
+  g.append(figure);
+}
+</script>
+</body>
+</html>
