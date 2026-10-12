@@ -24,49 +24,25 @@
       <a href="index.html"><span class="es">Sobre mí</span><span class="en">About</span></a>
       <a href="work.html" class="active" aria-current="page"><span class="es">Proyectos</span><span class="en">Work</span></a>
     </nav>
-    <div class="lang-switch"><button data-set="en" aria-pressed="true">EN</button><button data-set="es" aria-pressed="false">ES</button></div>
+    <div class="lang-switch">
+      <button class="active" data-set="en" aria-pressed="true">EN</button>
+      <button data-set="es" aria-pressed="false">ES</button>
+    </div>
   </div>
+
 <main>
 <a href="work.html">← Back to Work</a>
 <div class="case-content">
 <p class="eyebrow">Case study &middot; Design system &middot; Private draft</p>
 <h1>Is our design system AI-ready?</h1>
 <section class="case-summary">
-<h3><span class="es">Descripción</span><span class="en">Description</span></h3>
-<p><span class="es">Un marco de auditoría de seis dimensiones para evaluar cómo un sistema de diseño de herramientas mayoristas puede apoyar flujos asistidos por IA.</span><span class="en">A six-dimension audit framework to assess how a wholesale-tools design system can support AI-assisted workflows.</span></p>
-<h3><span class="es">Definición del problema</span><span class="en">Problem statement</span></h3>
-<p><span class="es">La IA necesita tokens, APIs, documentación y estructuras coherentes; las diferencias entre diseño y código y la falta de gobernanza pueden generar errores y divergencias.</span><span class="en">AI needs consistent tokens, APIs, documentation, and structures; design–code mismatches and missing governance can lead to errors and drift.</span></p>
-<h3><span class="es">Qué creé</span><span class="en">What I created</span></h3>
-<p><span class="es">Una guía de evaluación de 0 a 5 para arquitectura de tokens, APIs de componentes, paridad diseño–código, estructura, gobernanza y preparación de flujos con IA.</span><span class="en">A 0–5 assessment guide covering token architecture, component APIs, design–code parity, structure, governance, and AI workflow readiness.</span></p>
+<h3><span class="es">Descripción</span><span class="en">Description</span></h3><p><span class="es">Un marco de auditoría de seis dimensiones para comprobar la preparación de un sistema de diseño mayorista para flujos asistidos por IA.</span><span class="en">A six-dimension audit framework to check how ready a wholesale design system is for AI-assisted workflows.</span></p>
+<h3><span class="es">Definición del problema</span><span class="en">Problem statement</span></h3><p><span class="es">La IA es tan fiable como el sistema en el que se apoya. En nuestras herramientas mayoristas, el sistema de diseño, su capa front-end y Figma habían divergido, por lo que no había una única fuente de verdad desde la que la IA pudiera construir.</span><span class="en">AI is only as reliable as the system underneath it. In our wholesale tools, the design system, its front-end layer and Figma had drifted apart, so there was no single source of truth for AI to build from.</span></p>
+<h3><span class="es">Qué creé</span><span class="en">What I created</span></h3><p><span class="es">Una guía de puntuación de 0 a 5 en seis dimensiones: arquitectura de tokens, APIs de componentes, paridad diseño–código, estructura, gobernanza y preparación para flujos con IA. Después audité el sistema de diseño y su capa front-end directamente desde el código, en lugar de preguntar a otras personas, y actué sobre lo que encontré:</span><span class="en">A 0–5 scoring guide across six dimensions: token architecture, component APIs, design–code parity, structure, governance and AI workflow readiness. Then I audited the design system and its front-end layer straight from the code instead of asking around, and acted on what I found:</span></p>
+<ul><li><span class="es">Conecté Button y 671 iconos mediante Code Connect (672 correspondencias), integrados en main.</span><span class="en">Connected Button and 671 icons through Code Connect (672 mappings), merged to main.</span></li><li><span class="es">Creé un kit de prototipado con componentes reales.</span><span class="en">Built a prototyping kit with real components.</span></li><li><span class="es">Creé un ejemplo completo de login.</span><span class="en">Built a complete login example.</span></li></ul>
 <h3><span class="es">Aprendizajes clave</span><span class="en">Key learnings</span></h3>
-<p><span class="es">Pendiente: el borrador aún no incluye los hallazgos al aplicar la auditoría ni las acciones realizadas.</span><span class="en">Pending: the draft does not yet include findings from applying the audit or the actions taken.</span></p>
+<ul><li><span class="es">Coexisten dos generaciones de implementación. Algunas herramientas utilizan solo el sistema de diseño base; otras, la capa front-end construida sobre él.</span><span class="en">Two generations of implementation coexist. Some tools run on the base design system alone, others on the front-end layer built on top of it.</span></li><li><span class="es">La capa front-end se utiliza en tres versiones y ninguna es la más reciente. Una herramienta también incorporó una librería UI de terceros, lo que supone un segundo sistema de diseño dentro de un mismo producto.</span><span class="en">The front-end layer runs in three versions, and none is the latest. One tool also brought in a third-party UI library, which makes it a second design system inside one product.</span></li><li><span class="es">Figma y código no coinciden. Button tiene una variante CTA en Figma que no existe en código. Tres iconos existen solo en Figma y seis solo en código. Un enlace al código fuente está roto porque su paquete ya no se publica.</span><span class="en">Figma and code don’t match. Button has a CTA variant in Figma that doesn’t exist in code. Three icons exist only in Figma and six only in code. One source link is broken because its package is no longer published.</span></li><li><span class="es">La gobernanza es la verdadera carencia. El plan de convergencia propuesto por los desarrolladores front-end tiene una envergadura similar a la migración a React, por lo que nadie lo aprobaría tal como está planteado.</span><span class="en">Governance is the real gap. The convergence plan the FE devs proposed is as big as the React migration, so nobody would approve it as written.</span></li></ul>
 </section>
-
-
-
-
-
-<p class="lead"><span class="es">Seis dimensiones para evaluar la preparación para la IA e identificar dónde mejorar.</span><span class="en">Six dimensions to assess AI readiness and identify where to improve.</span></p>
-<section>
-<h2><span class="es">Cómo puntuar</span><span class="en">How to score</span></h2>
-<p><span class="es">Puntúa cada dimensión de 0 a 5: <b>0</b> inexistente · <b>1–2</b> incipiente o informal · <b>3</b> parcialmente establecida · <b>4–5</b> coherente, documentada y mantenida.</span><span class="en">Score each dimension from 0 to 5: <b>0</b> absent · <b>1–2</b> early or ad hoc · <b>3</b> partially established · <b>4–5</b> consistent, documented, and maintained.</span></p>
-</section>
-<section>
-<h2><span class="es">Las seis dimensiones</span><span class="en">The six dimensions</span></h2>
-<div class="dim"><h3><span class="es">01 / Arquitectura de tokens</span><span class="en">01 / Token architecture</span></h3><p><span class="es">Tokens semánticos y jerarquizados, disponibles en formatos legibles por herramientas y con documentación actualizada.</span><span class="en">Semantic, tiered tokens in tool-readable formats, backed by current documentation.</span></p></div>
-<div class="dim"><h3><span class="es">02 / APIs de componentes</span><span class="en">02 / Component APIs</span></h3><p><span class="es">Props, variantes y estados coherentes y documentados para generar código fiable.</span><span class="en">Consistent, documented props, variants, and states for reliable code generation.</span></p></div>
-<div class="dim"><h3><span class="es">03 / Paridad diseño–código</span><span class="en">03 / Design–code parity</span></h3><p><span class="es">Nombres, tokens y variantes alineados entre Figma y código, con un proceso de sincronización.</span><span class="en">Matching names, tokens, and variants across Figma and code, with a process to keep them in sync.</span></p></div>
-<div class="dim"><h3><span class="es">04 / Estructura y capas</span><span class="en">04 / Structure and layers</span></h3><p><span class="es">Capas con nombres descriptivos, Auto Layout y una jerarquía clara de archivos.</span><span class="en">Descriptive layer names, Auto Layout, and a clear file hierarchy.</span></p></div>
-<div class="dim"><h3><span class="es">05 / Gobernanza y contribución</span><span class="en">05 / Governance and contribution</span></h3><p><span class="es">Responsables definidos y procesos claros para contribuir, versionar y comunicar cambios.</span><span class="en">Clear ownership and processes for contributions, versioning, and communicating changes.</span></p></div>
-<div class="dim"><h3><span class="es">06 / Flujos de trabajo con IA</span><span class="en">06 / AI workflows</span></h3><p><span class="es">Al menos un flujo repetible, documentación legible por máquinas y límites de confianza compartidos.</span><span class="en">At least one repeatable workflow, machine-readable documentation, and agreed boundaries for trusting AI.</span></p></div>
-</section>
-
-<section>
-  <h2>Your score</h2>
-  <p>Score all six dimensions and add them up. The result is a map of where the leverage is, not a grade.</p>
-  <div class="todo">To fill in: what I found when I applied this to our system, and what we did about it.</div>
-</section>
-
 <section>
   <h2>Screens</h2>
   <p class="todo">Captures go here: save them in the <b>ds-shots</b> folder as image 00.png, image 01.png and so on, in the order you want them. They appear automatically and open at full size in a new tab.</p>
