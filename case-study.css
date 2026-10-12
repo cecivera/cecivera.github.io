@@ -34,3 +34,7 @@
 .ai-native-case .gallery { display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:12px; }
 .ai-native-case .gallery figure { flex:0 0 220px; scroll-snap-align:start; }
 .ai-native-case .gallery figure[hidden] { display:none; }
+
+/* Fit all six previews on desktop; keep horizontal scrolling on small screens. */
+.ai-native-case .gallery figure { flex:0 0 calc((100% - 80px)/6); min-width:0; }
+@media(max-width:600px) { .ai-native-case .gallery figure { flex:0 0 160px; } }
