@@ -18,3 +18,11 @@
 .case-study .gallery img { width:100%; display:block; }
 .case-study footer { margin-top:64px; }
 @media(max-width:600px) { .case-study .scale { grid-template-columns:1fr; } }
+
+.case-study .meta, .case-study .cols { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 24px; margin:24px 0; }
+.case-study .meta b { display:block; font-weight:500; }
+.case-study .card h3 { margin-bottom:8px; }
+.case-study blockquote { margin:24px 0; padding-left:20px; border-left:2px solid #e6e6e6; }
+.case-study .draft, .case-study .note { font-size:13px; color:var(--text-dim); }
+.case-study .gallery img { cursor:zoom-in; }
+@media(max-width:600px) { .case-study .meta, .case-study .cols { grid-template-columns:1fr; } }
