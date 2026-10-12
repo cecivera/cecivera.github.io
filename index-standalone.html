@@ -41,17 +41,39 @@ blockquote{margin:24px 0;padding:0;font-size:1.25rem;line-height:1.45;font-weigh
 footer{padding:96px 0 40px;font-size:1rem;color:var(--mute)}
 @media(max-width:600px){.top{flex-direction:column;gap:12px;padding:32px 0 40px}.meta{grid-template-columns:1fr}}
 </style>
+<style>body[data-lang="en"] .es,body[data-lang="es"] .en{display:none}.case-summary h2{margin-top:24px}.wip{color:#6b6b6b;font-size:14px}</style>
+<script src="language.js" defer></script>
 </head>
-<body>
+<body data-lang="en">
 <div class="wrap">
 <div class="top">
   <div class="brand">Cecilia Vera &middot; Product Design Lead &middot; Enterprise Products</div>
   <nav><a href="index.html">About</a><a href="work.html" class="on">Work</a></nav>
 </div>
 <p><a href="work.html">← Back to Work</a></p>
+<p class="wip"><span class="es">WIP · Caso en actualización. El contenido detallado está disponible por ahora en inglés.</span><span class="en">WIP · Case study being updated. Detailed content is currently available in English.</span></p>
+<div class="lang-switch"><button data-set="en" aria-pressed="true">EN</button> <button data-set="es" aria-pressed="false">ES</button></div>
 <header>
   <span class="draft">Case study &middot; Private draft</span>
-  <h1>Designing the future contact center with an AI-native process</h1>
+  <h1>Designing the future contact center with an AI-native process</h1><section class="case-summary">
+<h2><span class="es">Descripción</span><span class="en">Description</span></h2>
+<p><span class="es">Diseño del futuro centro de atención: de Salesforce a Amazon Connect, con contexto compartido y prototipos en código. Piloto: paquetes perdidos. Objetivo: reducir un 20% el tiempo medio de atención.</span><span class="en">Designing the future contact center: from Salesforce to Amazon Connect, with shared context and coded prototypes. Pilot: lost parcels. Goal: reduce average handling time by 20%.</span></p>
+<h2><span class="es">Definición del problema</span><span class="en">Problem statement</span></h2>
+<p><span class="es">Los agentes alternan entre herramientas y pestañas para resolver un caso, con tareas manuales después de cada contacto y traspasos entre agentes. Esto contribuye a esperas prolongadas y contactos repetidos.</span><span class="en">Agents switch between tools and tabs to resolve a case, with manual after-contact work and handoffs. This contributes to longer waits and repeat contacts.</span></p>
+<h2><span class="es">Qué creé</span><span class="en">What I created</span></h2>
+<ul>
+<li><span class="es">Un espacio de contexto compartido con investigación previa, feedback y evaluación heurística.</span><span class="en">A shared context space combining existing research, feedback, and heuristic evaluation.</span></li>
+<li><span class="es">El journey del piloto de paquete perdido y un card sorting con más de 50 agentes.</span><span class="en">The lost-parcel pilot journey and a card sort with 50+ agents.</span></li>
+<li><span class="es">Dos direcciones de prototipos en código: una personalizada y otra con componentes nativos de Amazon Connect.</span><span class="en">Two coded prototype directions: a custom vision and one using native Amazon Connect components.</span></li>
+</ul>
+<h2><span class="es">Aprendizajes clave</span><span class="en">Key learnings</span></h2>
+<ul>
+<li><span class="es">La IA amplifica el criterio de diseño; la velocidad no sustituye la calidad.</span><span class="en">AI amplifies design judgment; speed does not replace craft.</span></li>
+<li><span class="es">Figma sirve para expresar intención con bocetos; los prototipos interactivos facilitan el feedback.</span><span class="en">Figma helps express intent through sketches; interactive prototypes make feedback easier.</span></li>
+<li><span class="es">Los sistemas de diseño deben ser legibles para los modelos de lenguaje: la IA comprendió mejor el de Amazon Connect que el interno.</span><span class="en">Design systems need to be LLM-friendly: AI understood Amazon Connect’s system better than the internal one.</span></li>
+</ul>
+</section>
+
   <p class="lead">How case management moved from Salesforce to Amazon Connect, and what changed when the whole design process started from shared context and coded prototypes instead of Figma.</p>
   <div class="meta">
     <div><b>Project</b>Case management, internal tool for customer service agents</div>
