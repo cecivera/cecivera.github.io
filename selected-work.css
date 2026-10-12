@@ -6,7 +6,6 @@
 .selected-work .more-projects h2 { font-size:16px; }
 .selected-work .more-projects ul { padding-left:20px; }
 .selected-work .more-projects li { margin-bottom:12px; }
-.selected-work #ai-native-case-management h2 { font-size:clamp(24px,4vw,32px); }
 .selected-work #ai-native-case-management { padding-top:32px; padding-bottom:32px; }
 
 .selected-work .selected-case h3, .selected-work .secondary-case h3 { font-size:13px; font-weight:500; color:var(--text-dim); margin:20px 0 8px; }
