@@ -1,0 +1,13 @@
+.selected-work .hero { margin-bottom:32px; }
+.selected-work .selected-case { padding:24px 0; border-top:1px solid #e6e6e6; }
+.selected-work .selected-case h2 { font-size:20px; font-weight:500; }
+.selected-work .selected-case .eyebrow { margin-bottom:8px; }
+.selected-work .more-projects { margin-top:40px; }
+.selected-work .more-projects h2 { font-size:16px; }
+.selected-work .more-projects ul { padding-left:20px; }
+.selected-work .more-projects li { margin-bottom:12px; }
+.selected-work #ai-native-case-management { padding-top:32px; padding-bottom:32px; }
+
+.selected-work .selected-case h3, .selected-work .secondary-case h3 { font-size:13px; font-weight:500; color:var(--text-dim); margin:20px 0 8px; }
+.selected-work .secondary-case { padding:16px 0; border-top:1px solid #e6e6e6; }
+.selected-work .secondary-case > summary { cursor:pointer; }

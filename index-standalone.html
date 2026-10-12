@@ -5,52 +5,56 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI-native design process for case management (private draft)</title>
-<style>
-:root{--ink:#111;--mute:#6b6b6b;--line:#e6e6e6}
-*{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--ink);font:1.0625rem/1.65 Inter,-apple-system,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.wrap{max-width:760px;margin:0 auto;padding:0 24px}
-.top{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:56px 0 64px;font-size:1rem}
-.top .brand{color:var(--mute)}
-nav{display:flex;gap:16px;align-items:baseline}
-nav a{text-decoration:none;color:var(--mute)}
-nav a.on{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
-header{padding:0 0 8px}
-.draft{display:block;font-size:1rem;color:var(--mute);margin:0 0 24px}
-h1{font-size:clamp(1.8rem,4vw,2.4rem);line-height:1.15;font-weight:600;letter-spacing:-.02em;margin:0 0 20px}
-h2{font-size:1rem;font-weight:400;color:var(--mute);margin:0 0 12px}
-p{margin:0 0 16px}
-section{margin:0 0 8px;padding:40px 0 0}
-.lead{margin:0 0 40px}
-.meta{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;margin:0 0 8px}
-.meta div{padding:0}
-.meta b{display:block;font-weight:400;color:var(--mute);margin-bottom:4px}
-.cols{display:block}
-.card{margin:0 0 16px;padding:0}
-.card h3{font-size:1.0625rem;font-weight:600;margin:0}
-blockquote{margin:24px 0;padding:0;font-size:1.25rem;line-height:1.45;font-weight:500}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:16px 10px}
-.gallery figure{margin:0}
-.gallery figcaption{font-size:.75rem;color:var(--mute);margin-top:4px;line-height:1.3}
-.gallery figcaption b{color:var(--ink);font-weight:600}
-.gallery .long{display:none}
-
-.gallery img{width:100%;border:1px solid var(--line);cursor:zoom-in}
-.note{color:var(--mute);font-size:1rem}
-footer{padding:96px 0 40px;font-size:1rem;color:var(--mute)}
-@media(max-width:600px){.top{flex-direction:column;gap:12px;padding:32px 0 40px}.meta{grid-template-columns:1fr}}
-</style>
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style-29fc6bef70.css">
+<link rel="stylesheet" href="case-study.css">
+<script src="language.js" defer></script>
 </head>
-<body>
-<div class="wrap">
-<div class="top">
-  <div class="brand">Cecilia Vera &middot; Product Design Lead</div>
-  <nav><a href="index.html">About</a><a href="work.html" class="on">Work</a></nav>
-</div>
+<body data-lang="en" class="case-study">
+  <div class="docket-bar">
+    <div class="left">
+      <div class="left-stack">
+        <span class="brand-name"><span class="dot"></span><span class="es">Cecilia Vera · Lead de Diseño de Producto · Productos Enterprise</span><span class="en">Cecilia Vera · Product Design Lead · Enterprise Products</span></span>
+        <div class="left-sub">
+          <span class="brand-tag">Portfolio 2026</span>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="Principal">
+      <a href="index.html"><span class="es">Sobre mí</span><span class="en">About</span></a>
+      <a href="work.html" class="active" aria-current="page"><span class="es">Proyectos</span><span class="en">Work</span></a>
+    </nav>
+    <div class="lang-switch">
+      <button class="active" data-set="en" aria-pressed="true">EN</button>
+      <button data-set="es" aria-pressed="false">ES</button>
+    </div>
+  </div>
+
+<main>
+<a href="work.html"><span class="es">← Volver a Work</span><span class="en">← Back to Work</span></a>
+<p class="wip-notice" role="note"><span class="es">WIP · Estoy actualizando este portfolio. Algunos casos siguen en preparación; el relato detallado de este caso está por ahora en inglés.</span><span class="en">WIP · I’m updating this portfolio. Some case studies are still in progress; this case’s detailed narrative is currently in English.</span></p>
+<div class="case-content">
 <header>
   <span class="draft">Case study &middot; Private draft</span>
-  <h1>Designing the future contact center with an AI-native process</h1>
+  <h1>Designing the future contact center with an AI-native process</h1><section class="case-summary">
+<h2><span class="es">Descripción</span><span class="en">Description</span></h2>
+<p><span class="es">Diseño del futuro centro de atención: de Salesforce a Amazon Connect, con contexto compartido y prototipos en código. Piloto: paquetes perdidos. Objetivo: reducir un 20% el tiempo medio de atención.</span><span class="en">Designing the future contact center: from Salesforce to Amazon Connect, with shared context and coded prototypes. Pilot: lost parcels. Goal: reduce average handling time by 20%.</span></p>
+<h2><span class="es">Definición del problema</span><span class="en">Problem statement</span></h2>
+<p><span class="es">Los agentes alternan entre herramientas y pestañas para resolver un caso, con tareas manuales después de cada contacto y traspasos entre agentes. Esto contribuye a esperas prolongadas y contactos repetidos.</span><span class="en">Agents switch between tools and tabs to resolve a case, with manual after-contact work and handoffs. This contributes to longer waits and repeat contacts.</span></p>
+<h2><span class="es">Qué creé</span><span class="en">What I created</span></h2>
+<ul>
+<li><span class="es">Un espacio de contexto compartido con investigación previa, feedback y evaluación heurística.</span><span class="en">A shared context space combining existing research, feedback, and heuristic evaluation.</span></li>
+<li><span class="es">El journey del piloto de paquete perdido y un card sorting con más de 50 agentes.</span><span class="en">The lost-parcel pilot journey and a card sort with 50+ agents.</span></li>
+<li><span class="es">Dos direcciones de prototipos en código: una personalizada y otra con componentes nativos de Amazon Connect.</span><span class="en">Two coded prototype directions: a custom vision and one using native Amazon Connect components.</span></li>
+</ul>
+<h2><span class="es">Aprendizajes clave</span><span class="en">Key learnings</span></h2>
+<ul>
+<li><span class="es">La IA amplifica el criterio de quien la dirige; la velocidad no sustituye la calidad, como ocurrió al pasar de Illustrator a Sketch y Figma.</span><span class="en">AI amplifies the judgment of whoever directs it; speed does not replace craft, just as with the move from Illustrator to Sketch to Figma.</span></li>
+<li><span class="es">Figma funciona como compañero de bocetado: mockups rápidos para comunicar intención a la IA, no páginas completas. Los prototipos interactivos facilitan el feedback.</span><span class="en">Figma acts as a sketch partner: quick mockups to communicate intent to AI, not full pages. Interactive prototypes make feedback easier.</span></li>
+<li><span class="es">Los sistemas de diseño deben ser legibles para los modelos de lenguaje: la IA comprendió mejor el de Amazon Connect que el interno.</span><span class="en">Design systems need to be LLM-friendly: AI understood Amazon Connect’s system better than the internal one.</span></li>
+</ul>
+</section>
+
   <p class="lead">How case management moved from Salesforce to Amazon Connect, and what changed when the whole design process started from shared context and coded prototypes instead of Figma.</p>
   <div class="meta">
     <div><b>Project</b>Case management, internal tool for customer service agents</div>
@@ -89,14 +93,7 @@ footer{padding:96px 0 40px;font-size:1rem;color:var(--mute)}
   <blockquote>When there is something people can play with, it is much easier to get feedback than when business decisions are made without seeing what they look like.</blockquote>
 </section>
 
-<section>
-  <h2>Learnings</h2>
-  <div class="cols">
-    <div class="card"><h3>Craft matters more</h3>Speed is not the point. The tool amplifies whoever drives it, like the move from Illustrator to Sketch to Figma.</div>
-    <div class="card"><h3>Figma as sketch partner</h3>Used for quick mockups so the AI understands intent, not for full pages.</div>
-    <div class="card"><h3>Design systems must be LLM friendly</h3>AI understood Amazon Connect's design system much better than the internal one.</div>
-  </div>
-</section>
+
 
 <section>
   <h2>Screens</h2>
@@ -105,6 +102,11 @@ footer{padding:96px 0 40px;font-size:1rem;color:var(--mute)}
 </section>
 
 </div>
+</main>
+  <footer>
+    <div class="fmono">Portfolio 2026</div>
+    <div class="fmono"><a href="https://www.linkedin.com/in/ceciliavera/" target="_blank" rel="noopener noreferrer" style="color:var(--ink); text-decoration:underline;">LinkedIn</a> · <a href="Cecilia%20Vera%20Battaglia%20-%20CV.pdf" target="_blank" rel="noopener noreferrer"><span class="es">Descargar CV</span><span class="en">Download CV</span></a></div>
+  </footer>
 <script>
 /* Shared lightbox: click a screenshot, then use the arrow keys or the on-screen arrows. Esc or click outside closes. */
 (function(){
