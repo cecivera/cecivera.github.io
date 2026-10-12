@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="case-study.css">
 <script src="language.js" defer></script>
 </head>
-<body data-lang="en" class="case-study">
+<body data-lang="en" class="case-study ai-native-case">
   <div class="docket-bar">
     <div class="left">
       <div class="left-stack">
@@ -97,7 +97,7 @@
 
 <section>
   <h2>Screens</h2>
-  <p class="note">All screens in presentation order. Click any one to enlarge it with its full text, then use the arrows to move through them.</p>
+  <p class="note">Six preview screens. Open any image to explore all screens at full size using the arrows or keyboard.</p>
   <div class="gallery" id="g"></div>
 </section>
 
@@ -165,7 +165,10 @@ caps.forEach((c,i)=>{
   im.onclick=()=>zoom(im.src);
   const cp=document.createElement('figcaption');
   cp.innerHTML='<b>'+(i+1)+'</b> '+labels[i];
+  cp.hidden = true;
   const lg=document.createElement('div');lg.className='long';lg.innerHTML='<b>'+c[1]+'</b> '+c[0];
+  lg.hidden = true;
+  f.hidden = i >= 6;
   f.append(im,cp,lg);g.appendChild(f);
 });
 </script>
