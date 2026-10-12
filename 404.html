@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="refresh" content="0; url=https://cecivera-work.vercel.app/">
+<link rel="canonical" href="https://cecivera-work.vercel.app/">
+<title>Cecilia Vera — Portfolio</title>
+<style>
+  :root { --ink:#202020; --text-dim:#595959; }
+  * { box-sizing:border-box; }
+  html { background:#fff; color-scheme:light; }
+  body { max-width:760px; margin:0 auto; padding:64px 28px 32px; background:#fff; color:var(--ink);
+         font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+  [data-lang="es"] .en, [data-lang="en"] .es { display:none; }
+  .wrap { max-width:420px; margin:6vh auto 0; }
+  p { margin:0 0 16px; }
+  .brand { font-size:14px; color:var(--text-dim); margin-bottom:40px; }
+  h1 { font-size:clamp(26px,5vw,32px); line-height:1.2; letter-spacing:-.035em; font-weight:500; margin:0 0 16px; }
+  .note { color:var(--text-dim); }
+  a { color:var(--ink); text-underline-offset:4px; }
+  .lang { display:flex; gap:16px; margin-bottom:48px; }
+  .lang button { padding:0; border:0; background:none; color:var(--text-dim); font:inherit; cursor:pointer; }
+  .lang button.active { color:var(--ink); text-decoration:underline; text-underline-offset:4px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="lang">
+      <button type="button" class="active" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" data-set="es" aria-pressed="false">ES</button>
+    </div>
+    <p class="brand"><span class="es">Cecilia Vera · Diseño de Producto</span><span class="en">Cecilia Vera · Product Design</span></p>
+    <h1><span class="es">El portfolio se ha mudado</span><span class="en">The portfolio has moved</span></h1>
+    <p class="note"><span class="es">Te estoy llevando a la nueva dirección. Si no ocurre nada, entra desde aquí:</span><span class="en">Taking you to its new address. If nothing happens, use this link:</span></p>
+    <p><a href="https://cecivera-work.vercel.app/">cecivera-work.vercel.app</a></p>
+  </div>
+<script>
+  var root = document.documentElement, buttons = document.querySelectorAll('[data-set]');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      root.dataset.lang = b.dataset.set;
+      root.lang = b.dataset.set;
+      buttons.forEach(function (o) {
+        var on = o === b;
+        o.classList.toggle('active', on);
+        o.setAttribute('aria-pressed', String(on));
+      });
+    });
+  });
+  location.replace('https://cecivera-work.vercel.app/');
+</script>
+</body>
+</html>
