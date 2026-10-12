@@ -26,3 +26,7 @@
 .case-study .draft, .case-study .note { font-size:13px; color:var(--text-dim); }
 .case-study .gallery img { cursor:zoom-in; }
 @media(max-width:600px) { .case-study .meta, .case-study .cols { grid-template-columns:1fr; } }
+
+.ai-native-case .gallery .long, .ai-native-case .gallery figcaption { display:none; }
+.ai-native-case .gallery { grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); }
+.ai-native-case .gallery img { aspect-ratio:16/10; object-fit:contain; border:1px solid #e6e6e6; }
